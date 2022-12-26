@@ -1,0 +1,42 @@
+body {
+    margin: 0;
+}
+
+.home-page {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: #001e5b;
+    height: 100vh;
+    width: 100vw;
+}
+
+.logo {
+    width: 450px;
+}
+
+.website_name {
+    text-align: center;
+    color: white;
+    font-size: 4rem;
+}
+
+.thumbnail {
+    object-fit: cover;
+    width: 100px;
+    height: 100px;
+}
+
+.profile {
+    width: 230px;
+    height: 200px;
+    object-fit: cover;
+    border-radius: 50%;
+}
+
+.profile_icon {
+    width: 50px;
+    height: 50px;
+    object-fit: cover;
+    border-radius: 15%;
+}
