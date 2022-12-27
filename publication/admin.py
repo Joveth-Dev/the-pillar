@@ -70,6 +70,8 @@ class MemberAdmin(admin.ModelAdmin):
         subquery = models.MemberPosition.objects.select_related('position').filter(
             member_id=OuterRef('pk')).order_by('-datetime').values('position__title')[:1]
         return super().get_queryset(request). \
+            select_related('user') . \
+            filter(user__is_active=True) . \
             prefetch_related('memberposition_set'). \
             annotate(current_position=Subquery(subquery))
 

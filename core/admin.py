@@ -8,8 +8,8 @@ from .models import User
 @admin.register(User)
 class UserAdmin(BaseUserAdmin):
     # SET USER TO INACTIVE INSTEAD OF DELETING
-    # def delete_queryset(self, request, queryset):
-    #     queryset.update(is_active=False)
+    def delete_queryset(self, request, queryset):
+        queryset.update(is_active=False)
     # ========================================
 
     actions = ['delete_user']
@@ -44,6 +44,7 @@ class UserAdmin(BaseUserAdmin):
     )
 
     readonly_fields = ['display_picture']
+    list_per_page = 10
     list_select_related = ['profile']
 
     def display_picture(self, instance):

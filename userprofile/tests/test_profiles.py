@@ -25,6 +25,5 @@
 #             "city": user.profile.city,
 #             "state_or_province": user.profile.state_or_province,
 #             "zip_code": user.profile.zip_code,
-#             "country": user.profile.country,
-#             "is_student": user.profile.is_student
+#             "country": user.profile.country
 #         }

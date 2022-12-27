@@ -1,3 +1,5 @@
+from django.utils.decorators import method_decorator
+from django.views.decorators.cache import cache_page
 from rest_framework.decorators import action
 from rest_framework.response import Response
 from rest_framework.mixins import CreateModelMixin
@@ -14,6 +16,10 @@ class ProfileViewSet(CreateModelMixin,
 
     def get_serializer_context(self):
         return {'user_id': self.request.user.id}
+
+    @method_decorator(cache_page(10*60, key_prefix='profiles_list'))
+    def list(self, request, *args, **kwargs):
+        return super().list(request, *args, **kwargs)
 
     @action(detail=False, methods=['GET', 'PUT'], permission_classes=[IsAuthenticated])
     def me(self, request):
