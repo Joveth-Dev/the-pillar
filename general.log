@@ -27152,3 +27152,880 @@ TypeError: can only concatenate str (not "ImageFieldFile") to str
 2022-12-25 17:36:29,174 (INFO) - django.utils.autoreload - /home/adduser/thesis/the_pillar/userprofile/models.py changed, reloading.
 2022-12-25 17:36:30,304 (INFO) - django.utils.autoreload - Watching for file changes with StatReloader
 2022-12-25 17:36:30,361 (WARNING) - silk.profiling.profiler - Cannot execute silk_profile as silk is not installed correctly.
+2022-12-27 02:26:49,077 (INFO) - django.utils.autoreload - Watching for file changes with StatReloader
+2022-12-27 02:26:49,153 (WARNING) - silk.profiling.profiler - Cannot execute silk_profile as silk is not installed correctly.
+2022-12-27 02:26:51,316 (INFO) - django.request - [36mGET /[0m
+2022-12-27 02:26:51,317 (INFO) - django.request - [36mGET / - 200[0m
+2022-12-27 02:26:51,807 (INFO) - django.request - [36mGET /favicon.ico[0m
+2022-12-27 02:26:51,808 (ERROR) - django.request - [35m{'Content-Length': '', 'Content-Type': 'text/plain', 'Host': '127.0.0.1:8000', 'Connection': 'keep-alive', 'Sec-Ch-Ua': '"Not?A_Brand";v="8", "Chromium";v="108", "Google Chrome";v="108"', 'Sec-Ch-Ua-Mobile': '?0', 'User-Agent': 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/108.0.0.0 Safari/537.36', 'Sec-Ch-Ua-Platform': '"Windows"', 'Accept': 'image/avif,image/webp,image/apng,image/svg+xml,image/*,*/*;q=0.8', 'Sec-Fetch-Site': 'same-origin', 'Sec-Fetch-Mode': 'no-cors', 'Sec-Fetch-Dest': 'image', 'Referer': 'http://127.0.0.1:8000/', 'Accept-Encoding': 'gzip, deflate, br', 'Accept-Language': 'en-GB,en-US;q=0.9,en;q=0.8,la;q=0.7', 'Cookie': 'csrftoken=v21SWTzEcKFCqhm68NNfFroEarfvrlxc; sessionid=m0nqd6ncgovdwvo3o1bvx4ttrue8n5ty'}[0m
+2022-12-27 02:26:51,808 (ERROR) - django.request - [35mb''[0m
+2022-12-27 02:26:51,809 (INFO) - django.request - [35mGET /favicon.ico - 404[0m
+2022-12-27 02:26:51,821 (WARNING) - django.request - Not Found: /favicon.ico
+2022-12-27 02:26:54,922 (INFO) - django.request - [36mGET /admin/[0m
+2022-12-27 02:26:54,922 (INFO) - django.request - [36mGET /admin/ - 200[0m
+2022-12-27 02:26:58,322 (INFO) - django.request - [36mGET /admin/userprofile/profile/[0m
+2022-12-27 02:26:58,323 (INFO) - django.request - [36mGET /admin/userprofile/profile/ - 200[0m
+2022-12-27 02:26:58,402 (INFO) - django.request - [36mGET /admin/jsi18n/[0m
+2022-12-27 02:26:58,404 (INFO) - django.request - [36mGET /admin/jsi18n/ - 200[0m
+2022-12-27 02:26:59,310 (INFO) - django.request - [36mGET /media/userprofile/images/default_male.jpg[0m
+2022-12-27 02:26:59,312 (INFO) - django.request - [36mGET /media/userprofile/images/default_male.jpg - 304[0m
+2022-12-27 02:26:59,323 (INFO) - django.request - [36mGET /media/userprofile/images/default_female.jpg[0m
+2022-12-27 02:26:59,331 (INFO) - django.request - [36mGET /media/userprofile/images/default_female.jpg - 304[0m
+2022-12-27 02:27:03,970 (INFO) - django.request - [36mGET /admin/core/user/[0m
+2022-12-27 02:27:03,971 (INFO) - django.request - [36mGET /admin/core/user/ - 200[0m
+2022-12-27 02:27:04,037 (INFO) - django.request - [36mGET /admin/jsi18n/[0m
+2022-12-27 02:27:04,039 (INFO) - django.request - [36mGET /admin/jsi18n/ - 200[0m
+2022-12-27 02:27:06,783 (INFO) - django.request - [36mGET /admin/userprofile/profile/[0m
+2022-12-27 02:27:06,783 (INFO) - django.request - [36mGET /admin/userprofile/profile/ - 200[0m
+2022-12-27 02:27:06,841 (INFO) - django.request - [36mGET /admin/jsi18n/[0m
+2022-12-27 02:27:06,842 (INFO) - django.request - [36mGET /admin/jsi18n/ - 200[0m
+2022-12-27 02:27:09,072 (INFO) - django.request - [36mGET /admin/auth/group/[0m
+2022-12-27 02:27:09,072 (INFO) - django.request - [36mGET /admin/auth/group/ - 200[0m
+2022-12-27 02:27:09,127 (INFO) - django.request - [36mGET /admin/jsi18n/[0m
+2022-12-27 02:27:09,128 (INFO) - django.request - [36mGET /admin/jsi18n/ - 200[0m
+2022-12-27 02:27:10,548 (INFO) - django.request - [36mGET /admin/core/user/[0m
+2022-12-27 02:27:10,548 (INFO) - django.request - [36mGET /admin/core/user/ - 200[0m
+2022-12-27 02:27:10,598 (INFO) - django.request - [36mGET /admin/jsi18n/[0m
+2022-12-27 02:27:10,600 (INFO) - django.request - [36mGET /admin/jsi18n/ - 200[0m
+2022-12-27 02:27:17,061 (INFO) - django.request - [36mGET /admin/userprofile/profile/[0m
+2022-12-27 02:27:17,061 (INFO) - django.request - [36mGET /admin/userprofile/profile/ - 200[0m
+2022-12-27 02:27:17,118 (INFO) - django.request - [36mGET /admin/jsi18n/[0m
+2022-12-27 02:27:17,120 (INFO) - django.request - [36mGET /admin/jsi18n/ - 200[0m
+2022-12-27 02:27:19,175 (INFO) - django.request - [36mGET /admin/userprofile/profile/add/[0m
+2022-12-27 02:27:19,176 (INFO) - django.request - [36mGET /admin/userprofile/profile/add/ - 200[0m
+2022-12-27 02:27:19,294 (INFO) - django.request - [36mGET /admin/jsi18n/[0m
+2022-12-27 02:27:19,296 (INFO) - django.request - [36mGET /admin/jsi18n/ - 200[0m
+2022-12-27 02:27:32,674 (INFO) - django.request - [36mPOST /admin/userprofile/profile/add/[0m
+2022-12-27 02:27:32,675 (INFO) - django.request - [36mPOST /admin/userprofile/profile/add/ - 302[0m
+2022-12-27 02:27:32,741 (INFO) - django.request - [36mGET /admin/userprofile/profile/[0m
+2022-12-27 02:27:32,742 (INFO) - django.request - [36mGET /admin/userprofile/profile/ - 200[0m
+2022-12-27 02:27:32,798 (INFO) - django.request - [36mGET /admin/jsi18n/[0m
+2022-12-27 02:27:32,801 (INFO) - django.request - [36mGET /admin/jsi18n/ - 200[0m
+2022-12-27 02:27:35,529 (INFO) - django.request - [36mGET /admin/userprofile/profile/40/change/[0m
+2022-12-27 02:27:35,529 (INFO) - django.request - [36mGET /admin/userprofile/profile/40/change/ - 200[0m
+2022-12-27 02:27:35,584 (INFO) - django.request - [36mGET /admin/jsi18n/[0m
+2022-12-27 02:27:35,585 (INFO) - django.request - [36mGET /admin/jsi18n/ - 200[0m
+2022-12-27 02:27:45,257 (INFO) - django.request - [36mPOST /admin/userprofile/profile/40/change/[0m
+2022-12-27 02:27:45,258 (INFO) - django.request - [36mPOST /admin/userprofile/profile/40/change/ - 302[0m
+2022-12-27 02:27:45,324 (INFO) - django.request - [36mGET /admin/userprofile/profile/[0m
+2022-12-27 02:27:45,325 (INFO) - django.request - [36mGET /admin/userprofile/profile/ - 200[0m
+2022-12-27 02:27:45,381 (INFO) - django.request - [36mGET /admin/jsi18n/[0m
+2022-12-27 02:27:45,382 (INFO) - django.request - [36mGET /admin/jsi18n/ - 200[0m
+2022-12-27 02:27:46,271 (INFO) - django.request - [36mGET /media/userprofile/images/1667418090423_HXvwkm3.jpg[0m
+2022-12-27 02:27:46,273 (INFO) - django.request - [36mGET /media/userprofile/images/1667418090423_HXvwkm3.jpg - 200[0m
+2022-12-27 02:27:48,623 (INFO) - django.request - [36mGET /admin/userprofile/profile/40/change/[0m
+2022-12-27 02:27:48,624 (INFO) - django.request - [36mGET /admin/userprofile/profile/40/change/ - 200[0m
+2022-12-27 02:27:48,676 (INFO) - django.request - [36mGET /admin/jsi18n/[0m
+2022-12-27 02:27:48,677 (INFO) - django.request - [36mGET /admin/jsi18n/ - 200[0m
+2022-12-27 02:27:49,805 (INFO) - django.request - [36mGET /media/userprofile/images/1667418090423_HXvwkm3.jpg[0m
+2022-12-27 02:27:49,813 (INFO) - django.request - [36mGET /media/userprofile/images/1667418090423_HXvwkm3.jpg - 304[0m
+2022-12-27 02:27:57,284 (INFO) - django.request - [36mPOST /admin/userprofile/profile/40/change/[0m
+2022-12-27 02:27:57,285 (INFO) - django.request - [36mPOST /admin/userprofile/profile/40/change/ - 302[0m
+2022-12-27 02:27:57,348 (INFO) - django.request - [36mGET /admin/userprofile/profile/[0m
+2022-12-27 02:27:57,348 (INFO) - django.request - [36mGET /admin/userprofile/profile/ - 200[0m
+2022-12-27 02:27:57,410 (INFO) - django.request - [36mGET /admin/jsi18n/[0m
+2022-12-27 02:27:57,412 (INFO) - django.request - [36mGET /admin/jsi18n/ - 200[0m
+2022-12-27 02:27:58,375 (INFO) - django.request - [36mGET /media/userprofile/images/1665462493754.jpg[0m
+2022-12-27 02:27:58,388 (INFO) - django.request - [36mGET /media/userprofile/images/1665462493754.jpg - 200[0m
+2022-12-27 02:27:59,852 (INFO) - django.request - [36mGET /admin/userprofile/profile/40/change/[0m
+2022-12-27 02:27:59,853 (INFO) - django.request - [36mGET /admin/userprofile/profile/40/change/ - 200[0m
+2022-12-27 02:27:59,907 (INFO) - django.request - [36mGET /admin/jsi18n/[0m
+2022-12-27 02:27:59,908 (INFO) - django.request - [36mGET /admin/jsi18n/ - 200[0m
+2022-12-27 02:28:00,885 (INFO) - django.request - [36mGET /media/userprofile/images/1665462493754.jpg[0m
+2022-12-27 02:28:00,887 (INFO) - django.request - [36mGET /media/userprofile/images/1665462493754.jpg - 304[0m
+2022-12-27 02:28:08,113 (INFO) - django.request - [36mPOST /admin/userprofile/profile/40/change/[0m
+2022-12-27 02:28:08,113 (INFO) - django.request - [36mPOST /admin/userprofile/profile/40/change/ - 200[0m
+2022-12-27 02:28:08,168 (INFO) - django.request - [36mGET /admin/jsi18n/[0m
+2022-12-27 02:28:08,169 (INFO) - django.request - [36mGET /admin/jsi18n/ - 200[0m
+2022-12-27 02:28:08,890 (INFO) - django.request - [36mGET /media/planets.jpg[0m
+2022-12-27 02:28:08,892 (ERROR) - django.request - [35m{'Content-Length': '', 'Content-Type': 'text/plain', 'Host': '127.0.0.1:8000', 'Connection': 'keep-alive', 'Sec-Ch-Ua': '"Not?A_Brand";v="8", "Chromium";v="108", "Google Chrome";v="108"', 'Sec-Ch-Ua-Mobile': '?0', 'User-Agent': 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/108.0.0.0 Safari/537.36', 'Sec-Ch-Ua-Platform': '"Windows"', 'Accept': 'image/avif,image/webp,image/apng,image/svg+xml,image/*,*/*;q=0.8', 'Sec-Fetch-Site': 'same-origin', 'Sec-Fetch-Mode': 'no-cors', 'Sec-Fetch-Dest': 'image', 'Referer': 'http://127.0.0.1:8000/admin/userprofile/profile/40/change/', 'Accept-Encoding': 'gzip, deflate, br', 'Accept-Language': 'en-GB,en-US;q=0.9,en;q=0.8,la;q=0.7', 'Cookie': 'csrftoken=v21SWTzEcKFCqhm68NNfFroEarfvrlxc; sessionid=m0nqd6ncgovdwvo3o1bvx4ttrue8n5ty'}[0m
+2022-12-27 02:28:08,893 (ERROR) - django.request - [35mb''[0m
+2022-12-27 02:28:08,894 (INFO) - django.request - [35mGET /media/planets.jpg - 404[0m
+2022-12-27 02:28:09,162 (WARNING) - django.request - Not Found: /media/planets.jpg
+2022-12-27 02:28:57,525 (INFO) - django.utils.autoreload - /home/adduser/thesis/the_pillar/publication/validators.py changed, reloading.
+2022-12-27 02:28:58,038 (INFO) - django.utils.autoreload - Watching for file changes with StatReloader
+2022-12-27 02:28:58,073 (WARNING) - silk.profiling.profiler - Cannot execute silk_profile as silk is not installed correctly.
+2022-12-27 02:29:01,431 (INFO) - django.utils.autoreload - /home/adduser/thesis/the_pillar/publication/validators.py changed, reloading.
+2022-12-27 02:29:01,916 (INFO) - django.utils.autoreload - Watching for file changes with StatReloader
+2022-12-27 02:29:01,950 (WARNING) - silk.profiling.profiler - Cannot execute silk_profile as silk is not installed correctly.
+2022-12-27 02:31:03,874 (INFO) - django.request - [36mGET /admin/userprofile/profile/[0m
+2022-12-27 02:31:03,875 (INFO) - django.request - [36mGET /admin/userprofile/profile/ - 200[0m
+2022-12-27 02:31:03,972 (INFO) - django.request - [36mGET /admin/jsi18n/[0m
+2022-12-27 02:31:03,973 (INFO) - django.request - [36mGET /admin/jsi18n/ - 200[0m
+2022-12-27 02:31:04,857 (INFO) - django.request - [36mGET /media/userprofile/images/1665462493754.jpg[0m
+2022-12-27 02:31:04,859 (INFO) - django.request - [36mGET /media/userprofile/images/1665462493754.jpg - 304[0m
+2022-12-27 02:31:08,216 (INFO) - django.request - [36mGET /admin/userprofile/profile/40/change/[0m
+2022-12-27 02:31:08,216 (INFO) - django.request - [36mGET /admin/userprofile/profile/40/change/ - 200[0m
+2022-12-27 02:31:08,287 (INFO) - django.request - [36mGET /admin/jsi18n/[0m
+2022-12-27 02:31:08,289 (INFO) - django.request - [36mGET /admin/jsi18n/ - 200[0m
+2022-12-27 02:33:49,135 (INFO) - django.utils.autoreload - /home/adduser/thesis/the_pillar/userprofile/validators.py changed, reloading.
+2022-12-27 02:33:49,652 (INFO) - django.utils.autoreload - Watching for file changes with StatReloader
+2022-12-27 02:33:49,686 (WARNING) - silk.profiling.profiler - Cannot execute silk_profile as silk is not installed correctly.
+2022-12-27 02:33:51,031 (INFO) - django.utils.autoreload - /home/adduser/thesis/the_pillar/userprofile/validators.py changed, reloading.
+2022-12-27 02:33:51,498 (INFO) - django.utils.autoreload - Watching for file changes with StatReloader
+2022-12-27 02:33:51,532 (WARNING) - silk.profiling.profiler - Cannot execute silk_profile as silk is not installed correctly.
+2022-12-27 02:37:08,541 (INFO) - django.utils.autoreload - /home/adduser/thesis/the_pillar/userprofile/validators.py changed, reloading.
+2022-12-27 02:37:09,011 (INFO) - django.utils.autoreload - Watching for file changes with StatReloader
+2022-12-27 02:37:11,171 (INFO) - django.utils.autoreload - /home/adduser/thesis/the_pillar/userprofile/validators.py changed, reloading.
+2022-12-27 02:37:11,618 (INFO) - django.utils.autoreload - Watching for file changes with StatReloader
+2022-12-27 02:37:11,652 (WARNING) - silk.profiling.profiler - Cannot execute silk_profile as silk is not installed correctly.
+2022-12-27 02:37:12,966 (INFO) - django.utils.autoreload - /home/adduser/thesis/the_pillar/userprofile/validators.py changed, reloading.
+2022-12-27 02:37:13,489 (INFO) - django.utils.autoreload - Watching for file changes with StatReloader
+2022-12-27 02:37:13,526 (WARNING) - silk.profiling.profiler - Cannot execute silk_profile as silk is not installed correctly.
+2022-12-27 02:37:14,836 (INFO) - django.utils.autoreload - /home/adduser/thesis/the_pillar/userprofile/validators.py changed, reloading.
+2022-12-27 02:37:15,305 (INFO) - django.utils.autoreload - Watching for file changes with StatReloader
+2022-12-27 02:37:15,340 (WARNING) - silk.profiling.profiler - Cannot execute silk_profile as silk is not installed correctly.
+2022-12-27 02:37:32,790 (INFO) - django.request - [36mGET /admin/userprofile/profile/[0m
+2022-12-27 02:37:32,791 (INFO) - django.request - [36mGET /admin/userprofile/profile/ - 200[0m
+2022-12-27 02:37:32,894 (INFO) - django.request - [36mGET /admin/jsi18n/[0m
+2022-12-27 02:37:32,896 (INFO) - django.request - [36mGET /admin/jsi18n/ - 200[0m
+2022-12-27 02:37:34,041 (INFO) - django.request - [36mGET /media/userprofile/images/1665462493754.jpg[0m
+2022-12-27 02:37:34,043 (INFO) - django.request - [36mGET /media/userprofile/images/1665462493754.jpg - 304[0m
+2022-12-27 02:37:35,956 (INFO) - django.request - [36mGET /admin/core/user/[0m
+2022-12-27 02:37:35,957 (INFO) - django.request - [36mGET /admin/core/user/ - 200[0m
+2022-12-27 02:37:36,025 (INFO) - django.request - [36mGET /admin/jsi18n/[0m
+2022-12-27 02:37:36,026 (INFO) - django.request - [36mGET /admin/jsi18n/ - 200[0m
+2022-12-27 02:37:38,101 (INFO) - django.request - [36mGET /admin/userprofile/profile/[0m
+2022-12-27 02:37:38,101 (INFO) - django.request - [36mGET /admin/userprofile/profile/ - 200[0m
+2022-12-27 02:37:38,154 (INFO) - django.request - [36mGET /admin/jsi18n/[0m
+2022-12-27 02:37:38,156 (INFO) - django.request - [36mGET /admin/jsi18n/ - 200[0m
+2022-12-27 02:37:39,595 (INFO) - django.request - [36mGET /admin/userprofile/profile/add/[0m
+2022-12-27 02:37:39,596 (INFO) - django.request - [36mGET /admin/userprofile/profile/add/ - 200[0m
+2022-12-27 02:37:39,658 (INFO) - django.request - [36mGET /admin/jsi18n/[0m
+2022-12-27 02:37:39,659 (INFO) - django.request - [36mGET /admin/jsi18n/ - 200[0m
+2022-12-27 02:38:02,967 (INFO) - django.request - [36mPOST /admin/userprofile/profile/add/[0m
+2022-12-27 02:38:02,968 (INFO) - django.request - [36mPOST /admin/userprofile/profile/add/ - 302[0m
+2022-12-27 02:38:03,037 (INFO) - django.request - [36mGET /admin/userprofile/profile/[0m
+2022-12-27 02:38:03,037 (INFO) - django.request - [36mGET /admin/userprofile/profile/ - 200[0m
+2022-12-27 02:38:03,092 (INFO) - django.request - [36mGET /admin/jsi18n/[0m
+2022-12-27 02:38:03,094 (INFO) - django.request - [36mGET /admin/jsi18n/ - 200[0m
+2022-12-27 02:38:05,965 (INFO) - django.request - [36mGET /admin/userprofile/profile/41/change/[0m
+2022-12-27 02:38:05,966 (INFO) - django.request - [36mGET /admin/userprofile/profile/41/change/ - 200[0m
+2022-12-27 02:38:06,022 (INFO) - django.request - [36mGET /admin/jsi18n/[0m
+2022-12-27 02:38:06,024 (INFO) - django.request - [36mGET /admin/jsi18n/ - 200[0m
+2022-12-27 02:38:10,303 (ERROR) - django.security.RequestDataTooBig - Request body exceeded settings.DATA_UPLOAD_MAX_MEMORY_SIZE.
+Traceback (most recent call last):
+  File "/home/adduser/.local/share/virtualenvs/the_pillar-hcpoMslp/lib/python3.10/site-packages/django/core/handlers/exception.py", line 55, in inner
+    response = get_response(request)
+  File "/home/adduser/.local/share/virtualenvs/the_pillar-hcpoMslp/lib/python3.10/site-packages/request_logging/middleware.py", line 159, in __call__
+    cached_request_body = request.body
+  File "/home/adduser/.local/share/virtualenvs/the_pillar-hcpoMslp/lib/python3.10/site-packages/django/http/request.py", line 335, in body
+    raise RequestDataTooBig(
+django.core.exceptions.RequestDataTooBig: Request body exceeded settings.DATA_UPLOAD_MAX_MEMORY_SIZE.
+2022-12-27 02:38:10,342 (ERROR) - django.security.RequestDataTooBig - Request body exceeded settings.DATA_UPLOAD_MAX_MEMORY_SIZE.
+Traceback (most recent call last):
+  File "/home/adduser/.local/share/virtualenvs/the_pillar-hcpoMslp/lib/python3.10/site-packages/django/core/handlers/exception.py", line 55, in inner
+    response = get_response(request)
+  File "/home/adduser/.local/share/virtualenvs/the_pillar-hcpoMslp/lib/python3.10/site-packages/debug_toolbar/middleware.py", line 69, in __call__
+    panel.generate_stats(request, response)
+  File "/home/adduser/.local/share/virtualenvs/the_pillar-hcpoMslp/lib/python3.10/site-packages/debug_toolbar/panels/history/panel.py", line 62, in generate_stats
+    and request.body
+  File "/home/adduser/.local/share/virtualenvs/the_pillar-hcpoMslp/lib/python3.10/site-packages/django/http/request.py", line 335, in body
+    raise RequestDataTooBig(
+django.core.exceptions.RequestDataTooBig: Request body exceeded settings.DATA_UPLOAD_MAX_MEMORY_SIZE.
+2022-12-27 02:38:10,360 (WARNING) - django.request - Bad Request: /admin/userprofile/profile/41/change/
+2022-12-27 02:38:31,100 (INFO) - django.request - [36mGET /admin/userprofile/profile/41/change/[0m
+2022-12-27 02:38:31,101 (INFO) - django.request - [36mGET /admin/userprofile/profile/41/change/ - 200[0m
+2022-12-27 02:38:41,297 (INFO) - django.utils.autoreload - /home/adduser/thesis/the_pillar/userprofile/validators.py changed, reloading.
+2022-12-27 02:38:41,839 (INFO) - django.utils.autoreload - Watching for file changes with StatReloader
+2022-12-27 02:38:41,874 (WARNING) - silk.profiling.profiler - Cannot execute silk_profile as silk is not installed correctly.
+2022-12-27 02:38:44,035 (ERROR) - django.security.RequestDataTooBig - Request body exceeded settings.DATA_UPLOAD_MAX_MEMORY_SIZE.
+Traceback (most recent call last):
+  File "/home/adduser/.local/share/virtualenvs/the_pillar-hcpoMslp/lib/python3.10/site-packages/django/core/handlers/exception.py", line 55, in inner
+    response = get_response(request)
+  File "/home/adduser/.local/share/virtualenvs/the_pillar-hcpoMslp/lib/python3.10/site-packages/request_logging/middleware.py", line 159, in __call__
+    cached_request_body = request.body
+  File "/home/adduser/.local/share/virtualenvs/the_pillar-hcpoMslp/lib/python3.10/site-packages/django/http/request.py", line 335, in body
+    raise RequestDataTooBig(
+django.core.exceptions.RequestDataTooBig: Request body exceeded settings.DATA_UPLOAD_MAX_MEMORY_SIZE.
+2022-12-27 02:38:44,138 (ERROR) - django.security.RequestDataTooBig - Request body exceeded settings.DATA_UPLOAD_MAX_MEMORY_SIZE.
+Traceback (most recent call last):
+  File "/home/adduser/.local/share/virtualenvs/the_pillar-hcpoMslp/lib/python3.10/site-packages/django/core/handlers/exception.py", line 55, in inner
+    response = get_response(request)
+  File "/home/adduser/.local/share/virtualenvs/the_pillar-hcpoMslp/lib/python3.10/site-packages/debug_toolbar/middleware.py", line 69, in __call__
+    panel.generate_stats(request, response)
+  File "/home/adduser/.local/share/virtualenvs/the_pillar-hcpoMslp/lib/python3.10/site-packages/debug_toolbar/panels/history/panel.py", line 62, in generate_stats
+    and request.body
+  File "/home/adduser/.local/share/virtualenvs/the_pillar-hcpoMslp/lib/python3.10/site-packages/django/http/request.py", line 335, in body
+    raise RequestDataTooBig(
+django.core.exceptions.RequestDataTooBig: Request body exceeded settings.DATA_UPLOAD_MAX_MEMORY_SIZE.
+2022-12-27 02:38:44,153 (WARNING) - django.request - Bad Request: /admin/userprofile/profile/41/change/
+2022-12-27 02:38:46,370 (INFO) - django.request - [36mGET /admin/userprofile/profile/41/change/[0m
+2022-12-27 02:38:46,371 (INFO) - django.request - [36mGET /admin/userprofile/profile/41/change/ - 200[0m
+2022-12-27 02:38:47,889 (ERROR) - django.security.RequestDataTooBig - Request body exceeded settings.DATA_UPLOAD_MAX_MEMORY_SIZE.
+Traceback (most recent call last):
+  File "/home/adduser/.local/share/virtualenvs/the_pillar-hcpoMslp/lib/python3.10/site-packages/django/core/handlers/exception.py", line 55, in inner
+    response = get_response(request)
+  File "/home/adduser/.local/share/virtualenvs/the_pillar-hcpoMslp/lib/python3.10/site-packages/request_logging/middleware.py", line 159, in __call__
+    cached_request_body = request.body
+  File "/home/adduser/.local/share/virtualenvs/the_pillar-hcpoMslp/lib/python3.10/site-packages/django/http/request.py", line 335, in body
+    raise RequestDataTooBig(
+django.core.exceptions.RequestDataTooBig: Request body exceeded settings.DATA_UPLOAD_MAX_MEMORY_SIZE.
+2022-12-27 02:38:47,926 (ERROR) - django.security.RequestDataTooBig - Request body exceeded settings.DATA_UPLOAD_MAX_MEMORY_SIZE.
+Traceback (most recent call last):
+  File "/home/adduser/.local/share/virtualenvs/the_pillar-hcpoMslp/lib/python3.10/site-packages/django/core/handlers/exception.py", line 55, in inner
+    response = get_response(request)
+  File "/home/adduser/.local/share/virtualenvs/the_pillar-hcpoMslp/lib/python3.10/site-packages/debug_toolbar/middleware.py", line 69, in __call__
+    panel.generate_stats(request, response)
+  File "/home/adduser/.local/share/virtualenvs/the_pillar-hcpoMslp/lib/python3.10/site-packages/debug_toolbar/panels/history/panel.py", line 62, in generate_stats
+    and request.body
+  File "/home/adduser/.local/share/virtualenvs/the_pillar-hcpoMslp/lib/python3.10/site-packages/django/http/request.py", line 335, in body
+    raise RequestDataTooBig(
+django.core.exceptions.RequestDataTooBig: Request body exceeded settings.DATA_UPLOAD_MAX_MEMORY_SIZE.
+2022-12-27 02:38:47,944 (WARNING) - django.request - Bad Request: /admin/userprofile/profile/41/change/
+2022-12-27 02:38:49,365 (INFO) - django.request - [36mGET /admin/userprofile/profile/41/change/[0m
+2022-12-27 02:38:49,366 (INFO) - django.request - [36mGET /admin/userprofile/profile/41/change/ - 200[0m
+2022-12-27 02:38:50,594 (INFO) - django.request - [36mGET /admin/userprofile/profile/41/change/[0m
+2022-12-27 02:38:50,595 (INFO) - django.request - [36mGET /admin/userprofile/profile/41/change/ - 200[0m
+2022-12-27 02:38:50,656 (INFO) - django.request - [36mGET /admin/jsi18n/[0m
+2022-12-27 02:38:50,656 (INFO) - django.request - [36mGET /admin/jsi18n/ - 200[0m
+2022-12-27 02:38:51,716 (INFO) - django.request - [36mGET /media/userprofile/images/default_female.jpg[0m
+2022-12-27 02:38:51,718 (INFO) - django.request - [36mGET /media/userprofile/images/default_female.jpg - 200[0m
+2022-12-27 02:38:54,726 (ERROR) - django.security.RequestDataTooBig - Request body exceeded settings.DATA_UPLOAD_MAX_MEMORY_SIZE.
+Traceback (most recent call last):
+  File "/home/adduser/.local/share/virtualenvs/the_pillar-hcpoMslp/lib/python3.10/site-packages/django/core/handlers/exception.py", line 55, in inner
+    response = get_response(request)
+  File "/home/adduser/.local/share/virtualenvs/the_pillar-hcpoMslp/lib/python3.10/site-packages/request_logging/middleware.py", line 159, in __call__
+    cached_request_body = request.body
+  File "/home/adduser/.local/share/virtualenvs/the_pillar-hcpoMslp/lib/python3.10/site-packages/django/http/request.py", line 335, in body
+    raise RequestDataTooBig(
+django.core.exceptions.RequestDataTooBig: Request body exceeded settings.DATA_UPLOAD_MAX_MEMORY_SIZE.
+2022-12-27 02:38:54,766 (ERROR) - django.security.RequestDataTooBig - Request body exceeded settings.DATA_UPLOAD_MAX_MEMORY_SIZE.
+Traceback (most recent call last):
+  File "/home/adduser/.local/share/virtualenvs/the_pillar-hcpoMslp/lib/python3.10/site-packages/django/core/handlers/exception.py", line 55, in inner
+    response = get_response(request)
+  File "/home/adduser/.local/share/virtualenvs/the_pillar-hcpoMslp/lib/python3.10/site-packages/debug_toolbar/middleware.py", line 69, in __call__
+    panel.generate_stats(request, response)
+  File "/home/adduser/.local/share/virtualenvs/the_pillar-hcpoMslp/lib/python3.10/site-packages/debug_toolbar/panels/history/panel.py", line 62, in generate_stats
+    and request.body
+  File "/home/adduser/.local/share/virtualenvs/the_pillar-hcpoMslp/lib/python3.10/site-packages/django/http/request.py", line 335, in body
+    raise RequestDataTooBig(
+django.core.exceptions.RequestDataTooBig: Request body exceeded settings.DATA_UPLOAD_MAX_MEMORY_SIZE.
+2022-12-27 02:38:54,821 (WARNING) - django.request - Bad Request: /admin/userprofile/profile/41/change/
+2022-12-27 02:38:54,971 (INFO) - django.request - [36mGET /favicon.ico[0m
+2022-12-27 02:38:54,971 (ERROR) - django.request - [35m{'Content-Length': '', 'Content-Type': 'text/plain', 'Host': '127.0.0.1:8000', 'Connection': 'keep-alive', 'Sec-Ch-Ua': '"Not?A_Brand";v="8", "Chromium";v="108", "Google Chrome";v="108"', 'Sec-Ch-Ua-Mobile': '?0', 'User-Agent': 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/108.0.0.0 Safari/537.36', 'Sec-Ch-Ua-Platform': '"Windows"', 'Accept': 'image/avif,image/webp,image/apng,image/svg+xml,image/*,*/*;q=0.8', 'Sec-Fetch-Site': 'same-origin', 'Sec-Fetch-Mode': 'no-cors', 'Sec-Fetch-Dest': 'image', 'Referer': 'http://127.0.0.1:8000/admin/userprofile/profile/41/change/', 'Accept-Encoding': 'gzip, deflate, br', 'Accept-Language': 'en-GB,en-US;q=0.9,en;q=0.8,la;q=0.7', 'Cookie': 'csrftoken=v21SWTzEcKFCqhm68NNfFroEarfvrlxc; sessionid=m0nqd6ncgovdwvo3o1bvx4ttrue8n5ty'}[0m
+2022-12-27 02:38:54,971 (ERROR) - django.request - [35mb''[0m
+2022-12-27 02:38:54,971 (INFO) - django.request - [35mGET /favicon.ico - 404[0m
+2022-12-27 02:38:54,984 (WARNING) - django.request - Not Found: /favicon.ico
+2022-12-27 02:38:56,802 (INFO) - django.request - [36mGET /admin/userprofile/profile/41/change/[0m
+2022-12-27 02:38:56,802 (INFO) - django.request - [36mGET /admin/userprofile/profile/41/change/ - 200[0m
+2022-12-27 02:39:01,197 (INFO) - django.utils.autoreload - /home/adduser/thesis/the_pillar/userprofile/validators.py changed, reloading.
+2022-12-27 02:39:01,707 (INFO) - django.utils.autoreload - Watching for file changes with StatReloader
+2022-12-27 02:39:01,743 (WARNING) - silk.profiling.profiler - Cannot execute silk_profile as silk is not installed correctly.
+2022-12-27 02:39:06,099 (INFO) - django.utils.autoreload - /home/adduser/thesis/the_pillar/userprofile/models.py changed, reloading.
+2022-12-27 02:39:06,567 (INFO) - django.utils.autoreload - Watching for file changes with StatReloader
+2022-12-27 02:39:06,601 (WARNING) - silk.profiling.profiler - Cannot execute silk_profile as silk is not installed correctly.
+2022-12-27 02:39:15,027 (INFO) - django.utils.autoreload - /home/adduser/thesis/the_pillar/userprofile/validators.py changed, reloading.
+2022-12-27 02:39:15,514 (INFO) - django.utils.autoreload - Watching for file changes with StatReloader
+2022-12-27 02:39:15,548 (WARNING) - silk.profiling.profiler - Cannot execute silk_profile as silk is not installed correctly.
+2022-12-27 02:39:16,858 (INFO) - django.utils.autoreload - /home/adduser/thesis/the_pillar/userprofile/validators.py changed, reloading.
+2022-12-27 02:39:17,331 (INFO) - django.utils.autoreload - Watching for file changes with StatReloader
+2022-12-27 02:39:17,370 (WARNING) - silk.profiling.profiler - Cannot execute silk_profile as silk is not installed correctly.
+2022-12-27 02:39:20,181 (ERROR) - django.security.RequestDataTooBig - Request body exceeded settings.DATA_UPLOAD_MAX_MEMORY_SIZE.
+Traceback (most recent call last):
+  File "/home/adduser/.local/share/virtualenvs/the_pillar-hcpoMslp/lib/python3.10/site-packages/django/core/handlers/exception.py", line 55, in inner
+    response = get_response(request)
+  File "/home/adduser/.local/share/virtualenvs/the_pillar-hcpoMslp/lib/python3.10/site-packages/request_logging/middleware.py", line 159, in __call__
+    cached_request_body = request.body
+  File "/home/adduser/.local/share/virtualenvs/the_pillar-hcpoMslp/lib/python3.10/site-packages/django/http/request.py", line 335, in body
+    raise RequestDataTooBig(
+django.core.exceptions.RequestDataTooBig: Request body exceeded settings.DATA_UPLOAD_MAX_MEMORY_SIZE.
+2022-12-27 02:39:20,287 (ERROR) - django.security.RequestDataTooBig - Request body exceeded settings.DATA_UPLOAD_MAX_MEMORY_SIZE.
+Traceback (most recent call last):
+  File "/home/adduser/.local/share/virtualenvs/the_pillar-hcpoMslp/lib/python3.10/site-packages/django/core/handlers/exception.py", line 55, in inner
+    response = get_response(request)
+  File "/home/adduser/.local/share/virtualenvs/the_pillar-hcpoMslp/lib/python3.10/site-packages/debug_toolbar/middleware.py", line 69, in __call__
+    panel.generate_stats(request, response)
+  File "/home/adduser/.local/share/virtualenvs/the_pillar-hcpoMslp/lib/python3.10/site-packages/debug_toolbar/panels/history/panel.py", line 62, in generate_stats
+    and request.body
+  File "/home/adduser/.local/share/virtualenvs/the_pillar-hcpoMslp/lib/python3.10/site-packages/django/http/request.py", line 335, in body
+    raise RequestDataTooBig(
+django.core.exceptions.RequestDataTooBig: Request body exceeded settings.DATA_UPLOAD_MAX_MEMORY_SIZE.
+2022-12-27 02:39:20,304 (WARNING) - django.request - Bad Request: /admin/userprofile/profile/41/change/
+2022-12-27 02:39:32,294 (INFO) - django.request - [36mGET /admin/userprofile/profile/41/change/[0m
+2022-12-27 02:39:32,295 (INFO) - django.request - [36mGET /admin/userprofile/profile/41/change/ - 200[0m
+2022-12-27 02:39:39,093 (INFO) - django.utils.autoreload - /home/adduser/thesis/the_pillar/userprofile/validators.py changed, reloading.
+2022-12-27 02:39:39,617 (INFO) - django.utils.autoreload - Watching for file changes with StatReloader
+2022-12-27 02:39:39,651 (WARNING) - silk.profiling.profiler - Cannot execute silk_profile as silk is not installed correctly.
+2022-12-27 02:39:51,595 (INFO) - django.request - [36mPOST /admin/userprofile/profile/41/change/[0m
+2022-12-27 02:39:51,596 (INFO) - django.request - [36mPOST /admin/userprofile/profile/41/change/ - 200[0m
+2022-12-27 02:39:51,698 (INFO) - django.request - [36mGET /admin/jsi18n/[0m
+2022-12-27 02:39:51,700 (INFO) - django.request - [36mGET /admin/jsi18n/ - 200[0m
+2022-12-27 02:39:52,707 (INFO) - django.request - [36mGET /media/planets.jpg[0m
+2022-12-27 02:39:52,710 (ERROR) - django.request - [35m{'Content-Length': '', 'Content-Type': 'text/plain', 'Host': '127.0.0.1:8000', 'Connection': 'keep-alive', 'Sec-Ch-Ua': '"Not?A_Brand";v="8", "Chromium";v="108", "Google Chrome";v="108"', 'Sec-Ch-Ua-Mobile': '?0', 'User-Agent': 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/108.0.0.0 Safari/537.36', 'Sec-Ch-Ua-Platform': '"Windows"', 'Accept': 'image/avif,image/webp,image/apng,image/svg+xml,image/*,*/*;q=0.8', 'Sec-Fetch-Site': 'same-origin', 'Sec-Fetch-Mode': 'no-cors', 'Sec-Fetch-Dest': 'image', 'Referer': 'http://127.0.0.1:8000/admin/userprofile/profile/41/change/', 'Accept-Encoding': 'gzip, deflate, br', 'Accept-Language': 'en-GB,en-US;q=0.9,en;q=0.8,la;q=0.7', 'Cookie': 'csrftoken=v21SWTzEcKFCqhm68NNfFroEarfvrlxc; sessionid=m0nqd6ncgovdwvo3o1bvx4ttrue8n5ty'}[0m
+2022-12-27 02:39:52,711 (ERROR) - django.request - [35mb''[0m
+2022-12-27 02:39:52,712 (INFO) - django.request - [35mGET /media/planets.jpg - 404[0m
+2022-12-27 02:39:53,045 (WARNING) - django.request - Not Found: /media/planets.jpg
+2022-12-27 02:42:51,535 (ERROR) - django.security.RequestDataTooBig - Request body exceeded settings.DATA_UPLOAD_MAX_MEMORY_SIZE.
+Traceback (most recent call last):
+  File "/home/adduser/.local/share/virtualenvs/the_pillar-hcpoMslp/lib/python3.10/site-packages/django/core/handlers/exception.py", line 55, in inner
+    response = get_response(request)
+  File "/home/adduser/.local/share/virtualenvs/the_pillar-hcpoMslp/lib/python3.10/site-packages/request_logging/middleware.py", line 159, in __call__
+    cached_request_body = request.body
+  File "/home/adduser/.local/share/virtualenvs/the_pillar-hcpoMslp/lib/python3.10/site-packages/django/http/request.py", line 335, in body
+    raise RequestDataTooBig(
+django.core.exceptions.RequestDataTooBig: Request body exceeded settings.DATA_UPLOAD_MAX_MEMORY_SIZE.
+2022-12-27 02:42:51,575 (ERROR) - django.security.RequestDataTooBig - Request body exceeded settings.DATA_UPLOAD_MAX_MEMORY_SIZE.
+Traceback (most recent call last):
+  File "/home/adduser/.local/share/virtualenvs/the_pillar-hcpoMslp/lib/python3.10/site-packages/django/core/handlers/exception.py", line 55, in inner
+    response = get_response(request)
+  File "/home/adduser/.local/share/virtualenvs/the_pillar-hcpoMslp/lib/python3.10/site-packages/debug_toolbar/middleware.py", line 69, in __call__
+    panel.generate_stats(request, response)
+  File "/home/adduser/.local/share/virtualenvs/the_pillar-hcpoMslp/lib/python3.10/site-packages/debug_toolbar/panels/history/panel.py", line 62, in generate_stats
+    and request.body
+  File "/home/adduser/.local/share/virtualenvs/the_pillar-hcpoMslp/lib/python3.10/site-packages/django/http/request.py", line 335, in body
+    raise RequestDataTooBig(
+django.core.exceptions.RequestDataTooBig: Request body exceeded settings.DATA_UPLOAD_MAX_MEMORY_SIZE.
+2022-12-27 02:42:51,591 (WARNING) - django.request - Bad Request: /admin/userprofile/profile/41/change/
+2022-12-27 02:45:05,755 (INFO) - django.utils.autoreload - /home/adduser/thesis/the_pillar/userprofile/validators.py changed, reloading.
+2022-12-27 02:45:06,246 (INFO) - django.utils.autoreload - Watching for file changes with StatReloader
+2022-12-27 02:45:06,281 (WARNING) - silk.profiling.profiler - Cannot execute silk_profile as silk is not installed correctly.
+2022-12-27 02:45:12,668 (INFO) - django.utils.autoreload - /home/adduser/thesis/the_pillar/userprofile/validators.py changed, reloading.
+2022-12-27 02:45:13,150 (INFO) - django.utils.autoreload - Watching for file changes with StatReloader
+2022-12-27 02:45:13,189 (WARNING) - silk.profiling.profiler - Cannot execute silk_profile as silk is not installed correctly.
+2022-12-27 02:45:18,556 (INFO) - django.utils.autoreload - /home/adduser/thesis/the_pillar/userprofile/validators.py changed, reloading.
+2022-12-27 02:45:19,010 (INFO) - django.utils.autoreload - Watching for file changes with StatReloader
+2022-12-27 02:45:22,175 (INFO) - django.utils.autoreload - /home/adduser/thesis/the_pillar/userprofile/validators.py changed, reloading.
+2022-12-27 02:45:22,645 (INFO) - django.utils.autoreload - Watching for file changes with StatReloader
+2022-12-27 02:45:30,832 (INFO) - django.utils.autoreload - /home/adduser/thesis/the_pillar/userprofile/validators.py changed, reloading.
+2022-12-27 02:45:31,255 (INFO) - django.utils.autoreload - Watching for file changes with StatReloader
+2022-12-27 02:45:34,416 (INFO) - django.utils.autoreload - /home/adduser/thesis/the_pillar/userprofile/validators.py changed, reloading.
+2022-12-27 02:45:34,837 (INFO) - django.utils.autoreload - Watching for file changes with StatReloader
+2022-12-27 02:45:37,999 (INFO) - django.utils.autoreload - /home/adduser/thesis/the_pillar/userprofile/validators.py changed, reloading.
+2022-12-27 02:45:38,484 (INFO) - django.utils.autoreload - Watching for file changes with StatReloader
+2022-12-27 02:45:39,637 (INFO) - django.utils.autoreload - /home/adduser/thesis/the_pillar/userprofile/validators.py changed, reloading.
+2022-12-27 02:45:40,066 (INFO) - django.utils.autoreload - Watching for file changes with StatReloader
+2022-12-27 02:45:42,224 (INFO) - django.utils.autoreload - /home/adduser/thesis/the_pillar/userprofile/validators.py changed, reloading.
+2022-12-27 02:45:42,662 (INFO) - django.utils.autoreload - Watching for file changes with StatReloader
+2022-12-27 02:45:43,815 (INFO) - django.utils.autoreload - /home/adduser/thesis/the_pillar/userprofile/validators.py changed, reloading.
+2022-12-27 02:45:44,261 (INFO) - django.utils.autoreload - Watching for file changes with StatReloader
+2022-12-27 02:45:45,415 (INFO) - django.utils.autoreload - /home/adduser/thesis/the_pillar/userprofile/validators.py changed, reloading.
+2022-12-27 02:45:45,848 (INFO) - django.utils.autoreload - Watching for file changes with StatReloader
+2022-12-27 02:45:47,000 (INFO) - django.utils.autoreload - /home/adduser/thesis/the_pillar/userprofile/validators.py changed, reloading.
+2022-12-27 02:45:47,427 (INFO) - django.utils.autoreload - Watching for file changes with StatReloader
+2022-12-27 02:45:51,594 (INFO) - django.utils.autoreload - /home/adduser/thesis/the_pillar/userprofile/validators.py changed, reloading.
+2022-12-27 02:45:52,009 (INFO) - django.utils.autoreload - Watching for file changes with StatReloader
+2022-12-27 02:45:55,172 (INFO) - django.utils.autoreload - /home/adduser/thesis/the_pillar/userprofile/validators.py changed, reloading.
+2022-12-27 02:45:55,586 (INFO) - django.utils.autoreload - Watching for file changes with StatReloader
+2022-12-27 02:45:57,745 (INFO) - django.utils.autoreload - /home/adduser/thesis/the_pillar/userprofile/validators.py changed, reloading.
+2022-12-27 02:45:58,174 (INFO) - django.utils.autoreload - Watching for file changes with StatReloader
+2022-12-27 02:45:59,327 (INFO) - django.utils.autoreload - /home/adduser/thesis/the_pillar/userprofile/validators.py changed, reloading.
+2022-12-27 02:45:59,752 (INFO) - django.utils.autoreload - Watching for file changes with StatReloader
+2022-12-27 02:46:01,910 (INFO) - django.utils.autoreload - /home/adduser/thesis/the_pillar/userprofile/validators.py changed, reloading.
+2022-12-27 02:46:02,323 (INFO) - django.utils.autoreload - Watching for file changes with StatReloader
+2022-12-27 02:46:04,480 (INFO) - django.utils.autoreload - /home/adduser/thesis/the_pillar/userprofile/validators.py changed, reloading.
+2022-12-27 02:46:04,915 (INFO) - django.utils.autoreload - Watching for file changes with StatReloader
+2022-12-27 02:46:09,083 (INFO) - django.utils.autoreload - /home/adduser/thesis/the_pillar/userprofile/validators.py changed, reloading.
+2022-12-27 02:46:09,512 (INFO) - django.utils.autoreload - Watching for file changes with StatReloader
+2022-12-27 02:46:09,548 (WARNING) - silk.profiling.profiler - Cannot execute silk_profile as silk is not installed correctly.
+2022-12-27 02:46:10,875 (INFO) - django.utils.autoreload - /home/adduser/thesis/the_pillar/userprofile/validators.py changed, reloading.
+2022-12-27 02:46:11,374 (INFO) - django.utils.autoreload - Watching for file changes with StatReloader
+2022-12-27 02:46:11,409 (WARNING) - silk.profiling.profiler - Cannot execute silk_profile as silk is not installed correctly.
+2022-12-27 02:46:14,922 (INFO) - django.request - [36mGET /admin/userprofile/profile/41/change/[0m
+2022-12-27 02:46:14,922 (INFO) - django.request - [36mGET /admin/userprofile/profile/41/change/ - 200[0m
+2022-12-27 02:46:17,066 (INFO) - django.request - [36mPOST /admin/userprofile/profile/41/change/[0m
+2022-12-27 02:46:17,066 (INFO) - django.request - [36mPOST /admin/userprofile/profile/41/change/ - 200[0m
+2022-12-27 02:46:17,136 (INFO) - django.request - [36mGET /admin/jsi18n/[0m
+2022-12-27 02:46:17,138 (INFO) - django.request - [36mGET /admin/jsi18n/ - 200[0m
+2022-12-27 02:46:17,940 (INFO) - django.request - [36mGET /media/planets.jpg[0m
+2022-12-27 02:46:17,943 (ERROR) - django.request - [35m{'Content-Length': '', 'Content-Type': 'text/plain', 'Host': '127.0.0.1:8000', 'Connection': 'keep-alive', 'Sec-Ch-Ua': '"Not?A_Brand";v="8", "Chromium";v="108", "Google Chrome";v="108"', 'Sec-Ch-Ua-Mobile': '?0', 'User-Agent': 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/108.0.0.0 Safari/537.36', 'Sec-Ch-Ua-Platform': '"Windows"', 'Accept': 'image/avif,image/webp,image/apng,image/svg+xml,image/*,*/*;q=0.8', 'Sec-Fetch-Site': 'same-origin', 'Sec-Fetch-Mode': 'no-cors', 'Sec-Fetch-Dest': 'image', 'Referer': 'http://127.0.0.1:8000/admin/userprofile/profile/41/change/', 'Accept-Encoding': 'gzip, deflate, br', 'Accept-Language': 'en-GB,en-US;q=0.9,en;q=0.8,la;q=0.7', 'Cookie': 'csrftoken=v21SWTzEcKFCqhm68NNfFroEarfvrlxc; sessionid=m0nqd6ncgovdwvo3o1bvx4ttrue8n5ty'}[0m
+2022-12-27 02:46:17,944 (ERROR) - django.request - [35mb''[0m
+2022-12-27 02:46:17,947 (INFO) - django.request - [35mGET /media/planets.jpg - 404[0m
+2022-12-27 02:46:18,296 (WARNING) - django.request - Not Found: /media/planets.jpg
+2022-12-27 02:46:21,957 (ERROR) - django.security.RequestDataTooBig - Request body exceeded settings.DATA_UPLOAD_MAX_MEMORY_SIZE.
+Traceback (most recent call last):
+  File "/home/adduser/.local/share/virtualenvs/the_pillar-hcpoMslp/lib/python3.10/site-packages/django/core/handlers/exception.py", line 55, in inner
+    response = get_response(request)
+  File "/home/adduser/.local/share/virtualenvs/the_pillar-hcpoMslp/lib/python3.10/site-packages/request_logging/middleware.py", line 159, in __call__
+    cached_request_body = request.body
+  File "/home/adduser/.local/share/virtualenvs/the_pillar-hcpoMslp/lib/python3.10/site-packages/django/http/request.py", line 335, in body
+    raise RequestDataTooBig(
+django.core.exceptions.RequestDataTooBig: Request body exceeded settings.DATA_UPLOAD_MAX_MEMORY_SIZE.
+2022-12-27 02:46:21,998 (ERROR) - django.security.RequestDataTooBig - Request body exceeded settings.DATA_UPLOAD_MAX_MEMORY_SIZE.
+Traceback (most recent call last):
+  File "/home/adduser/.local/share/virtualenvs/the_pillar-hcpoMslp/lib/python3.10/site-packages/django/core/handlers/exception.py", line 55, in inner
+    response = get_response(request)
+  File "/home/adduser/.local/share/virtualenvs/the_pillar-hcpoMslp/lib/python3.10/site-packages/debug_toolbar/middleware.py", line 69, in __call__
+    panel.generate_stats(request, response)
+  File "/home/adduser/.local/share/virtualenvs/the_pillar-hcpoMslp/lib/python3.10/site-packages/debug_toolbar/panels/history/panel.py", line 62, in generate_stats
+    and request.body
+  File "/home/adduser/.local/share/virtualenvs/the_pillar-hcpoMslp/lib/python3.10/site-packages/django/http/request.py", line 335, in body
+    raise RequestDataTooBig(
+django.core.exceptions.RequestDataTooBig: Request body exceeded settings.DATA_UPLOAD_MAX_MEMORY_SIZE.
+2022-12-27 02:46:22,015 (WARNING) - django.request - Bad Request: /admin/userprofile/profile/41/change/
+2022-12-27 02:46:27,549 (INFO) - django.utils.autoreload - /home/adduser/thesis/the_pillar/userprofile/validators.py changed, reloading.
+2022-12-27 02:46:28,058 (INFO) - django.utils.autoreload - Watching for file changes with StatReloader
+2022-12-27 02:46:28,091 (WARNING) - silk.profiling.profiler - Cannot execute silk_profile as silk is not installed correctly.
+2022-12-27 02:46:41,580 (INFO) - django.utils.autoreload - /home/adduser/thesis/the_pillar/userprofile/validators.py changed, reloading.
+2022-12-27 02:46:42,051 (INFO) - django.utils.autoreload - Watching for file changes with StatReloader
+2022-12-27 02:46:42,087 (WARNING) - silk.profiling.profiler - Cannot execute silk_profile as silk is not installed correctly.
+2022-12-27 02:46:43,423 (INFO) - django.utils.autoreload - /home/adduser/thesis/the_pillar/userprofile/validators.py changed, reloading.
+2022-12-27 02:46:43,889 (INFO) - django.utils.autoreload - Watching for file changes with StatReloader
+2022-12-27 02:46:43,923 (WARNING) - silk.profiling.profiler - Cannot execute silk_profile as silk is not installed correctly.
+2022-12-27 02:46:45,827 (ERROR) - django.security.RequestDataTooBig - Request body exceeded settings.DATA_UPLOAD_MAX_MEMORY_SIZE.
+Traceback (most recent call last):
+  File "/home/adduser/.local/share/virtualenvs/the_pillar-hcpoMslp/lib/python3.10/site-packages/django/core/handlers/exception.py", line 55, in inner
+    response = get_response(request)
+  File "/home/adduser/.local/share/virtualenvs/the_pillar-hcpoMslp/lib/python3.10/site-packages/request_logging/middleware.py", line 159, in __call__
+    cached_request_body = request.body
+  File "/home/adduser/.local/share/virtualenvs/the_pillar-hcpoMslp/lib/python3.10/site-packages/django/http/request.py", line 335, in body
+    raise RequestDataTooBig(
+django.core.exceptions.RequestDataTooBig: Request body exceeded settings.DATA_UPLOAD_MAX_MEMORY_SIZE.
+2022-12-27 02:46:45,929 (ERROR) - django.security.RequestDataTooBig - Request body exceeded settings.DATA_UPLOAD_MAX_MEMORY_SIZE.
+Traceback (most recent call last):
+  File "/home/adduser/.local/share/virtualenvs/the_pillar-hcpoMslp/lib/python3.10/site-packages/django/core/handlers/exception.py", line 55, in inner
+    response = get_response(request)
+  File "/home/adduser/.local/share/virtualenvs/the_pillar-hcpoMslp/lib/python3.10/site-packages/debug_toolbar/middleware.py", line 69, in __call__
+    panel.generate_stats(request, response)
+  File "/home/adduser/.local/share/virtualenvs/the_pillar-hcpoMslp/lib/python3.10/site-packages/debug_toolbar/panels/history/panel.py", line 62, in generate_stats
+    and request.body
+  File "/home/adduser/.local/share/virtualenvs/the_pillar-hcpoMslp/lib/python3.10/site-packages/django/http/request.py", line 335, in body
+    raise RequestDataTooBig(
+django.core.exceptions.RequestDataTooBig: Request body exceeded settings.DATA_UPLOAD_MAX_MEMORY_SIZE.
+2022-12-27 02:46:45,945 (WARNING) - django.request - Bad Request: /admin/userprofile/profile/41/change/
+2022-12-27 02:46:48,095 (ERROR) - django.security.RequestDataTooBig - Request body exceeded settings.DATA_UPLOAD_MAX_MEMORY_SIZE.
+Traceback (most recent call last):
+  File "/home/adduser/.local/share/virtualenvs/the_pillar-hcpoMslp/lib/python3.10/site-packages/django/core/handlers/exception.py", line 55, in inner
+    response = get_response(request)
+  File "/home/adduser/.local/share/virtualenvs/the_pillar-hcpoMslp/lib/python3.10/site-packages/request_logging/middleware.py", line 159, in __call__
+    cached_request_body = request.body
+  File "/home/adduser/.local/share/virtualenvs/the_pillar-hcpoMslp/lib/python3.10/site-packages/django/http/request.py", line 335, in body
+    raise RequestDataTooBig(
+django.core.exceptions.RequestDataTooBig: Request body exceeded settings.DATA_UPLOAD_MAX_MEMORY_SIZE.
+2022-12-27 02:46:48,135 (ERROR) - django.security.RequestDataTooBig - Request body exceeded settings.DATA_UPLOAD_MAX_MEMORY_SIZE.
+Traceback (most recent call last):
+  File "/home/adduser/.local/share/virtualenvs/the_pillar-hcpoMslp/lib/python3.10/site-packages/django/core/handlers/exception.py", line 55, in inner
+    response = get_response(request)
+  File "/home/adduser/.local/share/virtualenvs/the_pillar-hcpoMslp/lib/python3.10/site-packages/debug_toolbar/middleware.py", line 69, in __call__
+    panel.generate_stats(request, response)
+  File "/home/adduser/.local/share/virtualenvs/the_pillar-hcpoMslp/lib/python3.10/site-packages/debug_toolbar/panels/history/panel.py", line 62, in generate_stats
+    and request.body
+  File "/home/adduser/.local/share/virtualenvs/the_pillar-hcpoMslp/lib/python3.10/site-packages/django/http/request.py", line 335, in body
+    raise RequestDataTooBig(
+django.core.exceptions.RequestDataTooBig: Request body exceeded settings.DATA_UPLOAD_MAX_MEMORY_SIZE.
+2022-12-27 02:46:48,152 (WARNING) - django.request - Bad Request: /admin/userprofile/profile/41/change/
+2022-12-27 02:46:50,504 (INFO) - django.request - [36mGET /admin/userprofile/profile/41/change/[0m
+2022-12-27 02:46:50,505 (INFO) - django.request - [36mGET /admin/userprofile/profile/41/change/ - 200[0m
+2022-12-27 02:46:54,317 (ERROR) - django.security.RequestDataTooBig - Request body exceeded settings.DATA_UPLOAD_MAX_MEMORY_SIZE.
+Traceback (most recent call last):
+  File "/home/adduser/.local/share/virtualenvs/the_pillar-hcpoMslp/lib/python3.10/site-packages/django/core/handlers/exception.py", line 55, in inner
+    response = get_response(request)
+  File "/home/adduser/.local/share/virtualenvs/the_pillar-hcpoMslp/lib/python3.10/site-packages/request_logging/middleware.py", line 159, in __call__
+    cached_request_body = request.body
+  File "/home/adduser/.local/share/virtualenvs/the_pillar-hcpoMslp/lib/python3.10/site-packages/django/http/request.py", line 335, in body
+    raise RequestDataTooBig(
+django.core.exceptions.RequestDataTooBig: Request body exceeded settings.DATA_UPLOAD_MAX_MEMORY_SIZE.
+2022-12-27 02:46:54,356 (ERROR) - django.security.RequestDataTooBig - Request body exceeded settings.DATA_UPLOAD_MAX_MEMORY_SIZE.
+Traceback (most recent call last):
+  File "/home/adduser/.local/share/virtualenvs/the_pillar-hcpoMslp/lib/python3.10/site-packages/django/core/handlers/exception.py", line 55, in inner
+    response = get_response(request)
+  File "/home/adduser/.local/share/virtualenvs/the_pillar-hcpoMslp/lib/python3.10/site-packages/debug_toolbar/middleware.py", line 69, in __call__
+    panel.generate_stats(request, response)
+  File "/home/adduser/.local/share/virtualenvs/the_pillar-hcpoMslp/lib/python3.10/site-packages/debug_toolbar/panels/history/panel.py", line 62, in generate_stats
+    and request.body
+  File "/home/adduser/.local/share/virtualenvs/the_pillar-hcpoMslp/lib/python3.10/site-packages/django/http/request.py", line 335, in body
+    raise RequestDataTooBig(
+django.core.exceptions.RequestDataTooBig: Request body exceeded settings.DATA_UPLOAD_MAX_MEMORY_SIZE.
+2022-12-27 02:46:54,372 (WARNING) - django.request - Bad Request: /admin/userprofile/profile/41/change/
+2022-12-27 02:46:56,418 (INFO) - django.request - [36mGET /admin/userprofile/profile/41/change/[0m
+2022-12-27 02:46:56,418 (INFO) - django.request - [36mGET /admin/userprofile/profile/41/change/ - 200[0m
+2022-12-27 02:47:08,432 (ERROR) - django.security.RequestDataTooBig - Request body exceeded settings.DATA_UPLOAD_MAX_MEMORY_SIZE.
+Traceback (most recent call last):
+  File "/home/adduser/.local/share/virtualenvs/the_pillar-hcpoMslp/lib/python3.10/site-packages/django/core/handlers/exception.py", line 55, in inner
+    response = get_response(request)
+  File "/home/adduser/.local/share/virtualenvs/the_pillar-hcpoMslp/lib/python3.10/site-packages/request_logging/middleware.py", line 159, in __call__
+    cached_request_body = request.body
+  File "/home/adduser/.local/share/virtualenvs/the_pillar-hcpoMslp/lib/python3.10/site-packages/django/http/request.py", line 335, in body
+    raise RequestDataTooBig(
+django.core.exceptions.RequestDataTooBig: Request body exceeded settings.DATA_UPLOAD_MAX_MEMORY_SIZE.
+2022-12-27 02:47:08,475 (ERROR) - django.security.RequestDataTooBig - Request body exceeded settings.DATA_UPLOAD_MAX_MEMORY_SIZE.
+Traceback (most recent call last):
+  File "/home/adduser/.local/share/virtualenvs/the_pillar-hcpoMslp/lib/python3.10/site-packages/django/core/handlers/exception.py", line 55, in inner
+    response = get_response(request)
+  File "/home/adduser/.local/share/virtualenvs/the_pillar-hcpoMslp/lib/python3.10/site-packages/debug_toolbar/middleware.py", line 69, in __call__
+    panel.generate_stats(request, response)
+  File "/home/adduser/.local/share/virtualenvs/the_pillar-hcpoMslp/lib/python3.10/site-packages/debug_toolbar/panels/history/panel.py", line 62, in generate_stats
+    and request.body
+  File "/home/adduser/.local/share/virtualenvs/the_pillar-hcpoMslp/lib/python3.10/site-packages/django/http/request.py", line 335, in body
+    raise RequestDataTooBig(
+django.core.exceptions.RequestDataTooBig: Request body exceeded settings.DATA_UPLOAD_MAX_MEMORY_SIZE.
+2022-12-27 02:47:08,492 (WARNING) - django.request - Bad Request: /admin/userprofile/profile/41/change/
+2022-12-27 02:49:12,437 (INFO) - django.utils.autoreload - /home/adduser/thesis/the_pillar/userprofile/validators.py changed, reloading.
+2022-12-27 02:49:12,922 (INFO) - django.utils.autoreload - Watching for file changes with StatReloader
+2022-12-27 02:49:14,077 (INFO) - django.utils.autoreload - /home/adduser/thesis/the_pillar/userprofile/validators.py changed, reloading.
+2022-12-27 02:49:14,517 (INFO) - django.utils.autoreload - Watching for file changes with StatReloader
+2022-12-27 02:49:14,552 (WARNING) - silk.profiling.profiler - Cannot execute silk_profile as silk is not installed correctly.
+2022-12-27 02:49:17,887 (INFO) - django.utils.autoreload - /home/adduser/thesis/the_pillar/userprofile/validators.py changed, reloading.
+2022-12-27 02:49:18,401 (INFO) - django.utils.autoreload - Watching for file changes with StatReloader
+2022-12-27 02:49:18,437 (WARNING) - silk.profiling.profiler - Cannot execute silk_profile as silk is not installed correctly.
+2022-12-27 02:49:21,012 (ERROR) - django.security.RequestDataTooBig - Request body exceeded settings.DATA_UPLOAD_MAX_MEMORY_SIZE.
+Traceback (most recent call last):
+  File "/home/adduser/.local/share/virtualenvs/the_pillar-hcpoMslp/lib/python3.10/site-packages/django/core/handlers/exception.py", line 55, in inner
+    response = get_response(request)
+  File "/home/adduser/.local/share/virtualenvs/the_pillar-hcpoMslp/lib/python3.10/site-packages/request_logging/middleware.py", line 159, in __call__
+    cached_request_body = request.body
+  File "/home/adduser/.local/share/virtualenvs/the_pillar-hcpoMslp/lib/python3.10/site-packages/django/http/request.py", line 335, in body
+    raise RequestDataTooBig(
+django.core.exceptions.RequestDataTooBig: Request body exceeded settings.DATA_UPLOAD_MAX_MEMORY_SIZE.
+2022-12-27 02:49:21,112 (ERROR) - django.security.RequestDataTooBig - Request body exceeded settings.DATA_UPLOAD_MAX_MEMORY_SIZE.
+Traceback (most recent call last):
+  File "/home/adduser/.local/share/virtualenvs/the_pillar-hcpoMslp/lib/python3.10/site-packages/django/core/handlers/exception.py", line 55, in inner
+    response = get_response(request)
+  File "/home/adduser/.local/share/virtualenvs/the_pillar-hcpoMslp/lib/python3.10/site-packages/debug_toolbar/middleware.py", line 69, in __call__
+    panel.generate_stats(request, response)
+  File "/home/adduser/.local/share/virtualenvs/the_pillar-hcpoMslp/lib/python3.10/site-packages/debug_toolbar/panels/history/panel.py", line 62, in generate_stats
+    and request.body
+  File "/home/adduser/.local/share/virtualenvs/the_pillar-hcpoMslp/lib/python3.10/site-packages/django/http/request.py", line 335, in body
+    raise RequestDataTooBig(
+django.core.exceptions.RequestDataTooBig: Request body exceeded settings.DATA_UPLOAD_MAX_MEMORY_SIZE.
+2022-12-27 02:49:21,128 (WARNING) - django.request - Bad Request: /admin/userprofile/profile/41/change/
+2022-12-27 02:52:13,272 (INFO) - django.utils.autoreload - /home/adduser/thesis/the_pillar/the_pillar/settings/common.py changed, reloading.
+2022-12-27 02:52:13,775 (INFO) - django.utils.autoreload - Watching for file changes with StatReloader
+2022-12-27 02:52:13,809 (WARNING) - silk.profiling.profiler - Cannot execute silk_profile as silk is not installed correctly.
+2022-12-27 02:52:16,142 (INFO) - django.utils.autoreload - /home/adduser/thesis/the_pillar/the_pillar/settings/common.py changed, reloading.
+2022-12-27 02:52:56,791 (INFO) - django.utils.autoreload - Watching for file changes with StatReloader
+2022-12-27 02:52:56,826 (WARNING) - silk.profiling.profiler - Cannot execute silk_profile as silk is not installed correctly.
+2022-12-27 02:53:00,044 (ERROR) - django.security.RequestDataTooBig - Request body exceeded settings.DATA_UPLOAD_MAX_MEMORY_SIZE.
+Traceback (most recent call last):
+  File "/home/adduser/.local/share/virtualenvs/the_pillar-hcpoMslp/lib/python3.10/site-packages/django/core/handlers/exception.py", line 55, in inner
+    response = get_response(request)
+  File "/home/adduser/.local/share/virtualenvs/the_pillar-hcpoMslp/lib/python3.10/site-packages/request_logging/middleware.py", line 159, in __call__
+    cached_request_body = request.body
+  File "/home/adduser/.local/share/virtualenvs/the_pillar-hcpoMslp/lib/python3.10/site-packages/django/http/request.py", line 335, in body
+    raise RequestDataTooBig(
+django.core.exceptions.RequestDataTooBig: Request body exceeded settings.DATA_UPLOAD_MAX_MEMORY_SIZE.
+2022-12-27 02:53:00,147 (ERROR) - django.security.RequestDataTooBig - Request body exceeded settings.DATA_UPLOAD_MAX_MEMORY_SIZE.
+Traceback (most recent call last):
+  File "/home/adduser/.local/share/virtualenvs/the_pillar-hcpoMslp/lib/python3.10/site-packages/django/core/handlers/exception.py", line 55, in inner
+    response = get_response(request)
+  File "/home/adduser/.local/share/virtualenvs/the_pillar-hcpoMslp/lib/python3.10/site-packages/debug_toolbar/middleware.py", line 69, in __call__
+    panel.generate_stats(request, response)
+  File "/home/adduser/.local/share/virtualenvs/the_pillar-hcpoMslp/lib/python3.10/site-packages/debug_toolbar/panels/history/panel.py", line 62, in generate_stats
+    and request.body
+  File "/home/adduser/.local/share/virtualenvs/the_pillar-hcpoMslp/lib/python3.10/site-packages/django/http/request.py", line 335, in body
+    raise RequestDataTooBig(
+django.core.exceptions.RequestDataTooBig: Request body exceeded settings.DATA_UPLOAD_MAX_MEMORY_SIZE.
+2022-12-27 02:53:00,163 (WARNING) - django.request - Bad Request: /admin/userprofile/profile/41/change/
+2022-12-27 02:53:02,250 (ERROR) - django.security.RequestDataTooBig - Request body exceeded settings.DATA_UPLOAD_MAX_MEMORY_SIZE.
+Traceback (most recent call last):
+  File "/home/adduser/.local/share/virtualenvs/the_pillar-hcpoMslp/lib/python3.10/site-packages/django/core/handlers/exception.py", line 55, in inner
+    response = get_response(request)
+  File "/home/adduser/.local/share/virtualenvs/the_pillar-hcpoMslp/lib/python3.10/site-packages/request_logging/middleware.py", line 159, in __call__
+    cached_request_body = request.body
+  File "/home/adduser/.local/share/virtualenvs/the_pillar-hcpoMslp/lib/python3.10/site-packages/django/http/request.py", line 335, in body
+    raise RequestDataTooBig(
+django.core.exceptions.RequestDataTooBig: Request body exceeded settings.DATA_UPLOAD_MAX_MEMORY_SIZE.
+2022-12-27 02:53:02,320 (ERROR) - django.security.RequestDataTooBig - Request body exceeded settings.DATA_UPLOAD_MAX_MEMORY_SIZE.
+Traceback (most recent call last):
+  File "/home/adduser/.local/share/virtualenvs/the_pillar-hcpoMslp/lib/python3.10/site-packages/django/core/handlers/exception.py", line 55, in inner
+    response = get_response(request)
+  File "/home/adduser/.local/share/virtualenvs/the_pillar-hcpoMslp/lib/python3.10/site-packages/debug_toolbar/middleware.py", line 69, in __call__
+    panel.generate_stats(request, response)
+  File "/home/adduser/.local/share/virtualenvs/the_pillar-hcpoMslp/lib/python3.10/site-packages/debug_toolbar/panels/history/panel.py", line 62, in generate_stats
+    and request.body
+  File "/home/adduser/.local/share/virtualenvs/the_pillar-hcpoMslp/lib/python3.10/site-packages/django/http/request.py", line 335, in body
+    raise RequestDataTooBig(
+django.core.exceptions.RequestDataTooBig: Request body exceeded settings.DATA_UPLOAD_MAX_MEMORY_SIZE.
+2022-12-27 02:53:02,338 (WARNING) - django.request - Bad Request: /admin/userprofile/profile/41/change/
+2022-12-27 02:54:09,283 (INFO) - django.utils.autoreload - /home/adduser/thesis/the_pillar/the_pillar/settings/dev.py changed, reloading.
+2022-12-27 02:54:09,773 (INFO) - django.utils.autoreload - Watching for file changes with StatReloader
+2022-12-27 02:54:09,806 (WARNING) - silk.profiling.profiler - Cannot execute silk_profile as silk is not installed correctly.
+2022-12-27 02:54:12,264 (ERROR) - django.security.RequestDataTooBig - Request body exceeded settings.DATA_UPLOAD_MAX_MEMORY_SIZE.
+Traceback (most recent call last):
+  File "/home/adduser/.local/share/virtualenvs/the_pillar-hcpoMslp/lib/python3.10/site-packages/django/core/handlers/exception.py", line 55, in inner
+    response = get_response(request)
+  File "/home/adduser/.local/share/virtualenvs/the_pillar-hcpoMslp/lib/python3.10/site-packages/request_logging/middleware.py", line 159, in __call__
+    cached_request_body = request.body
+  File "/home/adduser/.local/share/virtualenvs/the_pillar-hcpoMslp/lib/python3.10/site-packages/django/http/request.py", line 335, in body
+    raise RequestDataTooBig(
+django.core.exceptions.RequestDataTooBig: Request body exceeded settings.DATA_UPLOAD_MAX_MEMORY_SIZE.
+2022-12-27 02:54:12,364 (ERROR) - django.security.RequestDataTooBig - Request body exceeded settings.DATA_UPLOAD_MAX_MEMORY_SIZE.
+Traceback (most recent call last):
+  File "/home/adduser/.local/share/virtualenvs/the_pillar-hcpoMslp/lib/python3.10/site-packages/django/core/handlers/exception.py", line 55, in inner
+    response = get_response(request)
+  File "/home/adduser/.local/share/virtualenvs/the_pillar-hcpoMslp/lib/python3.10/site-packages/debug_toolbar/middleware.py", line 69, in __call__
+    panel.generate_stats(request, response)
+  File "/home/adduser/.local/share/virtualenvs/the_pillar-hcpoMslp/lib/python3.10/site-packages/debug_toolbar/panels/history/panel.py", line 62, in generate_stats
+    and request.body
+  File "/home/adduser/.local/share/virtualenvs/the_pillar-hcpoMslp/lib/python3.10/site-packages/django/http/request.py", line 335, in body
+    raise RequestDataTooBig(
+django.core.exceptions.RequestDataTooBig: Request body exceeded settings.DATA_UPLOAD_MAX_MEMORY_SIZE.
+2022-12-27 02:54:12,381 (WARNING) - django.request - Bad Request: /admin/userprofile/profile/41/change/
+2022-12-27 02:54:14,322 (INFO) - django.request - [36mGET /admin/userprofile/profile/41/change/[0m
+2022-12-27 02:54:14,323 (INFO) - django.request - [36mGET /admin/userprofile/profile/41/change/ - 200[0m
+2022-12-27 02:54:16,375 (INFO) - django.request - [36mGET /admin/userprofile/profile/41/change/[0m
+2022-12-27 02:54:16,375 (INFO) - django.request - [36mGET /admin/userprofile/profile/41/change/ - 200[0m
+2022-12-27 02:54:16,439 (INFO) - django.request - [36mGET /admin/jsi18n/[0m
+2022-12-27 02:54:16,440 (INFO) - django.request - [36mGET /admin/jsi18n/ - 200[0m
+2022-12-27 02:54:20,021 (ERROR) - django.security.RequestDataTooBig - Request body exceeded settings.DATA_UPLOAD_MAX_MEMORY_SIZE.
+Traceback (most recent call last):
+  File "/home/adduser/.local/share/virtualenvs/the_pillar-hcpoMslp/lib/python3.10/site-packages/django/core/handlers/exception.py", line 55, in inner
+    response = get_response(request)
+  File "/home/adduser/.local/share/virtualenvs/the_pillar-hcpoMslp/lib/python3.10/site-packages/request_logging/middleware.py", line 159, in __call__
+    cached_request_body = request.body
+  File "/home/adduser/.local/share/virtualenvs/the_pillar-hcpoMslp/lib/python3.10/site-packages/django/http/request.py", line 335, in body
+    raise RequestDataTooBig(
+django.core.exceptions.RequestDataTooBig: Request body exceeded settings.DATA_UPLOAD_MAX_MEMORY_SIZE.
+2022-12-27 02:54:20,062 (ERROR) - django.security.RequestDataTooBig - Request body exceeded settings.DATA_UPLOAD_MAX_MEMORY_SIZE.
+Traceback (most recent call last):
+  File "/home/adduser/.local/share/virtualenvs/the_pillar-hcpoMslp/lib/python3.10/site-packages/django/core/handlers/exception.py", line 55, in inner
+    response = get_response(request)
+  File "/home/adduser/.local/share/virtualenvs/the_pillar-hcpoMslp/lib/python3.10/site-packages/debug_toolbar/middleware.py", line 69, in __call__
+    panel.generate_stats(request, response)
+  File "/home/adduser/.local/share/virtualenvs/the_pillar-hcpoMslp/lib/python3.10/site-packages/debug_toolbar/panels/history/panel.py", line 62, in generate_stats
+    and request.body
+  File "/home/adduser/.local/share/virtualenvs/the_pillar-hcpoMslp/lib/python3.10/site-packages/django/http/request.py", line 335, in body
+    raise RequestDataTooBig(
+django.core.exceptions.RequestDataTooBig: Request body exceeded settings.DATA_UPLOAD_MAX_MEMORY_SIZE.
+2022-12-27 02:54:20,078 (WARNING) - django.request - Bad Request: /admin/userprofile/profile/41/change/
+2022-12-27 02:57:43,740 (INFO) - django.utils.autoreload - /home/adduser/thesis/the_pillar/the_pillar/settings/dev.py changed, reloading.
+2022-12-27 02:57:44,253 (INFO) - django.utils.autoreload - Watching for file changes with StatReloader
+2022-12-27 02:57:44,288 (WARNING) - silk.profiling.profiler - Cannot execute silk_profile as silk is not installed correctly.
+2022-12-27 02:57:45,592 (INFO) - django.utils.autoreload - /home/adduser/thesis/the_pillar/the_pillar/settings/dev.py changed, reloading.
+2022-12-27 02:57:46,066 (INFO) - django.utils.autoreload - Watching for file changes with StatReloader
+2022-12-27 02:57:46,103 (WARNING) - silk.profiling.profiler - Cannot execute silk_profile as silk is not installed correctly.
+2022-12-27 02:57:47,420 (INFO) - django.utils.autoreload - /home/adduser/thesis/the_pillar/the_pillar/settings/dev.py changed, reloading.
+2022-12-27 02:57:47,932 (INFO) - django.utils.autoreload - Watching for file changes with StatReloader
+2022-12-27 02:57:47,967 (WARNING) - silk.profiling.profiler - Cannot execute silk_profile as silk is not installed correctly.
+2022-12-27 02:57:52,144 (ERROR) - django.security.RequestDataTooBig - Request body exceeded settings.DATA_UPLOAD_MAX_MEMORY_SIZE.
+Traceback (most recent call last):
+  File "/home/adduser/.local/share/virtualenvs/the_pillar-hcpoMslp/lib/python3.10/site-packages/django/core/handlers/exception.py", line 55, in inner
+    response = get_response(request)
+  File "/home/adduser/.local/share/virtualenvs/the_pillar-hcpoMslp/lib/python3.10/site-packages/request_logging/middleware.py", line 159, in __call__
+    cached_request_body = request.body
+  File "/home/adduser/.local/share/virtualenvs/the_pillar-hcpoMslp/lib/python3.10/site-packages/django/http/request.py", line 335, in body
+    raise RequestDataTooBig(
+django.core.exceptions.RequestDataTooBig: Request body exceeded settings.DATA_UPLOAD_MAX_MEMORY_SIZE.
+2022-12-27 02:57:52,247 (ERROR) - django.security.RequestDataTooBig - Request body exceeded settings.DATA_UPLOAD_MAX_MEMORY_SIZE.
+Traceback (most recent call last):
+  File "/home/adduser/.local/share/virtualenvs/the_pillar-hcpoMslp/lib/python3.10/site-packages/django/core/handlers/exception.py", line 55, in inner
+    response = get_response(request)
+  File "/home/adduser/.local/share/virtualenvs/the_pillar-hcpoMslp/lib/python3.10/site-packages/debug_toolbar/middleware.py", line 69, in __call__
+    panel.generate_stats(request, response)
+  File "/home/adduser/.local/share/virtualenvs/the_pillar-hcpoMslp/lib/python3.10/site-packages/debug_toolbar/panels/history/panel.py", line 62, in generate_stats
+    and request.body
+  File "/home/adduser/.local/share/virtualenvs/the_pillar-hcpoMslp/lib/python3.10/site-packages/django/http/request.py", line 335, in body
+    raise RequestDataTooBig(
+django.core.exceptions.RequestDataTooBig: Request body exceeded settings.DATA_UPLOAD_MAX_MEMORY_SIZE.
+2022-12-27 02:57:52,263 (WARNING) - django.request - Bad Request: /admin/userprofile/profile/41/change/
+2022-12-27 02:57:57,494 (ERROR) - django.security.RequestDataTooBig - Request body exceeded settings.DATA_UPLOAD_MAX_MEMORY_SIZE.
+Traceback (most recent call last):
+  File "/home/adduser/.local/share/virtualenvs/the_pillar-hcpoMslp/lib/python3.10/site-packages/django/core/handlers/exception.py", line 55, in inner
+    response = get_response(request)
+  File "/home/adduser/.local/share/virtualenvs/the_pillar-hcpoMslp/lib/python3.10/site-packages/request_logging/middleware.py", line 159, in __call__
+    cached_request_body = request.body
+  File "/home/adduser/.local/share/virtualenvs/the_pillar-hcpoMslp/lib/python3.10/site-packages/django/http/request.py", line 335, in body
+    raise RequestDataTooBig(
+django.core.exceptions.RequestDataTooBig: Request body exceeded settings.DATA_UPLOAD_MAX_MEMORY_SIZE.
+2022-12-27 02:57:57,535 (ERROR) - django.security.RequestDataTooBig - Request body exceeded settings.DATA_UPLOAD_MAX_MEMORY_SIZE.
+Traceback (most recent call last):
+  File "/home/adduser/.local/share/virtualenvs/the_pillar-hcpoMslp/lib/python3.10/site-packages/django/core/handlers/exception.py", line 55, in inner
+    response = get_response(request)
+  File "/home/adduser/.local/share/virtualenvs/the_pillar-hcpoMslp/lib/python3.10/site-packages/debug_toolbar/middleware.py", line 69, in __call__
+    panel.generate_stats(request, response)
+  File "/home/adduser/.local/share/virtualenvs/the_pillar-hcpoMslp/lib/python3.10/site-packages/debug_toolbar/panels/history/panel.py", line 62, in generate_stats
+    and request.body
+  File "/home/adduser/.local/share/virtualenvs/the_pillar-hcpoMslp/lib/python3.10/site-packages/django/http/request.py", line 335, in body
+    raise RequestDataTooBig(
+django.core.exceptions.RequestDataTooBig: Request body exceeded settings.DATA_UPLOAD_MAX_MEMORY_SIZE.
+2022-12-27 02:57:57,551 (WARNING) - django.request - Bad Request: /admin/userprofile/profile/41/change/
+2022-12-27 02:58:39,034 (INFO) - django.utils.autoreload - /home/adduser/thesis/the_pillar/the_pillar/settings/dev.py changed, reloading.
+2022-12-27 02:58:39,514 (INFO) - django.utils.autoreload - Watching for file changes with StatReloader
+2022-12-27 02:58:39,551 (WARNING) - silk.profiling.profiler - Cannot execute silk_profile as silk is not installed correctly.
+2022-12-27 02:58:41,880 (INFO) - django.utils.autoreload - /home/adduser/thesis/the_pillar/the_pillar/settings/dev.py changed, reloading.
+2022-12-27 02:58:42,350 (INFO) - django.utils.autoreload - Watching for file changes with StatReloader
+2022-12-27 02:58:42,385 (WARNING) - silk.profiling.profiler - Cannot execute silk_profile as silk is not installed correctly.
+2022-12-27 02:58:43,735 (INFO) - django.utils.autoreload - /home/adduser/thesis/the_pillar/the_pillar/settings/dev.py changed, reloading.
+2022-12-27 02:58:44,215 (INFO) - django.utils.autoreload - Watching for file changes with StatReloader
+2022-12-27 02:58:44,250 (WARNING) - silk.profiling.profiler - Cannot execute silk_profile as silk is not installed correctly.
+2022-12-27 02:58:45,589 (INFO) - django.utils.autoreload - /home/adduser/thesis/the_pillar/the_pillar/settings/dev.py changed, reloading.
+2022-12-27 02:58:46,051 (INFO) - django.utils.autoreload - Watching for file changes with StatReloader
+2022-12-27 02:58:46,098 (WARNING) - silk.profiling.profiler - Cannot execute silk_profile as silk is not installed correctly.
+2022-12-27 03:02:30,455 (INFO) - django.utils.autoreload - /home/adduser/thesis/the_pillar/the_pillar/settings/common.py changed, reloading.
+2022-12-27 03:02:30,925 (INFO) - django.utils.autoreload - Watching for file changes with StatReloader
+2022-12-27 03:02:30,960 (WARNING) - silk.profiling.profiler - Cannot execute silk_profile as silk is not installed correctly.
+2022-12-27 03:02:35,326 (INFO) - django.utils.autoreload - /home/adduser/thesis/the_pillar/the_pillar/settings/common.py changed, reloading.
+2022-12-27 03:02:35,824 (INFO) - django.utils.autoreload - Watching for file changes with StatReloader
+2022-12-27 03:02:35,858 (WARNING) - silk.profiling.profiler - Cannot execute silk_profile as silk is not installed correctly.
+2022-12-27 03:02:45,281 (INFO) - django.utils.autoreload - /home/adduser/thesis/the_pillar/userprofile/validators.py changed, reloading.
+2022-12-27 03:02:45,795 (INFO) - django.utils.autoreload - Watching for file changes with StatReloader
+2022-12-27 03:02:45,833 (WARNING) - silk.profiling.profiler - Cannot execute silk_profile as silk is not installed correctly.
+2022-12-27 03:04:20,462 (INFO) - django.utils.autoreload - /home/adduser/thesis/the_pillar/publication/models.py changed, reloading.
+2022-12-27 03:04:20,950 (INFO) - django.utils.autoreload - Watching for file changes with StatReloader
+2022-12-27 03:04:20,987 (WARNING) - silk.profiling.profiler - Cannot execute silk_profile as silk is not installed correctly.
+2022-12-27 03:04:23,324 (INFO) - django.utils.autoreload - /home/adduser/thesis/the_pillar/publication/models.py changed, reloading.
+2022-12-27 03:04:23,807 (INFO) - django.utils.autoreload - Watching for file changes with StatReloader
+2022-12-27 03:04:23,843 (WARNING) - silk.profiling.profiler - Cannot execute silk_profile as silk is not installed correctly.
+2022-12-27 03:06:01,495 (INFO) - django.utils.autoreload - /home/adduser/thesis/the_pillar/publication/models.py changed, reloading.
+2022-12-27 03:06:02,020 (INFO) - django.utils.autoreload - Watching for file changes with StatReloader
+2022-12-27 03:06:02,055 (WARNING) - silk.profiling.profiler - Cannot execute silk_profile as silk is not installed correctly.
+2022-12-27 03:06:07,420 (INFO) - django.utils.autoreload - /home/adduser/thesis/the_pillar/the_pillar/settings/common.py changed, reloading.
+2022-12-27 03:06:07,890 (INFO) - django.utils.autoreload - Watching for file changes with StatReloader
+2022-12-27 03:06:07,925 (WARNING) - silk.profiling.profiler - Cannot execute silk_profile as silk is not installed correctly.
+2022-12-27 03:06:12,271 (INFO) - django.utils.autoreload - /home/adduser/thesis/the_pillar/the_pillar/settings/common.py changed, reloading.
+2022-12-27 03:06:12,746 (INFO) - django.utils.autoreload - Watching for file changes with StatReloader
+2022-12-27 03:06:12,781 (WARNING) - silk.profiling.profiler - Cannot execute silk_profile as silk is not installed correctly.
+2022-12-27 03:06:14,104 (INFO) - django.utils.autoreload - /home/adduser/thesis/the_pillar/the_pillar/settings/common.py changed, reloading.
+2022-12-27 03:06:14,585 (INFO) - django.utils.autoreload - Watching for file changes with StatReloader
+2022-12-27 03:06:14,623 (WARNING) - silk.profiling.profiler - Cannot execute silk_profile as silk is not installed correctly.
+2022-12-27 03:06:15,952 (INFO) - django.utils.autoreload - /home/adduser/thesis/the_pillar/the_pillar/settings/common.py changed, reloading.
+2022-12-27 03:06:16,443 (INFO) - django.utils.autoreload - Watching for file changes with StatReloader
+2022-12-27 03:06:16,478 (WARNING) - silk.profiling.profiler - Cannot execute silk_profile as silk is not installed correctly.
+2022-12-27 03:06:20,279 (ERROR) - django.security.RequestDataTooBig - Request body exceeded settings.DATA_UPLOAD_MAX_MEMORY_SIZE.
+Traceback (most recent call last):
+  File "/home/adduser/.local/share/virtualenvs/the_pillar-hcpoMslp/lib/python3.10/site-packages/django/core/handlers/exception.py", line 55, in inner
+    response = get_response(request)
+  File "/home/adduser/.local/share/virtualenvs/the_pillar-hcpoMslp/lib/python3.10/site-packages/request_logging/middleware.py", line 159, in __call__
+    cached_request_body = request.body
+  File "/home/adduser/.local/share/virtualenvs/the_pillar-hcpoMslp/lib/python3.10/site-packages/django/http/request.py", line 335, in body
+    raise RequestDataTooBig(
+django.core.exceptions.RequestDataTooBig: Request body exceeded settings.DATA_UPLOAD_MAX_MEMORY_SIZE.
+2022-12-27 03:06:20,384 (ERROR) - django.security.RequestDataTooBig - Request body exceeded settings.DATA_UPLOAD_MAX_MEMORY_SIZE.
+Traceback (most recent call last):
+  File "/home/adduser/.local/share/virtualenvs/the_pillar-hcpoMslp/lib/python3.10/site-packages/django/core/handlers/exception.py", line 55, in inner
+    response = get_response(request)
+  File "/home/adduser/.local/share/virtualenvs/the_pillar-hcpoMslp/lib/python3.10/site-packages/debug_toolbar/middleware.py", line 69, in __call__
+    panel.generate_stats(request, response)
+  File "/home/adduser/.local/share/virtualenvs/the_pillar-hcpoMslp/lib/python3.10/site-packages/debug_toolbar/panels/history/panel.py", line 62, in generate_stats
+    and request.body
+  File "/home/adduser/.local/share/virtualenvs/the_pillar-hcpoMslp/lib/python3.10/site-packages/django/http/request.py", line 335, in body
+    raise RequestDataTooBig(
+django.core.exceptions.RequestDataTooBig: Request body exceeded settings.DATA_UPLOAD_MAX_MEMORY_SIZE.
+2022-12-27 03:06:20,400 (WARNING) - django.request - Bad Request: /admin/userprofile/profile/41/change/
+2022-12-27 03:06:22,351 (INFO) - django.request - [36mGET /admin/userprofile/profile/41/change/[0m
+2022-12-27 03:06:22,351 (INFO) - django.request - [36mGET /admin/userprofile/profile/41/change/ - 200[0m
+2022-12-27 03:08:21,676 (INFO) - django.utils.autoreload - /home/adduser/thesis/the_pillar/the_pillar/settings/common.py changed, reloading.
+2022-12-27 03:08:22,182 (INFO) - django.utils.autoreload - Watching for file changes with StatReloader
+2022-12-27 03:08:22,215 (WARNING) - silk.profiling.profiler - Cannot execute silk_profile as silk is not installed correctly.
+2022-12-27 03:08:30,615 (INFO) - django.utils.autoreload - /home/adduser/thesis/the_pillar/the_pillar/settings/dev.py changed, reloading.
+2022-12-27 03:08:31,093 (INFO) - django.utils.autoreload - Watching for file changes with StatReloader
+2022-12-27 03:08:31,127 (WARNING) - silk.profiling.profiler - Cannot execute silk_profile as silk is not installed correctly.
+2022-12-27 03:08:34,472 (INFO) - django.utils.autoreload - /home/adduser/thesis/the_pillar/userprofile/validators.py changed, reloading.
+2022-12-27 03:08:34,939 (INFO) - django.utils.autoreload - Watching for file changes with StatReloader
+2022-12-27 03:08:34,973 (WARNING) - silk.profiling.profiler - Cannot execute silk_profile as silk is not installed correctly.
+2022-12-27 03:09:14,837 (INFO) - django.utils.autoreload - /home/adduser/thesis/the_pillar/publication/validators.py changed, reloading.
+2022-12-27 03:09:15,321 (INFO) - django.utils.autoreload - Watching for file changes with StatReloader
+2022-12-27 03:09:15,356 (WARNING) - silk.profiling.profiler - Cannot execute silk_profile as silk is not installed correctly.
+2022-12-27 03:09:22,756 (INFO) - django.utils.autoreload - /home/adduser/thesis/the_pillar/publication/models.py changed, reloading.
+2022-12-27 03:09:23,246 (INFO) - django.utils.autoreload - Watching for file changes with StatReloader
+2022-12-27 03:09:23,282 (WARNING) - silk.profiling.profiler - Cannot execute silk_profile as silk is not installed correctly.
+2022-12-27 03:09:53,009 (INFO) - django.utils.autoreload - /home/adduser/thesis/the_pillar/publication/models.py changed, reloading.
+2022-12-27 03:09:53,506 (INFO) - django.utils.autoreload - Watching for file changes with StatReloader
+2022-12-27 03:09:53,547 (WARNING) - silk.profiling.profiler - Cannot execute silk_profile as silk is not installed correctly.
+2022-12-27 03:10:14,130 (INFO) - django.utils.autoreload - /home/adduser/thesis/the_pillar/publication/validators.py changed, reloading.
+2022-12-27 03:10:14,596 (INFO) - django.utils.autoreload - Watching for file changes with StatReloader
+2022-12-27 03:10:14,631 (WARNING) - silk.profiling.profiler - Cannot execute silk_profile as silk is not installed correctly.
+2022-12-27 03:10:16,961 (INFO) - django.utils.autoreload - /home/adduser/thesis/the_pillar/publication/validators.py changed, reloading.
+2022-12-27 03:10:17,434 (INFO) - django.utils.autoreload - Watching for file changes with StatReloader
+2022-12-27 03:10:17,469 (WARNING) - silk.profiling.profiler - Cannot execute silk_profile as silk is not installed correctly.
+2022-12-27 03:10:31,970 (INFO) - django.utils.autoreload - /home/adduser/thesis/the_pillar/publication/validators.py changed, reloading.
+2022-12-27 03:10:32,471 (INFO) - django.utils.autoreload - Watching for file changes with StatReloader
+2022-12-27 03:10:32,506 (WARNING) - silk.profiling.profiler - Cannot execute silk_profile as silk is not installed correctly.
+2022-12-27 03:10:46,532 (INFO) - django.request - [36mPOST /admin/userprofile/profile/41/change/[0m
+2022-12-27 03:10:46,533 (INFO) - django.request - [36mPOST /admin/userprofile/profile/41/change/ - 302[0m
+2022-12-27 03:10:46,652 (INFO) - django.request - [36mGET /admin/userprofile/profile/[0m
+2022-12-27 03:10:46,653 (INFO) - django.request - [36mGET /admin/userprofile/profile/ - 200[0m
+2022-12-27 03:10:46,736 (INFO) - django.request - [36mGET /admin/jsi18n/[0m
+2022-12-27 03:10:46,738 (INFO) - django.request - [36mGET /admin/jsi18n/ - 200[0m
+2022-12-27 03:10:47,778 (INFO) - django.request - [36mGET /media/userprofile/images/1665462493754.jpg[0m
+2022-12-27 03:10:47,784 (INFO) - django.request - [36mGET /media/userprofile/images/1665462493754.jpg - 304[0m
+2022-12-27 03:10:51,254 (INFO) - django.request - [36mGET /admin/userprofile/profile/41/change/[0m
+2022-12-27 03:10:51,254 (INFO) - django.request - [36mGET /admin/userprofile/profile/41/change/ - 200[0m
+2022-12-27 03:10:51,314 (INFO) - django.request - [36mGET /admin/jsi18n/[0m
+2022-12-27 03:10:51,316 (INFO) - django.request - [36mGET /admin/jsi18n/ - 200[0m
+2022-12-27 03:10:54,950 (INFO) - django.request - [36mPOST /admin/userprofile/profile/41/change/[0m
+2022-12-27 03:10:54,951 (INFO) - django.request - [36mPOST /admin/userprofile/profile/41/change/ - 200[0m
+2022-12-27 03:10:55,012 (INFO) - django.request - [36mGET /admin/jsi18n/[0m
+2022-12-27 03:10:55,013 (INFO) - django.request - [36mGET /admin/jsi18n/ - 200[0m
+2022-12-27 03:10:55,759 (INFO) - django.request - [36mGET /media/planets.jpg[0m
+2022-12-27 03:10:55,760 (ERROR) - django.request - [35m{'Content-Length': '', 'Content-Type': 'text/plain', 'Host': '127.0.0.1:8000', 'Connection': 'keep-alive', 'Sec-Ch-Ua': '"Not?A_Brand";v="8", "Chromium";v="108", "Google Chrome";v="108"', 'Sec-Ch-Ua-Mobile': '?0', 'User-Agent': 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/108.0.0.0 Safari/537.36', 'Sec-Ch-Ua-Platform': '"Windows"', 'Accept': 'image/avif,image/webp,image/apng,image/svg+xml,image/*,*/*;q=0.8', 'Sec-Fetch-Site': 'same-origin', 'Sec-Fetch-Mode': 'no-cors', 'Sec-Fetch-Dest': 'image', 'Referer': 'http://127.0.0.1:8000/admin/userprofile/profile/41/change/', 'Accept-Encoding': 'gzip, deflate, br', 'Accept-Language': 'en-GB,en-US;q=0.9,en;q=0.8,la;q=0.7', 'Cookie': 'csrftoken=v21SWTzEcKFCqhm68NNfFroEarfvrlxc; sessionid=m0nqd6ncgovdwvo3o1bvx4ttrue8n5ty'}[0m
+2022-12-27 03:10:55,761 (ERROR) - django.request - [35mb''[0m
+2022-12-27 03:10:55,763 (INFO) - django.request - [35mGET /media/planets.jpg - 404[0m
+2022-12-27 03:10:55,998 (WARNING) - django.request - Not Found: /media/planets.jpg
+2022-12-27 03:11:12,278 (ERROR) - django.security.RequestDataTooBig - Request body exceeded settings.DATA_UPLOAD_MAX_MEMORY_SIZE.
+Traceback (most recent call last):
+  File "/home/adduser/.local/share/virtualenvs/the_pillar-hcpoMslp/lib/python3.10/site-packages/django/core/handlers/exception.py", line 55, in inner
+    response = get_response(request)
+  File "/home/adduser/.local/share/virtualenvs/the_pillar-hcpoMslp/lib/python3.10/site-packages/request_logging/middleware.py", line 159, in __call__
+    cached_request_body = request.body
+  File "/home/adduser/.local/share/virtualenvs/the_pillar-hcpoMslp/lib/python3.10/site-packages/django/http/request.py", line 335, in body
+    raise RequestDataTooBig(
+django.core.exceptions.RequestDataTooBig: Request body exceeded settings.DATA_UPLOAD_MAX_MEMORY_SIZE.
+2022-12-27 03:11:12,318 (ERROR) - django.security.RequestDataTooBig - Request body exceeded settings.DATA_UPLOAD_MAX_MEMORY_SIZE.
+Traceback (most recent call last):
+  File "/home/adduser/.local/share/virtualenvs/the_pillar-hcpoMslp/lib/python3.10/site-packages/django/core/handlers/exception.py", line 55, in inner
+    response = get_response(request)
+  File "/home/adduser/.local/share/virtualenvs/the_pillar-hcpoMslp/lib/python3.10/site-packages/debug_toolbar/middleware.py", line 69, in __call__
+    panel.generate_stats(request, response)
+  File "/home/adduser/.local/share/virtualenvs/the_pillar-hcpoMslp/lib/python3.10/site-packages/debug_toolbar/panels/history/panel.py", line 62, in generate_stats
+    and request.body
+  File "/home/adduser/.local/share/virtualenvs/the_pillar-hcpoMslp/lib/python3.10/site-packages/django/http/request.py", line 335, in body
+    raise RequestDataTooBig(
+django.core.exceptions.RequestDataTooBig: Request body exceeded settings.DATA_UPLOAD_MAX_MEMORY_SIZE.
+2022-12-27 03:11:12,334 (WARNING) - django.request - Bad Request: /admin/userprofile/profile/41/change/
+2022-12-27 03:11:43,399 (INFO) - django.request - [36mGET /admin/userprofile/profile/41/change/[0m
+2022-12-27 03:11:43,400 (INFO) - django.request - [36mGET /admin/userprofile/profile/41/change/ - 200[0m
+2022-12-27 03:11:45,994 (INFO) - django.request - [36mGET /admin/publication/issue/[0m
+2022-12-27 03:11:45,994 (INFO) - django.request - [36mGET /admin/publication/issue/ - 200[0m
+2022-12-27 03:11:46,066 (INFO) - django.request - [36mGET /admin/jsi18n/[0m
+2022-12-27 03:11:46,067 (INFO) - django.request - [36mGET /admin/jsi18n/ - 200[0m
+2022-12-27 03:11:48,640 (INFO) - django.request - [36mGET /admin/publication/member/[0m
+2022-12-27 03:11:48,641 (INFO) - django.request - [36mGET /admin/publication/member/ - 200[0m
+2022-12-27 03:11:48,719 (INFO) - django.request - [36mGET /admin/jsi18n/[0m
+2022-12-27 03:11:48,721 (INFO) - django.request - [36mGET /admin/jsi18n/ - 200[0m
+2022-12-27 03:11:52,406 (INFO) - django.request - [36mGET /admin/publication/member/?all=[0m
+2022-12-27 03:11:52,406 (INFO) - django.request - [36mGET /admin/publication/member/?all= - 200[0m
+2022-12-27 03:11:52,485 (INFO) - django.request - [36mGET /admin/jsi18n/[0m
+2022-12-27 03:11:52,487 (INFO) - django.request - [36mGET /admin/jsi18n/ - 200[0m
+2022-12-27 03:12:02,717 (INFO) - django.request - [36mGET /admin/userprofile/profile/[0m
+2022-12-27 03:12:02,717 (INFO) - django.request - [36mGET /admin/userprofile/profile/ - 200[0m
+2022-12-27 03:12:02,779 (INFO) - django.request - [36mGET /admin/jsi18n/[0m
+2022-12-27 03:12:02,781 (INFO) - django.request - [36mGET /admin/jsi18n/ - 200[0m
+2022-12-27 03:12:07,188 (INFO) - django.request - [36mGET /admin/publication/member/[0m
+2022-12-27 03:12:07,189 (INFO) - django.request - [36mGET /admin/publication/member/ - 200[0m
+2022-12-27 03:12:07,237 (INFO) - django.request - [36mGET /admin/jsi18n/[0m
+2022-12-27 03:12:07,238 (INFO) - django.request - [36mGET /admin/jsi18n/ - 200[0m
+2022-12-27 03:12:11,015 (INFO) - django.request - [36mGET /admin/publication/member/add/[0m
+2022-12-27 03:12:11,016 (INFO) - django.request - [36mGET /admin/publication/member/add/ - 200[0m
+2022-12-27 03:12:11,070 (INFO) - django.request - [36mGET /admin/jsi18n/[0m
+2022-12-27 03:12:11,072 (INFO) - django.request - [36mGET /admin/jsi18n/ - 200[0m
+2022-12-27 03:12:13,225 (INFO) - django.request - [36mGET /admin/autocomplete/?app_label=publication&model_name=member&field_name=user[0m
+2022-12-27 03:12:13,226 (INFO) - django.request - [36mGET /admin/autocomplete/?app_label=publication&model_name=member&field_name=user - 200[0m
+2022-12-27 03:12:13,471 (INFO) - django.request - [36mGET /__debug__/history_sidebar/?store_id=db10dfe757d843948925edd3892eebde[0m
+2022-12-27 03:12:13,472 (INFO) - django.request - [36mGET /__debug__/history_sidebar/?store_id=db10dfe757d843948925edd3892eebde - 200[0m
+2022-12-27 03:12:15,318 (INFO) - django.request - [36mGET /admin/autocomplete/?term=mem&app_label=publication&model_name=member&field_name=user[0m
+2022-12-27 03:12:15,319 (INFO) - django.request - [36mGET /admin/autocomplete/?term=mem&app_label=publication&model_name=member&field_name=user - 200[0m
+2022-12-27 03:12:15,601 (INFO) - django.request - [36mGET /__debug__/history_sidebar/?store_id=e0d1210347d946cdb0a6c471cab9b77b[0m
+2022-12-27 03:12:15,601 (INFO) - django.request - [36mGET /__debug__/history_sidebar/?store_id=e0d1210347d946cdb0a6c471cab9b77b - 200[0m
+2022-12-27 03:12:16,827 (INFO) - django.request - [36mGET /admin/autocomplete/?term=m&app_label=publication&model_name=member&field_name=user[0m
+2022-12-27 03:12:16,827 (INFO) - django.request - [36mGET /admin/autocomplete/?term=m&app_label=publication&model_name=member&field_name=user - 200[0m
+2022-12-27 03:12:17,069 (INFO) - django.request - [36mGET /__debug__/history_sidebar/?store_id=dc0c6a58704b4094a37bb84b02f162ff[0m
+2022-12-27 03:12:17,069 (INFO) - django.request - [36mGET /__debug__/history_sidebar/?store_id=dc0c6a58704b4094a37bb84b02f162ff - 200[0m
+2022-12-27 03:12:17,925 (INFO) - django.request - [36mGET /admin/autocomplete/?term=&app_label=publication&model_name=member&field_name=user[0m
+2022-12-27 03:12:17,926 (INFO) - django.request - [36mGET /admin/autocomplete/?term=&app_label=publication&model_name=member&field_name=user - 200[0m
+2022-12-27 03:12:18,166 (INFO) - django.request - [36mGET /__debug__/history_sidebar/?store_id=d9273a547a68486fa328ddc2b9de0b7a[0m
+2022-12-27 03:12:18,167 (INFO) - django.request - [36mGET /__debug__/history_sidebar/?store_id=d9273a547a68486fa328ddc2b9de0b7a - 200[0m
+2022-12-27 03:12:27,251 (INFO) - django.request - [36mGET /admin/autocomplete/?term=mem&app_label=publication&model_name=member&field_name=user[0m
+2022-12-27 03:12:27,251 (INFO) - django.request - [36mGET /admin/autocomplete/?term=mem&app_label=publication&model_name=member&field_name=user - 200[0m
+2022-12-27 03:12:27,488 (INFO) - django.request - [36mGET /__debug__/history_sidebar/?store_id=2a591a523f18426294fb62520d87d3fc[0m
+2022-12-27 03:12:27,488 (INFO) - django.request - [36mGET /__debug__/history_sidebar/?store_id=2a591a523f18426294fb62520d87d3fc - 200[0m
+2022-12-27 03:12:27,930 (INFO) - django.request - [36mGET /admin/autocomplete/?term=&app_label=publication&model_name=member&field_name=user[0m
+2022-12-27 03:12:27,931 (INFO) - django.request - [36mGET /admin/autocomplete/?term=&app_label=publication&model_name=member&field_name=user - 200[0m
+2022-12-27 03:12:28,157 (INFO) - django.request - [36mGET /__debug__/history_sidebar/?store_id=5c4db5dc11b1439e9c20fe62311b0471[0m
+2022-12-27 03:12:28,157 (INFO) - django.request - [36mGET /__debug__/history_sidebar/?store_id=5c4db5dc11b1439e9c20fe62311b0471 - 200[0m
+2022-12-27 03:12:30,551 (INFO) - django.request - [36mGET /admin/autocomplete/?term=admin&app_label=publication&model_name=member&field_name=user[0m
+2022-12-27 03:12:30,551 (INFO) - django.request - [36mGET /admin/autocomplete/?term=admin&app_label=publication&model_name=member&field_name=user - 200[0m
+2022-12-27 03:12:30,797 (INFO) - django.request - [36mGET /__debug__/history_sidebar/?store_id=7fd3d7e633db4edaa716926d0f171442[0m
+2022-12-27 03:12:30,798 (INFO) - django.request - [36mGET /__debug__/history_sidebar/?store_id=7fd3d7e633db4edaa716926d0f171442 - 200[0m
+2022-12-27 03:13:00,668 (INFO) - django.utils.autoreload - /home/adduser/thesis/the_pillar/publication/validators.py changed, reloading.
+2022-12-27 03:13:01,212 (INFO) - django.utils.autoreload - Watching for file changes with StatReloader
+2022-12-27 03:13:01,249 (WARNING) - silk.profiling.profiler - Cannot execute silk_profile as silk is not installed correctly.
+2022-12-27 03:13:02,570 (INFO) - django.utils.autoreload - /home/adduser/thesis/the_pillar/publication/validators.py changed, reloading.
+2022-12-27 03:13:03,051 (INFO) - django.utils.autoreload - Watching for file changes with StatReloader
+2022-12-27 03:13:03,087 (WARNING) - silk.profiling.profiler - Cannot execute silk_profile as silk is not installed correctly.
+2022-12-27 03:13:19,631 (INFO) - django.utils.autoreload - /home/adduser/thesis/the_pillar/userprofile/models.py changed, reloading.
+2022-12-27 03:13:20,116 (INFO) - django.utils.autoreload - Watching for file changes with StatReloader
+2022-12-27 03:13:20,151 (WARNING) - silk.profiling.profiler - Cannot execute silk_profile as silk is not installed correctly.
+2022-12-27 03:13:21,473 (INFO) - django.utils.autoreload - /home/adduser/thesis/the_pillar/userprofile/validators.py changed, reloading.
+2022-12-27 03:13:21,975 (INFO) - django.utils.autoreload - Watching for file changes with StatReloader
+2022-12-27 03:13:22,011 (WARNING) - silk.profiling.profiler - Cannot execute silk_profile as silk is not installed correctly.

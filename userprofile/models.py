@@ -2,7 +2,7 @@ from django.conf import settings
 from django.contrib import admin
 from django.core.validators import MinValueValidator, MaxValueValidator
 from django.db import models
-from .validators import validate_file_size
+from .validators import validate_image_size
 
 
 class Profile(models.Model):
@@ -16,7 +16,7 @@ class Profile(models.Model):
         upload_to='userprofile/images',
         null=True,
         blank=True,
-        validators=[validate_file_size])
+        validators=[validate_image_size])
     birth_date = models.DateField(
         null=True,
         blank=True)

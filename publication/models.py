@@ -1,7 +1,7 @@
 from django.conf import settings
 from django.core.validators import MinValueValidator, FileExtensionValidator
 from django.db import models
-from .validators import validate_file_size
+from .validators import validate_image_size
 
 
 class Member(models.Model):
@@ -86,7 +86,7 @@ class IssueFile(models.Model):
         validators=[FileExtensionValidator(allowed_extensions=['pdf'])])
     image_for_thumbnail = models.ImageField(
         upload_to='publication/files/thumbnails',
-        validators=[validate_file_size])
+        validators=[validate_image_size])
 
     def __str__(self) -> str:
         file_name = f'File name: {self.file.name.replace("publication/files/", "")}'
@@ -135,7 +135,7 @@ class ArticleImage(models.Model):
         upload_to='publication/images',
         max_length=255,
         blank=True,
-        validators=[validate_file_size])
+        validators=[validate_image_size])
     image_caption = models.CharField(max_length=255, blank=True)
 
     def __str__(self) -> str:

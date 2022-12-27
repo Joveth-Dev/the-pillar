@@ -19,23 +19,31 @@ class Migration(migrations.Migration):
         migrations.CreateModel(
             name='SampleImage',
             fields=[
-                ('id', models.BigAutoField(auto_created=True, primary_key=True, serialize=False, verbose_name='ID')),
-                ('image', models.ImageField(upload_to='sample', validators=[userprofile.validators.validate_file_size])),
+                ('id', models.BigAutoField(auto_created=True,
+                 primary_key=True, serialize=False, verbose_name='ID')),
+                ('image', models.ImageField(upload_to='sample',
+                 validators=[userprofile.validators.validate_image_size])),
             ],
         ),
         migrations.CreateModel(
             name='Profile',
             fields=[
-                ('id', models.BigAutoField(auto_created=True, primary_key=True, serialize=False, verbose_name='ID')),
-                ('profile_image', models.ImageField(blank=True, null=True, upload_to='userprofile/images', validators=[userprofile.validators.validate_file_size])),
+                ('id', models.BigAutoField(auto_created=True,
+                 primary_key=True, serialize=False, verbose_name='ID')),
+                ('profile_image', models.ImageField(blank=True, null=True, upload_to='userprofile/images',
+                 validators=[userprofile.validators.validate_image_size])),
                 ('birth_date', models.DateField(blank=True, null=True)),
-                ('sex', models.CharField(choices=[('M', 'Male'), ('F', 'Female')], default='M', max_length=1)),
+                ('sex', models.CharField(choices=[
+                 ('M', 'Male'), ('F', 'Female')], default='M', max_length=1)),
                 ('city', models.CharField(blank=True, max_length=255, null=True)),
-                ('state_or_province', models.CharField(blank=True, max_length=255, null=True)),
-                ('zip_code', models.PositiveSmallIntegerField(blank=True, null=True, validators=[django.core.validators.MinValueValidator(1), django.core.validators.MaxValueValidator(9999)])),
+                ('state_or_province', models.CharField(
+                    blank=True, max_length=255, null=True)),
+                ('zip_code', models.PositiveSmallIntegerField(blank=True, null=True, validators=[
+                 django.core.validators.MinValueValidator(1), django.core.validators.MaxValueValidator(9999)])),
                 ('country', models.CharField(blank=True, max_length=255, null=True)),
                 ('is_student', models.BooleanField(default=False)),
-                ('user', models.OneToOneField(on_delete=django.db.models.deletion.CASCADE, to=settings.AUTH_USER_MODEL)),
+                ('user', models.OneToOneField(
+                    on_delete=django.db.models.deletion.CASCADE, to=settings.AUTH_USER_MODEL)),
             ],
             options={
                 'ordering': ['user__first_name', 'user__last_name'],
