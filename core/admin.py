@@ -13,12 +13,12 @@ class UserAdmin(BaseUserAdmin):
     # ========================================
 
     actions = ['delete_user']
-    list_display = ['picture', 'username', 'email', 'last_name',
-                    'first_name', 'middle_initial', 'is_staff', 'is_active']
+    list_display = ['picture', 'username', 'email', 'first_name',
+                    'middle_initial', 'last_name', 'is_staff', 'is_active']
     fieldsets = (
         (None, {"fields": ("username", "password")}),
-        (_("Personal info"), {"fields": ('display_picture', "last_name",
-         "first_name", 'middle_initial', "email")}),
+        (_("Personal info"), {"fields": (
+            'display_picture', "first_name", 'middle_initial', "last_name", "email")}),
         (
             _("Permissions"),
             {

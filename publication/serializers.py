@@ -1,5 +1,5 @@
 from rest_framework import serializers
-from .models import Announcement, Article, ArticleImage, Issue, IssueFile, Member
+from .models import Announcement, Article, ArticleImage, Issue, IssueFile, Member, Banner
 
 
 class MemberSerializer(serializers.ModelSerializer):
@@ -76,3 +76,9 @@ class AnnouncementSerializer(serializers.ModelSerializer):
     class Meta:
         model = Announcement
         fields = ['id', 'announcement_img', 'member', 'date_created']
+
+
+class BannerSerializer(serializers.ModelSerializer):
+    class Meta:
+        model = Banner
+        fields = ['id', 'member', 'image']

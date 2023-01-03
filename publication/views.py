@@ -6,9 +6,10 @@ from django_filters.rest_framework import DjangoFilterBackend
 from rest_framework.filters import SearchFilter, OrderingFilter
 from rest_framework.viewsets import ReadOnlyModelViewSet
 from .pagination import DefaultPagination
-from .models import Announcement, Article, Issue, Member, MemberPosition
+from .models import Announcement, Article, Issue, Member, MemberPosition, Banner
 from .serializers import AnnouncementSerializer, \
     ArticleSerializer, \
+    BannerSerializer, \
     IssueSerializer, \
     MemberSerializer
 
@@ -38,10 +39,11 @@ class IssueViewSet(ReadOnlyModelViewSet):
         .filter(is_approved=True)
     serializer_class = IssueSerializer
     filter_backends = [DjangoFilterBackend, SearchFilter, OrderingFilter]
-    filterset_fields = ['volume_number', 'category']
-    ordering_fields = ['date_published', 'volume_number', 'category']
+    filterset_fields = ['category']
+    ordering_fields = ['date_published',
+                       'date_updated', 'volume_number', 'issue_number']
     pagination_class = DefaultPagination
-    search_fields = ['description']
+    search_fields = ['volume_number', 'issue_number', 'description']
 
     @method_decorator(cache_page(10*60, key_prefix='issues_list'))
     def list(self, request, *args, **kwargs):
@@ -63,11 +65,13 @@ class ArticleViewSet(ReadOnlyModelViewSet):
         .defer('slug', 'date_created', 'is_approved', 'is_enabled') \
         .filter(is_approved=True)
     serializer_class = ArticleSerializer
-    filter_backends = [DjangoFilterBackend, SearchFilter, OrderingFilter]
+    filter_backends = [DjangoFilterBackend, SearchFilter,
+                       OrderingFilter]
     filterset_fields = ['category']
-    ordering_fields = ['date_published', 'member', 'category']
+    ordering_fields = ['date_published', 'date_published']
     pagination_class = DefaultPagination
-    search_fields = ['title_or_headline', 'body']
+    search_fields = ['title_or_headline', 'body', 'member__pen_name',
+                     'member__user__first_name', 'member__user__last_name']
 
     @method_decorator(cache_page(10*60, key_prefix='articles_list'))
     def list(self, request, *args, **kwargs):
@@ -75,8 +79,22 @@ class ArticleViewSet(ReadOnlyModelViewSet):
 
 
 class AnnouncementViewSet(ReadOnlyModelViewSet):
-    queryset = Announcement.objects.all()
+    queryset = Announcement.objects.filter(is_approved=True)
     filter_backends = [OrderingFilter]
     ordering_fields = ['date_created']
-    pagination_class = DefaultPagination
     serializer_class = AnnouncementSerializer
+
+    @method_decorator(cache_page(10*60, key_prefix='announcements_list'))
+    def list(self, request, *args, **kwargs):
+        return super().list(request, *args, **kwargs)
+
+
+class BannerViewSet(ReadOnlyModelViewSet):
+    queryset = Banner.objects.filter(is_approved=True)
+    filter_backends = [OrderingFilter]
+    ordering_fields = ['date_created']
+    serializer_class = BannerSerializer
+
+    @method_decorator(cache_page(10*60, key_prefix='banners_list'))
+    def list(self, request, *args, **kwargs):
+        return super().list(request, *args, **kwargs)

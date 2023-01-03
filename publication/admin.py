@@ -76,7 +76,6 @@ class MemberAdmin(admin.ModelAdmin):
             annotate(current_position=Subquery(subquery))
 
     def save_model(self, request, obj, form, change):
-        print(cache.keys('*'))
         delete_cache_with_key_prefix('members_list')
         return super().save_model(request, obj, form, change)
 
@@ -102,26 +101,30 @@ class PositionAdmin(admin.ModelAdmin):
 
 @admin.register(models.Announcement)
 class AnnouncementAdmin(admin.ModelAdmin):
-    fields = ['announcement_img']
-    list_display = ['id', 'posted_by', 'announcement_img',
-                    'thumbnail', 'date_created']
-    list_filter = ['date_created']
+    fields = ['announcement_img', 'is_approved']
+    list_display = ['thumbnail', 'announcement_img',
+                    'created_by', 'date_created', 'is_approved']
+    list_filter = ['is_approved', 'member', 'date_created']
     list_per_page = 10
     list_select_related = ['member__user']
     ordering = ['date_created']
-    search_fields = ['id']
 
-    @admin.display(ordering='announcement_img')
+    @admin.display(ordering='id')
     def thumbnail(self, announcement: models.Announcement):
         return format_html(f'<img src="{announcement.announcement_img.url}" class="announcement"/>')
 
     @admin.display(ordering='member')
-    def posted_by(self, announcement: models.Announcement):
+    def created_by(self, announcement: models.Announcement):
         return announcement.member
 
     def save_model(self, request, obj, form, change):
         obj.member = request.user.member
+        delete_cache_with_key_prefix('announcements_list')
         return super().save_model(request, obj, form, change)
+
+    def delete_queryset(self, request, queryset):
+        delete_cache_with_key_prefix('announcements_list')
+        return super().delete_queryset(request, queryset)
 
     class Media:
         css = {
@@ -202,14 +205,13 @@ class IssueAdmin(admin.ModelAdmin):
     inlines = [IssueFileInline]
     list_display = ['id', 'volume_number', 'issue_number', 'category', 'no_of_articles',
                     'uploaded_by', 'date_published', 'date_created', 'date_updated', 'is_approved', 'is_enabled']
-    list_editable = ['category']
     list_filter = ['category', IsApprovedFilter,
                    IsEnabledFilter, 'date_published', 'date_created', 'date_updated']
     list_per_page = 10
     list_select_related = ['member__user', 'issuefile']
     ordering = ['date_created']
     readonly_fields = ['member']
-    search_fields = ['id', 'no_of_articles', 'volume_number', 'issue_number',
+    search_fields = ['id__exact', 'volume_number__exact', 'issue_number__exact', 'description__icontains',
                      'member__user__last_name__istartswith', 'member__user__first_name__istartswith']
 
     @admin.display(ordering='member')
@@ -352,12 +354,8 @@ class ArticleAdmin(admin.ModelAdmin):
         'slug': ['title_or_headline']
     }
     readonly_fields = ['member']
-    search_fields = ['id', 'issue__issue_number', 'title_or_headline__istartswith', 'member__user__last_name__istartswith',
+    search_fields = ['id__exact', 'issue__issue_number__exact', 'title_or_headline__istartswith', 'member__user__last_name__istartswith',
                      'member__user__first_name__istartswith', 'member__pen_name__istartswith']
-
-    @admin.display(ordering='issue_id__volume_number')
-    def volume(self, article):
-        return article.issue.volume_number
 
     @admin.display(ordering='member')
     def author(self, article):
@@ -418,6 +416,38 @@ class ArticleAdmin(admin.ModelAdmin):
 
     def delete_queryset(self, request, queryset):
         delete_cache_with_key_prefix('articles_list')
+        return super().delete_queryset(request, queryset)
+
+    class Media:
+        css = {
+            'all': ['publication/styles.css']
+        }
+
+
+@admin.register(models.Banner)
+class BannerAdmin(admin.ModelAdmin):
+    fields = ['image', 'is_approved']
+    list_display = ['thumbnail', 'image',
+                    'created_by', 'is_approved', 'date_created']
+    list_filter = ['is_approved', 'member', 'date_created']
+    readonly_fields = ['member']
+    search_fields = ['member__']
+
+    @admin.display(ordering='id')
+    def thumbnail(self, banner: models.Banner):
+        return format_html(f'<img src="{banner.image.url}" class="announcement"/>')
+
+    @admin.display(ordering='member')
+    def created_by(self, banner: models.Banner):
+        return banner.member
+
+    def save_model(self, request, obj, form, change):
+        obj.member = request.user.member
+        delete_cache_with_key_prefix('banners_list')
+        return super().save_model(request, obj, form, change)
+
+    def delete_queryset(self, request, queryset):
+        delete_cache_with_key_prefix('benners_list')
         return super().delete_queryset(request, queryset)
 
     class Media:

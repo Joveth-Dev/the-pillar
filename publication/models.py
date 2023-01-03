@@ -42,23 +42,16 @@ class MemberPosition(models.Model):
     datetime = models.DateTimeField(auto_now_add=True)
 
 
-class Announcement(models.Model):
-    member = models.ForeignKey(Member, on_delete=models.CASCADE)
-    announcement_img = models.ImageField(
-        upload_to='announcement/images', max_length=255)
-    date_created = models.DateTimeField(auto_now_add=True)
-
-
 class Issue(models.Model):
     LITERARY_FOLIO = 'LF'
     TABLOID = 'T'
-    SPORTS_MAGAZINE = 'M'
+    SPORTS_MAGAZINE = 'SM'
     NEWSLETTER = 'N'
 
     CATEGORY_CHOICES = [
         (LITERARY_FOLIO, 'Literary Folio'),
         (TABLOID, 'Tabloid'),
-        (SPORTS_MAGAZINE, 'Magazine'),
+        (SPORTS_MAGAZINE, 'Sports Magazine'),
         (NEWSLETTER, 'Newsletter')
     ]
     member = models.ForeignKey(Member, on_delete=models.CASCADE)
@@ -80,7 +73,9 @@ class Issue(models.Model):
 
 class IssueFile(models.Model):
     issue = models.OneToOneField(
-        Issue, on_delete=models.CASCADE, primary_key=True)
+        Issue,
+        on_delete=models.CASCADE,
+        primary_key=True)
     file = models.FileField(
         upload_to='publication/files',
         validators=[FileExtensionValidator(allowed_extensions=['pdf'])])
@@ -133,7 +128,6 @@ class ArticleImage(models.Model):
         Article, on_delete=models.CASCADE, related_name='article_images')
     image = models.ImageField(
         upload_to='publication/images',
-        max_length=255,
         blank=True,
         validators=[validate_image_size])
     image_caption = models.CharField(max_length=255, blank=True)
@@ -141,3 +135,20 @@ class ArticleImage(models.Model):
     def __str__(self) -> str:
         image_name = f'File name: {self.image.name.replace("publication/images/", "")}'
         return image_name
+
+
+class Announcement(models.Model):
+    member = models.ForeignKey(Member, on_delete=models.CASCADE)
+    announcement_img = models.ImageField(
+        upload_to='announcement/images', max_length=255)
+    date_created = models.DateTimeField(auto_now_add=True)
+    is_approved = models.BooleanField(default=False)
+
+
+class Banner(models.Model):
+    member = models.ForeignKey(Member, on_delete=models.CASCADE)
+    image = models.ImageField(
+        upload_to='publication/banners',
+        validators=[validate_image_size])
+    date_created = models.DateTimeField(auto_now_add=True)
+    is_approved = models.BooleanField(default=False)

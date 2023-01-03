@@ -49,4 +49,8 @@ EMAIL_PORT = 2525
 #     'SHOW_TOOLBAR_CALLBACK': lambda request: True
 # }
 
+CUSTOM_DOMAIN_URL = 'http://127.0.0.1:8000'
+
 MEDIA_URL = '/media/'
+
+DATA_UPLOAD_MAX_MEMORY_SIZE = 15728640  # 15MiB
