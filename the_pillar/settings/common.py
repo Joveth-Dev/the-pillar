@@ -10,7 +10,6 @@ For the full list of settings and their values, see
 https://docs.djangoproject.com/en/4.1/ref/settings/
 """
 
-import config
 import os
 from pathlib import Path
 from datetime import timedelta
@@ -156,7 +155,7 @@ REST_FRAMEWORK = {
 AUTH_USER_MODEL = 'core.User'
 
 DJOSER = {
-    'SEND_ACTIVATION_EMAIL': True,
+    'PASSWORD_RESET_CONFIRM_URL': 'html/forgotPass.html/{uid}/{token}',
     'SERIALIZERS': {
         'user_create': 'core.serializers.UserCreateSerializer',
         'current_user': 'core.serializers.UserSerializer',
@@ -213,14 +212,6 @@ LOGGING = {
         }
     }
 }
-
-# FOR FORGOT PASSOWORD FEATURE
-EMAIL_BACKEND = 'django.core.mail.backends.smtp.EmailBackend'
-EMAIL_HOST = 'smtp.gmail.com'
-EMAIL_PORT = 587
-EMAIL_USE_TLS = True
-EMAIL_HOST_USER = config.EMAIL_HOST_USER
-EMAIL_HOST_PASSWORD = config.EMAIL_HOST_PASSWORD
 
 # ADMIN UI CODE TWEAKS
 JAZZMIN_SETTINGS = {

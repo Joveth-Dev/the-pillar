@@ -19,6 +19,7 @@ from django.conf.urls.static import static
 from django.contrib import admin
 from django.contrib.auth import views as auth_views
 from django.urls import path, include
+from djoser import views as djoser_views
 
 admin.site.site_header = 'THE PILLAR'
 admin.site.index_title = 'Admin'
@@ -35,14 +36,15 @@ urlpatterns = [
     path('__debug__/', include('debug_toolbar.urls')),
 
     # for sending emial for forgot password feature
-    path('reset_password/', auth_views.PasswordResetView.as_view(),
-         name='reset_password'),
-    path('reset_password_sent/', auth_views.PasswordResetDoneView.as_view(),
-         name='password_reset_done'),
-    path('reset/<uidb64>/<token>/', auth_views.PasswordResetConfirmView.as_view(),
-         name='password_reset_confirm'),
-    path('reset_password_complete/',
-         auth_views.PasswordResetCompleteView.as_view(), name='password_reset_complete'),
+    # to customize templates for this endpoints the template_name inside as_view() should be called
+    # path('reset_password/', auth_views.PasswordResetView.as_view(),
+    #      name='reset_password'),
+    # path('reset_password_sent/', auth_views.PasswordResetDoneView.as_view(),
+    #      name='password_reset_done'),
+    # path('reset/<uidb64>/<token>/', auth_views.PasswordResetConfirmView.as_view(),
+    #      name='password_reset_confirm'),
+    # path('reset_password_complete/',
+    #      auth_views.PasswordResetCompleteView.as_view(), name='password_reset_complete'),
 ]
 
 if settings.DEBUG:
