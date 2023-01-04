@@ -67,7 +67,7 @@ class ArticleViewSet(ReadOnlyModelViewSet):
     serializer_class = ArticleSerializer
     filter_backends = [DjangoFilterBackend, SearchFilter,
                        OrderingFilter]
-    filterset_fields = ['category']
+    filterset_fields = ['category', 'id']
     ordering_fields = ['date_published', 'date_published']
     pagination_class = DefaultPagination
     search_fields = ['title_or_headline', 'body', 'member__pen_name',
