@@ -154,8 +154,15 @@ REST_FRAMEWORK = {
 
 AUTH_USER_MODEL = 'core.User'
 
+
+SITE_NAME = 'The Pillar'
+EMAIL_BACKEND = 'django.core.mail.backends.smtp.EmailBackend'
+EMAIL_HOST = 'smtp.gmail.com'
+EMAIL_PORT = 587
+EMAIL_USE_TLS = True
+
 DJOSER = {
-    'PASSWORD_RESET_CONFIRM_URL': 'html/forgotPass.html/{uid}/{token}',
+    'PASSWORD_RESET_CONFIRM_URL': 'confirm_reset_password/{uid}/{token}',
     'SERIALIZERS': {
         'user_create': 'core.serializers.UserCreateSerializer',
         'current_user': 'core.serializers.UserSerializer',
@@ -173,7 +180,6 @@ ADMINS = [
     ('Kizzelyn', 'kizzelynfloralde@gmail.com'),
     ('Joveth', 'jovethespiritu.developer@gmail.com'),
 ]
-
 
 # (command) celery -A the_pillar beat
 CELERY_BEAT_SCHEDULE = {

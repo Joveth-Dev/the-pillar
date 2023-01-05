@@ -49,3 +49,7 @@ MEDIA_URL = f'{AWS_S3_CUSTOM_DOMAIN}/media/'
 
 # To enable uploading of the same file without overwriting previous files
 # AWS_S3_FILE_OVERWRITE = False
+
+# Forgot password
+EMAIL_HOST_USER = os.environ['EMAIL_HOST_USER']
+EMAIL_HOST_PASSWORD = os.environ['EMAIL_HOST_PASSWORD']
