@@ -5,7 +5,6 @@ from django.urls import path
 # URLConf
 urlpatterns = [
     path('', TemplateView.as_view(template_name='core/index.html')),
-    path('sample/', TemplateView.as_view(template_name='core/password_reset_done.html')),
     path('confirm_reset_password/<uidb64>/<token>/',
          auth_views.PasswordResetConfirmView.as_view(
              template_name='core/password_reset_confirm.html'),
