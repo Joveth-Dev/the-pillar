@@ -12,7 +12,6 @@ pillow==9.3.0
 django-jazzmin==2.6.0
 django-filter==22.1
 django-cors-headers==3.13.0
-django-silk==5.0.2
 celery==5.2.7
 whitenoise==6.2.0
 dj-database-url==1.2.0

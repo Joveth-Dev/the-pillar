@@ -40,7 +40,7 @@ INSTALLED_APPS = [
     'djoser',
     'debug_toolbar',
     'corsheaders',
-    'silk',
+    # 'silk',
     'storages',
     'publication',
     # 'university',
@@ -163,6 +163,7 @@ EMAIL_USE_TLS = True
 
 DJOSER = {
     'PASSWORD_RESET_CONFIRM_URL': 'confirm_reset_password/{uid}/{token}',
+    'SET_PASSWORD_RETYPE': True,
     'SERIALIZERS': {
         'user_create': 'core.serializers.UserCreateSerializer',
         'current_user': 'core.serializers.UserSerializer',
@@ -171,7 +172,7 @@ DJOSER = {
 
 SIMPLE_JWT = {
     'AUTH_HEADER_TYPES': ('JWT',),
-    'ACCESS_TOKEN_LIFETIME': timedelta(hours=1),
+    'ACCESS_TOKEN_LIFETIME': timedelta(seconds=5),
     'REFRESH_TOKEN_LIFETIME': timedelta(weeks=2),
 }
 

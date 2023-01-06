@@ -201,7 +201,7 @@ class IssueFileInline(admin.StackedInline):
 class IssueAdmin(admin.ModelAdmin):
     actions = ['approve', 'disapprove', 'disable_display', 'enable_display']
     fields = ['member', 'volume_number', 'issue_number',
-              'category', 'description', 'is_approved', 'is_enabled']
+              'category', 'description']  # , 'is_approved', 'is_enabled'
     inlines = [IssueFileInline]
     list_display = ['id', 'volume_number', 'issue_number', 'category', 'no_of_articles',
                     'uploaded_by', 'date_published', 'date_created', 'date_updated', 'is_approved', 'is_enabled']
@@ -209,7 +209,7 @@ class IssueAdmin(admin.ModelAdmin):
                    IsEnabledFilter, 'date_published', 'date_created', 'date_updated']
     list_per_page = 10
     list_select_related = ['member__user', 'issuefile']
-    ordering = ['date_created']
+    ordering = ['-date_created']
     readonly_fields = ['member']
     search_fields = ['id__exact', 'volume_number__exact', 'issue_number__exact', 'description__icontains',
                      'member__user__last_name__istartswith', 'member__user__first_name__istartswith']
@@ -241,7 +241,7 @@ class IssueAdmin(admin.ModelAdmin):
         )
         delete_cache_with_key_prefix('issues_list')
 
-    @admin.action(description='Reject selected issues')
+    @admin.action(description='Disapprove selected issues')
     def disapprove(self, request, queryset):
         updated_issue_count = queryset.update(
             is_approved=False, date_published=None)
@@ -281,6 +281,18 @@ class IssueAdmin(admin.ModelAdmin):
     def delete_queryset(self, request, queryset):
         delete_cache_with_key_prefix('issues_list')
         return super().delete_queryset(request, queryset)
+
+    def get_actions(self, request):
+        actions = super().get_actions(request)
+        if not request.user.has_perms(['publication.can_approve_issue',
+                                       'publication.can_disapprove_issue',
+                                       'publication.can_enable_issue',
+                                       'publication.can_disable_issue']):
+            del actions['approve']
+            del actions['disapprove']
+            del actions['enable_display']
+            del actions['disable_display']
+        return actions
 
     class Media:
         css = {
@@ -341,7 +353,7 @@ class ArticleAdmin(admin.ModelAdmin):
     actions = ['approve', 'disapprove', 'disable_display', 'enable_display']
     autocomplete_fields = ['issue']
     fields = ['member', 'issue', 'title_or_headline', 'slug',
-              'category', 'body', 'is_approved', 'is_enabled']
+              'category', 'body']  # , 'is_approved', 'is_enabled'
     inlines = [ArticleImageInline]
     list_display = ['id', 'issue', 'title_or_headline', 'author', 'pen_name',
                     'category', 'date_published', 'date_created', 'date_updated', 'is_approved', 'is_enabled']
@@ -349,7 +361,7 @@ class ArticleAdmin(admin.ModelAdmin):
                    IsEnabledFilter, 'date_published', 'date_created', 'date_updated']
     list_per_page = 10
     list_select_related = ['issue', 'member__user']
-    ordering = ['date_created']
+    ordering = ['-date_created']
     prepopulated_fields = {
         'slug': ['title_or_headline']
     }
@@ -377,12 +389,21 @@ class ArticleAdmin(admin.ModelAdmin):
         )
         delete_cache_with_key_prefix('articles_list')
 
-    @admin.action(description='Reject selected articles')
+    @admin.action(description='Disapprove selected articles')
     def disapprove(self, request, queryset):
         updated_count = queryset.update(is_approved=False, date_published=None)
         self.message_user(
             request,
             f'{updated_count} articles were successfully updated.'
+        )
+        delete_cache_with_key_prefix('articles_list')
+
+    @admin.action(description='Enable display of selected articles')
+    def enable_display(self, request, queryset):
+        updated_display = queryset.update(is_enabled=True)
+        self.message_user(
+            request,
+            f'{updated_display} articles were successfully enabled.'
         )
         delete_cache_with_key_prefix('articles_list')
 
@@ -393,15 +414,6 @@ class ArticleAdmin(admin.ModelAdmin):
             request,
             f'{updated_display} articles were successfully disabled.',
             messages.ERROR
-        )
-        delete_cache_with_key_prefix('articles_list')
-
-    @admin.action(description='Enable display of selected articles')
-    def enable_display(self, request, queryset):
-        updated_display = queryset.update(is_enabled=True)
-        self.message_user(
-            request,
-            f'{updated_display} articles were successfully enabled.'
         )
         delete_cache_with_key_prefix('articles_list')
 
@@ -417,6 +429,18 @@ class ArticleAdmin(admin.ModelAdmin):
     def delete_queryset(self, request, queryset):
         delete_cache_with_key_prefix('articles_list')
         return super().delete_queryset(request, queryset)
+
+    def get_actions(self, request):
+        actions = super().get_actions(request)
+        if not request.user.has_perms(['publication.can_approve_article',
+                                       'publication.can_disapprove_article',
+                                       'publication.can_enable_article',
+                                       'publication.can_disable_article']):
+            del actions['approve']
+            del actions['disapprove']
+            del actions['enable_display']
+            del actions['disable_display']
+        return actions
 
     class Media:
         css = {
