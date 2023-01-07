@@ -3,15 +3,15 @@ from .models import Announcement, Article, ArticleImage, Issue, IssueFile, Membe
 
 
 class MemberSerializer(serializers.ModelSerializer):
-    profile = serializers.SerializerMethodField(read_only=True)
+    avatar = serializers.SerializerMethodField(read_only=True)
     sex = serializers.SerializerMethodField(read_only=True)
     full_name = serializers.SerializerMethodField(read_only=True)
     current_position = serializers.SerializerMethodField()
 
-    def get_profile(self, member: Member):
-        if member.user.profile.profile_image.name == '':
+    def get_avatar(self, member: Member):
+        if member.user.avatar.name == '':
             return ''
-        return member.user.profile.profile_image.url
+        return member.user.avatar.url
 
     def get_sex(self, member: Member):
         return member.user.profile.sex
@@ -24,7 +24,7 @@ class MemberSerializer(serializers.ModelSerializer):
 
     class Meta:
         model = Member
-        fields = ['id', 'profile', 'full_name',
+        fields = ['id', 'avatar', 'full_name',
                   'sex', 'pen_name', 'current_position']
 
 

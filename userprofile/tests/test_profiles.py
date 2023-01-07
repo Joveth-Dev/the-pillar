@@ -19,7 +19,6 @@
 #         assert response.data == {
 #             "id": user.profile.id,
 #             "user_id": user.id,
-#             "profile_image": user.profile.profile_image,
 #             "birth_date": user.profile.birth_date,
 #             "sex": user.profile.sex,
 #             "city": user.profile.city,

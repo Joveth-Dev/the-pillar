@@ -52,15 +52,15 @@ class StudentAdmin(admin.ModelAdmin):
                      'profile__user__first_name__istartswith', 'college__title__icontains', 'degree_program__title__icontains']
 
     def display_picture(self, instance):
-        if instance.profile.profile_image.name != '':
-            return format_html(f'<img src="{instance.profile.profile_image.url}" class="profile"/>')
+        if instance.profile.user.avatar.name != '':
+            return format_html(f'<img src="{instance.profile.user.avatar.url}" class="profile"/>')
         else:
             if instance.profile.sex == 'M':
-                instance.profile.profile_image = 'userprofile/images/default_male.jpg'
-                return format_html(f'<img src="{instance.profile.profile_image.url}" class="profile"/>')
-            elif instance.user.profile.sex == 'F':
-                instance.profile.profile_image = 'userprofile/images/default_female.jpg'
-                return format_html(f'<img src="{instance.profile.profile_image.url}" class="profile"/>')
+                instance.profile.user.avatar = 'userprofile/images/default_male.jpg'
+                return format_html(f'<img src="{instance.profile.user.avatar.url}" class="profile"/>')
+            elif instance.profile.user.sex == 'F':
+                instance.profile.user.avatar = 'userprofile/images/default_female.jpg'
+                return format_html(f'<img src="{instance.profile.user.avatar.url}" class="profile"/>')
 
     @admin.display(ordering='profile__user__first_name')
     def name(self, student):
@@ -68,15 +68,15 @@ class StudentAdmin(admin.ModelAdmin):
 
     @admin.display(ordering='id')
     def picture(self, instance):
-        if instance.profile.profile_image.name != '':
-            return format_html(f'<img src="{instance.profile.profile_image.url}" class="profile_icon"/>')
+        if instance.profile.user.avatar.name != '':
+            return format_html(f'<img src="{instance.profile.user.avatar.url}" class="profile_icon"/>')
         else:
             if instance.profile.sex == 'M':
-                instance.profile.profile_image = 'userprofile/images/default_male.jpg'
-                return format_html(f'<img src="{instance.profile.profile_image.url}" class="profile_icon"/>')
+                instance.profile.user.avatar = 'userprofile/images/default_male.jpg'
+                return format_html(f'<img src="{instance.profile.user.avatar.url}" class="profile_icon"/>')
             elif instance.profile.sex == 'F':
-                instance.profile.profile_image = 'userprofile/images/default_female.jpg'
-                return format_html(f'<img src="{instance.profile.profile_image.url}" class="profile_icon"/>')
+                instance.profile.user.avatar = 'userprofile/images/default_female.jpg'
+                return format_html(f'<img src="{instance.profile.user.avatar.url}" class="profile_icon"/>')
 
     @ admin.display(ordering='user__first_name')
     def full_name(self, student: models.Student):

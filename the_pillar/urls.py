@@ -21,8 +21,8 @@ from django.contrib.auth import views as auth_views
 from django.urls import path, include
 from djoser import views as djoser_views
 
-admin.site.site_header = 'THE PILLAR'
-admin.site.index_title = 'Admin'
+# admin.site.site_header = 'THE PILLAR'
+# admin.site.index_title = 'Admin'
 
 urlpatterns = [
     path('', include('core.urls')),

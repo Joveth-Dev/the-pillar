@@ -22,43 +22,43 @@ class MemberPositionInline(admin.StackedInline):
 @ admin.register(models.Member)
 class MemberAdmin(admin.ModelAdmin):
     autocomplete_fields = ['user']
-    fields = ['display_picture', 'user', 'pen_name']
+    fields = ['avatar_diplay', 'user', 'pen_name']
     exclude = ['date_updated']
     inlines = [MemberPositionInline]
-    list_display = ['profile', 'full_name',
+    list_display = ['user_avatar', 'full_name',
                     'pen_name', 'current_position', 'date_updated']
     list_filter = ['date_updated']
     list_per_page = 10
     list_select_related = ['user__profile']
     ordering = ['-user__date_joined']
-    readonly_fields = ['display_picture']
+    readonly_fields = ['avatar_diplay']
     search_fields = ['user__last_name__istartswith',
                      'user__first_name__istartswith', 'pen_name__istartswith']
 
-    def display_picture(self, instance):
-        if instance.user.profile.profile_image.name != '':
-            return format_html(f'<img src="{instance.user.profile.profile_image.url}" class="profile"/>')
+    def avatar_diplay(self, instance):
+        if instance.user.avatar.name != '':
+            return format_html(f'<img src="{instance.user.avatar.url}" class="profile"/>')
         else:
-            if instance.user.profile.sex == 'M':
-                instance.user.profile.profile_image = 'userprofile/images/default_male.jpg'
-                return format_html(f'<img src="{instance.user.profile.profile_image.url}" class="profile"/>')
-            elif instance.user.profile.sex == 'F':
-                instance.user.profile.profile_image = 'userprofile/images/default_female.jpg'
-                return format_html(f'<img src="{instance.user.profile.profile_image.url}" class="profile"/>')
+            if instance.profile.sex == 'M':
+                instance.user.avatar = 'core/images/default_male.jpg'
+                return format_html(f'<img src="{instance.user.avatar.url}" class="profile"/>')
+            elif instance.profile.sex == 'F':
+                instance.user.avatar = 'core/images/default_female.jpg'
+                return format_html(f'<img src="{instance.user.avatar.url}" class="profile"/>')
 
     @admin.display(ordering='id')
-    def profile(self, instance):
-        if instance.user.profile.profile_image.name != '':
-            return format_html(f'<img src="{instance.user.profile.profile_image.url}" class="profile_icon"/>')
+    def user_avatar(self, instance):
+        if instance.user.avatar.name != '':
+            return format_html(f'<img src="{instance.user.avatar.url}" class="profile_icon"/>')
         else:
             if instance.user.profile.sex == 'M':
-                instance.user.profile.profile_image = 'userprofile/images/default_male.jpg'
-                return format_html(f'<img src="{instance.user.profile.profile_image.url}" class="profile_icon"/>')
+                instance.user.avatar = 'userprofile/images/default_male.jpg'
+                return format_html(f'<img src="{instance.user.avatar.url}" class="profile_icon"/>')
             elif instance.user.profile.sex == 'F':
-                instance.user.profile.profile_image = 'userprofile/images/default_female.jpg'
-                return format_html(f'<img src="{instance.user.profile.profile_image.url}" class="profile_icon"/>')
+                instance.user.avatar = 'userprofile/images/default_female.jpg'
+                return format_html(f'<img src="{instance.user.avatar.url}" class="profile_icon"/>')
 
-    @ admin.display(ordering='user__last_name')
+    @admin.display(ordering='user__last_name')
     def full_name(self, member):
         return member.user.get_full_name()
 
@@ -284,6 +284,7 @@ class IssueAdmin(admin.ModelAdmin):
 
     def get_actions(self, request):
         actions = super().get_actions(request)
+        # for removing approval and display action if no permission
         if not request.user.has_perms(['publication.can_approve_issue',
                                        'publication.can_disapprove_issue',
                                        'publication.can_enable_issue',
@@ -292,6 +293,8 @@ class IssueAdmin(admin.ModelAdmin):
             del actions['disapprove']
             del actions['enable_display']
             del actions['disable_display']
+        if 'delete_selected' in actions:
+            del actions['delete_selected']
         return actions
 
     class Media:
@@ -432,6 +435,7 @@ class ArticleAdmin(admin.ModelAdmin):
 
     def get_actions(self, request):
         actions = super().get_actions(request)
+        # for removing approval and display action if no permission
         if not request.user.has_perms(['publication.can_approve_article',
                                        'publication.can_disapprove_article',
                                        'publication.can_enable_article',
@@ -440,6 +444,8 @@ class ArticleAdmin(admin.ModelAdmin):
             del actions['disapprove']
             del actions['enable_display']
             del actions['disable_display']
+        if 'delete_selected' in actions:
+            del actions['delete_selected']
         return actions
 
     class Media:

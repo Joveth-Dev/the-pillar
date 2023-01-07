@@ -12,11 +12,6 @@ class Profile(models.Model):
         (MALE, 'Male'),
         (FEMALE, 'Female'),
     ]
-    profile_image = models.ImageField(
-        upload_to='userprofile/images',
-        null=True,
-        blank=True,
-        validators=[validate_image_size])
     birth_date = models.DateField(
         null=True,
         blank=True)
@@ -46,14 +41,6 @@ class Profile(models.Model):
 
     def __str__(self) -> str:
         return f'{self.user.first_name} {self.user.middle_initial}. {self.user.last_name}'
-
-    def save(self, *args, **kwargs):
-        if self.profile_image == '':
-            if self.sex == 'M':
-                self.profile_image == 'userprofile/images/default_male.jpg'
-            if self.sex == 'F':
-                self.profile_image == 'userprofile/images/default_female.jpg'
-        super(Profile, self).save(*args, **kwargs)
 
     @admin.display(ordering='user__first_name')
     def first_name(self):

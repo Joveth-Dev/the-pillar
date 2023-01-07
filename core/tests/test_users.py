@@ -70,6 +70,7 @@
 #         assert response.status_code == status.HTTP_200_OK
 #         assert response.data == {
 #             "id": user.id,
+#             "avatar": user.avatar,
 #             "username": user.username,
 #             "email": user.email,
 #             "last_name": user.last_name,

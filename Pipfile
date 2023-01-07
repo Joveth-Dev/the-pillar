@@ -6,7 +6,6 @@ name = "pypi"
 [packages]
 mysqlclient = "*"
 django-debug-toolbar = "*"
-django-jazzmin = "*"
 django = "*"
 djangorestframework = "*"
 djangorestframework-simplejwt = "*"
@@ -28,6 +27,7 @@ whitenoise = "*"
 django-storages = "*"
 boto3 = "*"
 djoser = "*"
+django-jazzmin = "*"
 
 [dev-packages]
 autopep8 = "*"
