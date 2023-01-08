@@ -10,6 +10,7 @@ For the full list of settings and their values, see
 https://docs.djangoproject.com/en/4.1/ref/settings/
 """
 
+from corsheaders.defaults import default_headers
 import os
 from pathlib import Path
 from datetime import timedelta
@@ -73,13 +74,16 @@ INTERNAL_IPS = [
     # ...
 ]
 
+
+CORS_ALLOW_HEADERS = list(default_headers) + [
+    "Cache-Control",
+]
 CORS_ALLOWED_ORIGINS = [
     'http://localhost:8001',
     'http://127.0.0.1:8001',
     'http://localhost:5500',
     'http://127.0.0.1:5500',
 ]
-
 
 ROOT_URLCONF = 'the_pillar.urls'
 
@@ -230,7 +234,7 @@ JAZZMIN_SETTINGS = {
     "site_logo": "core/the_pillar.png",
     "welcome_sign": "Welcome to The Pillar",
     "copyright": "The Pillar",
-    "search_model": "core.user",
+    "search_model": ["core.user", "publication.Articles"],
     "user_avatar": 'avatar',
     "hide_apps": ['authToken'],
     "changeform_format": "carousel",

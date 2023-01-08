@@ -29,7 +29,7 @@ class User(AbstractUser):
                 self.avatar == 'core/images/default_female.jpg'
         super(User, self).save(*args, **kwargs)
 
-    def delete(self, *args, **kwargs):
-        # set is_active to False instead of deleting
-        self.is_active = False
-        super(User, self).save(*args, **kwargs)
+    # def delete(self, *args, **kwargs):
+    #     # set is_active to False instead of deleting
+    #     self.is_active = False
+    #     super(User, self).save(*args, **kwargs)

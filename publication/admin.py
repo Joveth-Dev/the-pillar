@@ -39,10 +39,10 @@ class MemberAdmin(admin.ModelAdmin):
         if instance.user.avatar.name != '':
             return format_html(f'<img src="{instance.user.avatar.url}" class="profile"/>')
         else:
-            if instance.profile.sex == 'M':
+            if instance.user.profile.sex == 'M':
                 instance.user.avatar = 'core/images/default_male.jpg'
                 return format_html(f'<img src="{instance.user.avatar.url}" class="profile"/>')
-            elif instance.profile.sex == 'F':
+            elif instance.user.profile.sex == 'F':
                 instance.user.avatar = 'core/images/default_female.jpg'
                 return format_html(f'<img src="{instance.user.avatar.url}" class="profile"/>')
 
@@ -52,10 +52,10 @@ class MemberAdmin(admin.ModelAdmin):
             return format_html(f'<img src="{instance.user.avatar.url}" class="profile_icon"/>')
         else:
             if instance.user.profile.sex == 'M':
-                instance.user.avatar = 'userprofile/images/default_male.jpg'
+                instance.user.avatar = 'core/images/default_male.jpg'
                 return format_html(f'<img src="{instance.user.avatar.url}" class="profile_icon"/>')
             elif instance.user.profile.sex == 'F':
-                instance.user.avatar = 'userprofile/images/default_female.jpg'
+                instance.user.avatar = 'core/images/default_female.jpg'
                 return format_html(f'<img src="{instance.user.avatar.url}" class="profile_icon"/>')
 
     @admin.display(ordering='user__last_name')
@@ -200,19 +200,19 @@ class IssueFileInline(admin.StackedInline):
 @ admin.register(models.Issue)
 class IssueAdmin(admin.ModelAdmin):
     actions = ['approve', 'disapprove', 'disable_display', 'enable_display']
-    fields = ['member', 'volume_number', 'issue_number',
+    fields = ['member', 'volume_number', 'issue_number', 'date_published',
               'category', 'description']  # , 'is_approved', 'is_enabled'
     inlines = [IssueFileInline]
     list_display = ['id', 'volume_number', 'issue_number', 'category', 'no_of_articles',
-                    'uploaded_by', 'date_published', 'date_created', 'date_updated', 'is_approved', 'is_enabled']
+                    'uploaded_by', 'date_created', 'date_updated', 'is_approved', 'is_enabled']
     list_filter = ['category', IsApprovedFilter,
                    IsEnabledFilter, 'date_published', 'date_created', 'date_updated']
     list_per_page = 10
     list_select_related = ['member__user', 'issuefile']
     ordering = ['-date_created']
     readonly_fields = ['member']
-    search_fields = ['id__exact', 'volume_number__exact', 'issue_number__exact', 'description__icontains',
-                     'member__user__last_name__istartswith', 'member__user__first_name__istartswith']
+    search_fields = ['volume_number__contains', 'issue_number__contains', 'description__icontains',
+                     'member__user__last_name__istartswith', 'member__user__first_name__istartswith', 'member__pen_name__istartswith']
 
     @admin.display(ordering='member')
     def uploaded_by(self, issue):
@@ -233,8 +233,7 @@ class IssueAdmin(admin.ModelAdmin):
 
     @admin.action(description='Approve selected issues')
     def approve(self, request, queryset):
-        updated_issue_count = queryset.update(
-            is_approved=True, date_published=datetime.now())
+        updated_issue_count = queryset.update(is_approved=True)
         self.message_user(
             request,
             f'{updated_issue_count} issues were successfully updated.'
@@ -243,8 +242,7 @@ class IssueAdmin(admin.ModelAdmin):
 
     @admin.action(description='Disapprove selected issues')
     def disapprove(self, request, queryset):
-        updated_issue_count = queryset.update(
-            is_approved=False, date_published=None)
+        updated_issue_count = queryset.update(is_approved=False)
         self.message_user(
             request,
             f'{updated_issue_count} issues and were successfully updated.'
@@ -271,10 +269,6 @@ class IssueAdmin(admin.ModelAdmin):
 
     def save_model(self, request, obj, form, change):
         obj.member = request.user.member
-        if obj.is_approved:
-            obj.date_published = datetime.now()
-        else:
-            obj.date_published = None
         delete_cache_with_key_prefix('issues_list')
         return super().save_model(request, obj, form, change)
 
@@ -356,7 +350,7 @@ class ArticleAdmin(admin.ModelAdmin):
     actions = ['approve', 'disapprove', 'disable_display', 'enable_display']
     autocomplete_fields = ['issue']
     fields = ['member', 'issue', 'title_or_headline', 'slug',
-              'category', 'body']  # , 'is_approved', 'is_enabled'
+              'date_published', 'category', 'body']  # , 'is_approved', 'is_enabled'
     inlines = [ArticleImageInline]
     list_display = ['id', 'issue', 'title_or_headline', 'author', 'pen_name',
                     'category', 'date_published', 'date_created', 'date_updated', 'is_approved', 'is_enabled']
@@ -369,8 +363,8 @@ class ArticleAdmin(admin.ModelAdmin):
         'slug': ['title_or_headline']
     }
     readonly_fields = ['member']
-    search_fields = ['id__exact', 'issue__issue_number__exact', 'title_or_headline__istartswith', 'member__user__last_name__istartswith',
-                     'member__user__first_name__istartswith', 'member__pen_name__istartswith']
+    search_fields = ['title_or_headline__icontains', 'member__user__last_name__istartswith',
+                     'member__user__first_name__istartswith', 'member__pen_name__istartswith', 'body__icontains']
 
     @admin.display(ordering='member')
     def author(self, article):
@@ -384,8 +378,7 @@ class ArticleAdmin(admin.ModelAdmin):
 
     @admin.action(description='Approve selected articles')
     def approve(self, request, queryset):
-        updated_count = queryset.update(
-            is_approved=True, date_published=datetime.now())
+        updated_count = queryset.update(is_approved=True)
         self.message_user(
             request,
             f'{updated_count} articles were successfully updated.'
@@ -394,7 +387,7 @@ class ArticleAdmin(admin.ModelAdmin):
 
     @admin.action(description='Disapprove selected articles')
     def disapprove(self, request, queryset):
-        updated_count = queryset.update(is_approved=False, date_published=None)
+        updated_count = queryset.update(is_approved=False)
         self.message_user(
             request,
             f'{updated_count} articles were successfully updated.'
@@ -422,10 +415,6 @@ class ArticleAdmin(admin.ModelAdmin):
 
     def save_model(self, request, obj, form, change):
         obj.member = request.user.member
-        if obj.is_approved:
-            obj.date_published = datetime.now()
-        else:
-            obj.date_published = None
         delete_cache_with_key_prefix('articles_list')
         return super().save_model(request, obj, form, change)
 

@@ -64,7 +64,7 @@ class Issue(models.Model):
     category = models.CharField(max_length=2, choices=CATEGORY_CHOICES)
     date_created = models.DateTimeField(auto_now_add=True)
     date_updated = models.DateTimeField(auto_now=True)
-    date_published = models.DateTimeField(null=True, blank=True)
+    date_published = models.DateField()
     is_approved = models.BooleanField(default=False)
     is_enabled = models.BooleanField(default=True)
 
@@ -115,8 +115,8 @@ class Article(models.Model):
     category = models.CharField(max_length=2, choices=CATEGORY_CHOICES)
     body = models.TextField()
     date_created = models.DateTimeField(auto_now_add=True)
-    date_published = models.DateTimeField(null=True, blank=True)
     date_updated = models.DateTimeField(auto_now=True)
+    date_published = models.DateField()
     is_approved = models.BooleanField(default=False)
     is_enabled = models.BooleanField(default=True)
 

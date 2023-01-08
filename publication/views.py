@@ -36,10 +36,11 @@ class IssueViewSet(ReadOnlyModelViewSet):
     queryset = Issue.objects.select_related('issuefile') \
         .annotate(articles_count=Count('articles')) \
         .defer('date_created', 'is_approved', 'is_enabled') \
-        .filter(is_approved=True)
+        .filter(is_approved=True) \
+        .filter(is_enabled=True)
     serializer_class = IssueSerializer
     filter_backends = [DjangoFilterBackend, SearchFilter, OrderingFilter]
-    filterset_fields = ['category']
+    filterset_fields = ['category', 'id']
     ordering_fields = ['date_published',
                        'date_updated', 'volume_number', 'issue_number']
     pagination_class = DefaultPagination
@@ -63,7 +64,8 @@ class ArticleViewSet(ReadOnlyModelViewSet):
                'member__user__email') \
         .prefetch_related('article_images') \
         .defer('slug', 'date_created', 'is_approved', 'is_enabled') \
-        .filter(is_approved=True)
+        .filter(is_approved=True) \
+        .filter(is_enabled=True)
     serializer_class = ArticleSerializer
     filter_backends = [DjangoFilterBackend, SearchFilter,
                        OrderingFilter]

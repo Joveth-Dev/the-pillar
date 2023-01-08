@@ -29,7 +29,3 @@ class ProfileViewSet(CreateModelMixin,
             serializer.is_valid(raise_exception=True)
             serializer.save()
             return Response(serializer.data)
-
-    @method_decorator(cache_page(10*60, key_prefix='profiles_list'))
-    def detail(self, request, *args, **kwargs):
-        return super().detail(request, *args, **kwargs)
