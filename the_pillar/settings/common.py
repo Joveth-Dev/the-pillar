@@ -189,15 +189,15 @@ SIMPLE_JWT = {
 }
 
 # (command) celery -A the_pillar beat
-CELERY_BEAT_SCHEDULE = {
-    'notify_readers': {
-        'task': 'playground.tasks.notify_readers',
-        # 'schedule': crontab(day_of_week=1, hour=7, minute=30) # Monday at 7:30am
-        'schedule': 15,
-        'args': ['Hello Readers!'],
-        # 'kwargs': {}
-    }
-}
+# CELERY_BEAT_SCHEDULE = {
+#     'notify_readers': {
+#         'task': 'playground.tasks.notify_readers',
+#         # 'schedule': crontab(day_of_week=1, hour=7, minute=30) # Monday at 7:30am
+#         'schedule': 15,
+#         'args': ['Hello Readers!'],
+#         # 'kwargs': {}
+#     }
+# }
 
 LOGGING = {
     'version': 1,
