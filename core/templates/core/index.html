@@ -7,13 +7,35 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="{% static 'core/styles.css' %}">
+    <link rel="stylesheet" href="{% static 'core/main.min.css' %}">
+    <link rel="stylesheet" href="{% static 'core/custom.css' %}">
     <title>THE PILLAR | UEP - Student Publication</title>
 </head>
 
 <body>
     <div class="home-page">
-        <h1 class="website_name" style="text-align: center;">THE PILLAR</h1>
-        <img src="{% static 'core/The Pillar Logo.png' %}" alt="Logo" class="logo">
+
+        <div class="row">
+            <div class="col d-flex flex-column justify-content-center align-items-center">
+                <img src="{% static 'core/The Pillar Logo.png' %}" alt="Logo" class="logo">
+                <h1 class="display-1 fw-bold text-light">
+                    <span class="initialCapital">T</span>HE <span class="initialCapital">P</span>ILLAR
+                </h1>
+
+                <div class="d-grid gap-2 col-6 mx-auto">
+                    <button class="btn btn-secondary" type="button">
+                        <a href="/admin" class="fw-bold text-light main_link">ADMIN</a>
+                    </button>
+                    <button class="btn btn-secondary" type="button">
+                        <a href="http://127.0.0.1:5500/index.html" class="fw-bold text-light main_link">SITE</a>
+                    </button>
+                </div>
+            </div>
+        </div>
+
+
+
+
     </div>
 </body>
 
