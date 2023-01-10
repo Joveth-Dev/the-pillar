@@ -26,7 +26,7 @@ class ProfileAdmin(admin.ModelAdmin):
             if instance.sex == 'N':
                 instance.user.avatar = 'core/images/default_no_sex.jpg'
                 return format_html(f'<img src="{instance.user.avatar.url}" class="profile"/>')
-            if instance.sex == 'M':
+            elif instance.sex == 'M':
                 instance.user.avatar = 'core/images/default_male.jpg'
                 return format_html(f'<img src="{instance.user.avatar.url}" class="profile"/>')
             elif instance.sex == 'F':
@@ -41,7 +41,7 @@ class ProfileAdmin(admin.ModelAdmin):
             if instance.sex == 'N':
                 instance.user.avatar = 'core/images/default_no_sex.jpg'
                 return format_html(f'<img src="{instance.user.avatar.url}" class="profile_icon"/>')
-            if instance.sex == 'M':
+            elif instance.sex == 'M':
                 instance.user.avatar = 'core/images/default_male.jpg'
                 return format_html(f'<img src="{instance.user.avatar.url}" class="profile_icon"/>')
             elif instance.sex == 'F':

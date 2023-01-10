@@ -55,7 +55,7 @@ class UserAdmin(BaseUserAdmin):
             if instance.profile.sex == 'N':
                 instance.avatar = 'core/images/default_no_sex.jpg'
                 return format_html(f'<img src="{instance.avatar.url}" class="profile"/>')
-            if instance.profile.sex == 'M':
+            elif instance.profile.sex == 'M':
                 instance.avatar = 'core/images/default_male.jpg'
                 return format_html(f'<img src="{instance.avatar.url}" class="profile"/>')
             elif instance.profile.sex == 'F':
@@ -70,7 +70,7 @@ class UserAdmin(BaseUserAdmin):
             if instance.profile.sex == 'N':
                 instance.avatar = 'core/images/default_no_sex.jpg'
                 return format_html(f'<img src="{instance.avatar.url}" class="profile_icon"/>')
-            if instance.profile.sex == 'M':
+            elif instance.profile.sex == 'M':
                 instance.avatar = 'core/images/default_male.jpg'
                 return format_html(f'<img src="{instance.avatar.url}" class="profile_icon"/>')
             elif instance.profile.sex == 'F':
