@@ -23,6 +23,9 @@ class ProfileAdmin(admin.ModelAdmin):
         if instance.user.avatar.name != '':
             return format_html(f'<img src="{instance.user.avatar.url}" class="profile"/>')
         else:
+            if instance.sex == 'N':
+                instance.user.avatar = 'core/images/default_no_sex.jpg'
+                return format_html(f'<img src="{instance.user.avatar.url}" class="profile"/>')
             if instance.sex == 'M':
                 instance.user.avatar = 'core/images/default_male.jpg'
                 return format_html(f'<img src="{instance.user.avatar.url}" class="profile"/>')
@@ -35,6 +38,9 @@ class ProfileAdmin(admin.ModelAdmin):
         if instance.user.avatar.name != '':
             return format_html(f'<img src="{instance.user.avatar.url}" class="profile_icon"/>')
         else:
+            if instance.sex == 'N':
+                instance.user.avatar = 'core/images/default_no_sex.jpg'
+                return format_html(f'<img src="{instance.user.avatar.url}" class="profile_icon"/>')
             if instance.sex == 'M':
                 instance.user.avatar = 'core/images/default_male.jpg'
                 return format_html(f'<img src="{instance.user.avatar.url}" class="profile_icon"/>')
@@ -48,6 +54,13 @@ class ProfileAdmin(admin.ModelAdmin):
             filter(user__is_active=True)
 
     def save_model(self, request, obj, form, change):
+        # if obj.user.avatar == '':
+        #     if obj.sex == 'N':
+        #         obj.user.avatar = 'core/images/default_no_sex.jpg'
+        #     if obj.sex == 'M':
+        #         obj.user.avatar = 'core/images/default_male.jpg'
+        #     if obj.sex == 'F':
+        #         obj.user.avatar = 'core/images/default_female.jpg'
         delete_cache_with_key_prefix('profiles_list')
         delete_cache_with_key_prefix('members_list')
         return super().save_model(request, obj, form, change)

@@ -52,5 +52,15 @@ class Profile(models.Model):
     def last_name(self):
         return self.user.last_name
 
+    # def save(self, *args, **kwargs):
+    #     if self.user.avatar == '':
+    #         if self.sex == 'N':
+    #             self.user.avatar = 'core/images/default_no_sex.jpg'
+    #         if self.sex == 'M':
+    #             self.user.avatar = 'core/images/default_male.jpg'
+    #         if self.sex == 'F':
+    #             self.user.avatar = 'core/images/default_female.jpg'
+    #     super(Profile, self).save(*args, **kwargs)
+
     class Meta:
         ordering = ['user__first_name', 'user__last_name']

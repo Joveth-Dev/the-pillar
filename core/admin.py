@@ -9,8 +9,8 @@ from .models import User
 @admin.register(User)
 class UserAdmin(BaseUserAdmin):
     # SET USER TO INACTIVE INSTEAD OF DELETING
-    def delete_queryset(self, request, queryset):
-        queryset.update(is_active=False)
+    # def delete_queryset(self, request, queryset):
+    #     queryset.update(is_active=False)
     # ========================================
 
     actions = ['delete_user']
@@ -52,6 +52,9 @@ class UserAdmin(BaseUserAdmin):
         if instance.avatar.name != '':
             return format_html(f'<img src="{instance.avatar.url}" class="profile"/>')
         else:
+            if instance.profile.sex == 'N':
+                instance.avatar = 'core/images/default_no_sex.jpg'
+                return format_html(f'<img src="{instance.avatar.url}" class="profile"/>')
             if instance.profile.sex == 'M':
                 instance.avatar = 'core/images/default_male.jpg'
                 return format_html(f'<img src="{instance.avatar.url}" class="profile"/>')
@@ -64,6 +67,9 @@ class UserAdmin(BaseUserAdmin):
         if instance.avatar.name != '':
             return format_html(f'<img src="{instance.avatar.url}" class="profile_icon"/>')
         else:
+            if instance.profile.sex == 'N':
+                instance.avatar = 'core/images/default_no_sex.jpg'
+                return format_html(f'<img src="{instance.avatar.url}" class="profile_icon"/>')
             if instance.profile.sex == 'M':
                 instance.avatar = 'core/images/default_male.jpg'
                 return format_html(f'<img src="{instance.avatar.url}" class="profile_icon"/>')
@@ -71,15 +77,15 @@ class UserAdmin(BaseUserAdmin):
                 instance.avatar = 'core/images/default_female.jpg'
                 return format_html(f'<img src="{instance.avatar.url}" class="profile_icon"/>')
 
-    def save_model(self, request, obj, form, change):
-        if obj.avatar == '':
-            if obj.profile.sex == 'N':
-                obj.avatar = 'core/images/default_no_sex.jpg'
-            if obj.profile.sex == 'M':
-                obj.avatar = 'core/images/default_male.jpg'
-            if obj.profile.sex == 'F':
-                obj.avatar = 'core/images/default_female.jpg'
-        return super().save_model(request, obj, form, change)
+    # def save_model(self, request, obj, form, change):
+    #     if obj.avatar == '':
+    #         if obj.profile.sex == 'N':
+    #             obj.avatar = 'core/images/default_no_sex.jpg'
+    #         if obj.profile.sex == 'M':
+    #             obj.avatar = 'core/images/default_male.jpg'
+    #         if obj.profile.sex == 'F':
+    #             obj.avatar = 'core/images/default_female.jpg'
+    #     return super().save_model(request, obj, form, change)
 
     class Media:
         css = {
