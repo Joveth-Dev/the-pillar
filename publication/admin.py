@@ -9,8 +9,8 @@ from . import models
 
 # from nested_admin import NestedModelAdmin, NestedStackedInline
 
-# from django.contrib.auth.models import Permission
-# admin.site.register(Permission)
+from django.contrib.auth.models import Permission
+admin.site.register(Permission)
 
 
 class MemberPositionInline(admin.StackedInline):
