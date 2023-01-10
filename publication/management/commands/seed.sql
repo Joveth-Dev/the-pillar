@@ -7,7 +7,7 @@ ALTER TABLE publication_article CHANGE `date_updated` `date_updated` TIMESTAMP N
 ALTER TABLE publication_article CHANGE `date_created` `date_created` TIMESTAMP NOT NULL DEFAULT CURRENT_TIMESTAMP;
 
 -- POPULATING POSITION TABLE
-INSERT INTO `publication_position` (`id`,`title`) VALUES (1,'Editor-in-chief');
+INSERT INTO `publication_position` (`id`,`title`) VALUES (1,'Editor-in-Chief');
 INSERT INTO `publication_position` (`id`,`title`) VALUES (2,'Associate Editor');
 INSERT INTO `publication_position` (`id`,`title`) VALUES (3,'Managing Editor');
 INSERT INTO `publication_position` (`id`,`title`) VALUES (4,'News Editor');

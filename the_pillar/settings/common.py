@@ -167,6 +167,12 @@ EMAIL_HOST = 'smtp.gmail.com'
 EMAIL_PORT = 587
 EMAIL_USE_TLS = True
 
+DEFAULT_FROM_EMAIL = 'jovethespiritu.developer@gmail.com'
+# ADMINS = [
+#     ('Kizzelyn', 'kizzelynfloralde@gmail.com'),
+#     ('Joveth', 'jovethespiritu.developer@gmail.com'),
+# ]
+
 DJOSER = {
     'PASSWORD_RESET_CONFIRM_URL': 'confirm_reset_password/{uid}/{token}',
     'SET_PASSWORD_RETYPE': True,
@@ -181,12 +187,6 @@ SIMPLE_JWT = {
     'ACCESS_TOKEN_LIFETIME': timedelta(hours=7),
     'REFRESH_TOKEN_LIFETIME': timedelta(weeks=2),
 }
-
-DEFAULT_FROM_EMAIL = 'jovethespiritu.developer@gmail.com'
-ADMINS = [
-    ('Kizzelyn', 'kizzelynfloralde@gmail.com'),
-    ('Joveth', 'jovethespiritu.developer@gmail.com'),
-]
 
 # (command) celery -A the_pillar beat
 CELERY_BEAT_SCHEDULE = {
