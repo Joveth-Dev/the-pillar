@@ -17,7 +17,7 @@ from .serializers import AnnouncementSerializer, \
 class MemberViewSet(ReadOnlyModelViewSet):
     # get the current position of the members first
     subquery = MemberPosition.objects.select_related('position').filter(
-        member_id=OuterRef('pk')).order_by('-datetime').values('position__title')[:1]
+        member_id=OuterRef('pk')).order_by('-date_assigned').values('position__title')[:1]
 
     # annotate the queryset with their current position
     queryset = Member.objects.prefetch_related('memberposition_set').select_related(

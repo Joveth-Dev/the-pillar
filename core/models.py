@@ -22,14 +22,16 @@ class User(AbstractUser):
         return f'{self.first_name} {self.middle_initial}. {self.last_name}'
 
     def save(self, *args, **kwargs):
-        if self.avatar == '':
+        if self.avatar.name == '':
+            if self.profile.sex == 'N':
+                self.avatar = 'core/images/default_no_sex.jpg'
             if self.profile.sex == 'M':
-                self.avatar == 'core/images/default_male.jpg'
+                self.avatar = 'core/images/default_male.jpg'
             if self.profile.sex == 'F':
-                self.avatar == 'core/images/default_female.jpg'
+                self.avatar = 'core/images/default_female.jpg'
         super(User, self).save(*args, **kwargs)
 
-    # def delete(self, *args, **kwargs):
-    #     # set is_active to False instead of deleting
-    #     self.is_active = False
-    #     super(User, self).save(*args, **kwargs)
+    def delete(self, *args, **kwargs):
+        # set is_active to False instead of deleting
+        self.is_active = False
+        super(User, self).save(*args, **kwargs)

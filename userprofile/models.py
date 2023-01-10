@@ -8,9 +8,11 @@ from .validators import validate_image_size
 class Profile(models.Model):
     MALE = 'M'
     FEMALE = 'F'
+    NOT_SET = 'N'
     SEX_CHOICES = [
         (MALE, 'Male'),
         (FEMALE, 'Female'),
+        (NOT_SET, 'Not set'),
     ]
     birth_date = models.DateField(
         null=True,
@@ -18,7 +20,7 @@ class Profile(models.Model):
     sex = models.CharField(
         max_length=1,
         choices=SEX_CHOICES,
-        default=SEX_CHOICES[0][0])
+        default=SEX_CHOICES[2][0])
     city = models.CharField(
         max_length=255,
         null=True,
@@ -37,7 +39,7 @@ class Profile(models.Model):
         blank=True)
     user = models.OneToOneField(
         settings.AUTH_USER_MODEL,
-        on_delete=models.CASCADE)
+        on_delete=models.CASCADE, related_name='profile')
 
     def __str__(self) -> str:
         return f'{self.user.first_name} {self.user.middle_initial}. {self.user.last_name}'

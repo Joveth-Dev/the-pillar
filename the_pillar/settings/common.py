@@ -249,6 +249,7 @@ JAZZMIN_SETTINGS = {
         "publication.issue": "fas fa-newspaper",
         "publication.member": "fas fa-user-friends",
         "publication.position": "fas fa-street-view",
+        "publication.memberposition": "fas fa-user-tie",
         "userprofile.profile": "fas fa-id-card",
     },
 }

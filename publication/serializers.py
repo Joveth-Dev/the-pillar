@@ -35,6 +35,9 @@ class IssueFileSerializer(serializers.ModelSerializer):
 
 
 class IssueSerializer(serializers.ModelSerializer):
+    issue_file = IssueFileSerializer(source='issuefile')
+    articles_count = serializers.IntegerField(read_only=True)
+
     def create(self, validated_data):
         return super().create(validated_data)
 
@@ -42,8 +45,6 @@ class IssueSerializer(serializers.ModelSerializer):
         model = Issue
         fields = ['id', 'volume_number', 'issue_number', 'category',
                   'issue_file', 'description', 'articles_count', 'date_published', 'date_updated']
-    issue_file = IssueFileSerializer(source='issuefile')
-    articles_count = serializers.IntegerField(read_only=True)
 
 
 class ArticleImageSerializer(serializers.ModelSerializer):
@@ -53,10 +54,6 @@ class ArticleImageSerializer(serializers.ModelSerializer):
 
 
 class ArticleSerializer(serializers.ModelSerializer):
-    class Meta:
-        model = Article
-        fields = ['id', 'author', 'pen_name', 'issue', 'category', 'title_or_headline',
-                  'article_images', 'body', 'date_published', 'date_updated']
     author = serializers.SerializerMethodField()
     pen_name = serializers.SerializerMethodField()
     issue = serializers.HyperlinkedRelatedField(
@@ -64,6 +61,11 @@ class ArticleSerializer(serializers.ModelSerializer):
         view_name='issues-detail'
     )
     article_images = ArticleImageSerializer(many=True)
+
+    class Meta:
+        model = Article
+        fields = ['id', 'author', 'pen_name', 'issue', 'category', 'title_or_headline',
+                  'article_images', 'body', 'date_published', 'date_updated']
 
     def get_author(self, article: Article):
         return str(article.member.user.get_full_name())

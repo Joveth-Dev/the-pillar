@@ -1,5 +1,4 @@
 # from django.utils import timezone
-from datetime import datetime
 from django.contrib import admin, messages
 from django.db.models import OuterRef, Subquery
 from django.db.models.aggregates import Count
@@ -7,8 +6,11 @@ from django.urls import reverse
 from django.utils.html import format_html, urlencode
 from . cache_handler import delete_cache_with_key_prefix
 from . import models
-from django.core.cache import cache
+
 # from nested_admin import NestedModelAdmin, NestedStackedInline
+
+# from django.contrib.auth.models import Permission
+# admin.site.register(Permission)
 
 
 class MemberPositionInline(admin.StackedInline):
@@ -68,7 +70,7 @@ class MemberAdmin(admin.ModelAdmin):
 
     def get_queryset(self, request):
         subquery = models.MemberPosition.objects.select_related('position').filter(
-            member_id=OuterRef('pk')).order_by('-datetime').values('position__title')[:1]
+            member_id=OuterRef('pk')).order_by('-date_assigned').values('position__title')[:1]
         return super().get_queryset(request). \
             select_related('user') . \
             filter(user__is_active=True) . \
@@ -97,6 +99,11 @@ class PositionAdmin(admin.ModelAdmin):
     @admin.display(ordering='title')
     def position(self, position):
         return position.title
+
+
+@admin.register(models.MemberPosition)
+class MemberPositionAdmin(admin.ModelAdmin):
+    list_display = ['id', 'member', 'position', 'date_assigned']
 
 
 @admin.register(models.Announcement)
@@ -203,8 +210,8 @@ class IssueAdmin(admin.ModelAdmin):
     fields = ['member', 'volume_number', 'issue_number', 'date_published',
               'category', 'description']  # , 'is_approved', 'is_enabled'
     inlines = [IssueFileInline]
-    list_display = ['id', 'volume_number', 'issue_number', 'category', 'no_of_articles',
-                    'uploaded_by', 'date_created', 'date_updated', 'is_approved', 'is_enabled']
+    list_display = ['volume_number', 'issue_number', 'category', 'uploaded_by', 'date_published',
+                    'date_created', 'date_updated', 'no_of_articles', 'is_approved', 'is_enabled']
     list_filter = ['category', IsApprovedFilter,
                    IsEnabledFilter, 'date_published', 'date_created', 'date_updated']
     list_per_page = 10

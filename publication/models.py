@@ -40,7 +40,10 @@ class Position(models.Model):
 class MemberPosition(models.Model):
     member = models.ForeignKey(Member, on_delete=models.CASCADE)
     position = models.ForeignKey(Position, on_delete=models.CASCADE, null=True)
-    datetime = models.DateTimeField(auto_now_add=True)
+    date_assigned = models.DateTimeField(auto_now_add=True)
+
+    def __str__(self) -> str:
+        return self.position.title
 
 
 class Issue(models.Model):
