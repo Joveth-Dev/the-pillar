@@ -244,6 +244,7 @@ JAZZMIN_SETTINGS = {
     "icons": {
         "core.user": "fas fa-user",
         "auth.group": "fas fa-users",
+        "auth.permission": "fas fa-key",
         "publication.article": "fas fa-file-alt",
         "publication.announcement": "fas fa-bullhorn",
         "publication.banner": "fas fa-flag",
