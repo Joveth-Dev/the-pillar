@@ -6,7 +6,7 @@ DEBUG = False
 
 SECRET_KEY = os.environ['SECRET_KEY']
 
-ALLOWED_HOSTS = ['web-production-8b44.up.railway.app']
+ALLOWED_HOSTS = ['web-production-db1d.up.railway.app']
 
 DATABASES = {
     'default': dj_database_url.config()
@@ -36,7 +36,7 @@ CACHES = {
 # EMAIL_HOST_PASSWORD = os.environ['MAILGUN_SMTP_PASSWORD']
 # EMAIL_PORT = os.environ['MAILGUN_SMTP_PORT']
 
-CSRF_TRUSTED_ORIGINS = ['https://web-production-8b44.up.railway.app']
+CSRF_TRUSTED_ORIGINS = ['https://web-production-db1d.up.railway.app']
 
 # AWS s3 configurations
 AWS_ACCESS_KEY_ID = os.environ['AWS_ACCESS_KEY_ID']
