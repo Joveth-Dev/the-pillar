@@ -1,6 +1,6 @@
-from django.contrib.auth.admin import UserAdmin as BaseUserAdmin
-from rest_framework.authtoken.models import Token
 from django.contrib import admin
+from django.contrib.auth.admin import UserAdmin as BaseUserAdmin, GroupAdmin as BaseGroupAdmin
+from django.contrib.auth.models import Group
 from django.utils.html import format_html, urlencode
 from django.utils.translation import gettext_lazy as _
 from .models import User
@@ -28,7 +28,7 @@ class UserAdmin(BaseUserAdmin):
                     "is_staff",
                     "is_superuser",
                     "groups",
-                    "user_permissions",
+                    # "user_permissions",
                 ),
             },
         ),

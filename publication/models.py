@@ -1,5 +1,4 @@
 from django.conf import settings
-from django.contrib.auth.models import Permission
 from django.core.validators import MinValueValidator, FileExtensionValidator
 from django.db import models
 from .validators import validate_image_size

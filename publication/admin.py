@@ -1,4 +1,3 @@
-# from django.utils import timezone
 from django.contrib import admin, messages
 from django.db.models import OuterRef, Subquery
 from django.db.models.aggregates import Count
@@ -216,7 +215,7 @@ class IssueAdmin(admin.ModelAdmin):
     fields = ['member', 'volume_number', 'issue_number', 'date_published',
               'category', 'description']  # , 'is_approved', 'is_enabled'
     inlines = [IssueFileInline]
-    list_display = ['volume_number', 'issue_number', 'category', 'uploaded_by', 'date_published',
+    list_display = ['id', 'volume_number', 'issue_number', 'category', 'uploaded_by', 'date_published',
                     'date_created', 'date_updated', 'no_of_articles', 'is_approved', 'is_enabled']
     list_filter = ['category', IsApprovedFilter,
                    IsEnabledFilter, 'date_published', 'date_created', 'date_updated']
@@ -224,7 +223,7 @@ class IssueAdmin(admin.ModelAdmin):
     list_select_related = ['member__user', 'issuefile']
     ordering = ['-date_created']
     readonly_fields = ['member']
-    search_fields = ['volume_number__contains', 'issue_number__contains', 'description__icontains',
+    search_fields = ['id__exact', 'volume_number__contains', 'issue_number__contains', 'description__icontains',
                      'member__user__last_name__istartswith', 'member__user__first_name__istartswith', 'member__pen_name__istartswith']
 
     @admin.display(ordering='member')
@@ -362,7 +361,7 @@ class ArticleImageInline(admin.StackedInline):
 class ArticleAdmin(admin.ModelAdmin):
     actions = ['approve', 'disapprove', 'disable_display', 'enable_display']
     autocomplete_fields = ['issue']
-    fields = ['member', 'issue', 'title_or_headline', 'slug',
+    fields = ['id', 'member', 'issue', 'title_or_headline', 'slug',
               'date_published', 'category', 'body']  # , 'is_approved', 'is_enabled'
     inlines = [ArticleImageInline]
     list_display = ['id', 'issue', 'title_or_headline', 'author', 'pen_name',
@@ -376,7 +375,7 @@ class ArticleAdmin(admin.ModelAdmin):
         'slug': ['title_or_headline']
     }
     readonly_fields = ['member']
-    search_fields = ['title_or_headline__icontains', 'member__user__last_name__istartswith',
+    search_fields = ['id__exact', 'title_or_headline__icontains', 'member__user__last_name__istartswith',
                      'member__user__first_name__istartswith', 'member__pen_name__istartswith', 'body__icontains']
 
     @admin.display(ordering='member')

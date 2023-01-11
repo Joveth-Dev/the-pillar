@@ -17,30 +17,19 @@ Including another URLconf
 from django.conf import settings
 from django.conf.urls.static import static
 from django.contrib import admin
-from django.contrib.auth import views as auth_views
 from django.urls import path, include
-from djoser import views as djoser_views
-
-# admin.site.site_header = 'THE PILLAR'
-# admin.site.index_title = 'Admin'
 
 urlpatterns = [
     path('', include('core.urls')),
     path('admin/', admin.site.urls),
     path('userprofile/', include('userprofile.urls')),
     path('publication/', include('publication.urls')),
+    path('likes/', include('likes.urls')),
     # path('university/', include('university.urls')),
     # path('playground/', include('playground.urls')),
     path('auth/', include('djoser.urls')),
     path('auth/', include('djoser.urls.jwt')),
     path('__debug__/', include('debug_toolbar.urls')),
-
-    # for sending emial for forgot password feature
-    # to customize templates for this endpoints the template_name inside as_view() should be called
-    # path('reset_password/', auth_views.PasswordResetView.as_view(),
-    #      name='reset_password'),
-    # path('reset_password_sent/', auth_views.PasswordResetDoneView.as_view(),
-    #      name='password_reset_done'),
 ]
 
 if settings.DEBUG:

@@ -49,6 +49,7 @@ INSTALLED_APPS = [
     'userprofile',
     # 'playground',
     'core',
+    'likes',
 ]
 
 MIDDLEWARE = [
@@ -253,6 +254,8 @@ JAZZMIN_SETTINGS = {
         "publication.position": "fas fa-street-view",
         "publication.memberposition": "fas fa-user-tie",
         "userprofile.profile": "fas fa-id-card",
+        "likes.likeditem": "fas fa-thumbs-up",
+        "likes.dislikeditem": "fas fa-thumbs-down",
     },
 }
 
