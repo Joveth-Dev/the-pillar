@@ -113,6 +113,7 @@ class MemberPositionAdmin(admin.ModelAdmin):
 
 @admin.register(models.Announcement)
 class AnnouncementAdmin(admin.ModelAdmin):
+    actions = ['approve', 'disapprove', 'disable_display', 'enable_display']
     fields = ['announcement_img', 'is_approved']
     list_display = ['thumbnail', 'announcement_img',
                     'created_by', 'date_created', 'is_approved']
@@ -128,6 +129,42 @@ class AnnouncementAdmin(admin.ModelAdmin):
     @admin.display(ordering='member')
     def created_by(self, announcement: models.Announcement):
         return announcement.member
+
+    @admin.action(description='Approve selected issues')
+    def approve(self, request, queryset):
+        updated_issue_count = queryset.update(is_approved=True)
+        self.message_user(
+            request,
+            f'{updated_issue_count} issues were successfully updated.'
+        )
+        delete_cache_with_key_prefix('announcements_list')
+
+    @admin.action(description='Disapprove selected issues')
+    def disapprove(self, request, queryset):
+        updated_issue_count = queryset.update(is_approved=False)
+        self.message_user(
+            request,
+            f'{updated_issue_count} issues and were successfully updated.'
+        )
+        delete_cache_with_key_prefix('announcements_list')
+
+    @admin.action(description='Disable display of selected issues')
+    def disable_display(self, request, queryset):
+        updated_issues_count = queryset.update(is_enabled=False)
+        self.message_user(
+            request,
+            f'{updated_issues_count} issues were successfully updated.'
+        )
+        delete_cache_with_key_prefix('announcements_list')
+
+    @admin.action(description='Enable display of selected issues')
+    def enable_display(self, request, queryset):
+        updated_issues_count = queryset.update(is_enabled=True)
+        self.message_user(
+            request,
+            f'{updated_issues_count} issues were successfully updated.'
+        )
+        delete_cache_with_key_prefix('announcements_list')
 
     def save_model(self, request, obj, form, change):
         obj.member = request.user.member
@@ -361,7 +398,7 @@ class ArticleImageInline(admin.StackedInline):
 class ArticleAdmin(admin.ModelAdmin):
     actions = ['approve', 'disapprove', 'disable_display', 'enable_display']
     autocomplete_fields = ['issue']
-    fields = ['id', 'member', 'issue', 'title_or_headline', 'slug',
+    fields = ['member', 'issue', 'title_or_headline', 'slug',
               'date_published', 'category', 'body']  # , 'is_approved', 'is_enabled'
     inlines = [ArticleImageInline]
     list_display = ['id', 'issue', 'title_or_headline', 'author', 'pen_name',
@@ -457,6 +494,7 @@ class ArticleAdmin(admin.ModelAdmin):
 
 @admin.register(models.Banner)
 class BannerAdmin(admin.ModelAdmin):
+    actions = ['approve', 'disapprove', 'disable_display', 'enable_display']
     fields = ['image', 'is_approved']
     list_display = ['thumbnail', 'image',
                     'created_by', 'is_approved', 'date_created']
@@ -471,6 +509,42 @@ class BannerAdmin(admin.ModelAdmin):
     @admin.display(ordering='member')
     def created_by(self, banner: models.Banner):
         return banner.member
+
+    @admin.action(description='Approve selected issues')
+    def approve(self, request, queryset):
+        updated_issue_count = queryset.update(is_approved=True)
+        self.message_user(
+            request,
+            f'{updated_issue_count} issues were successfully updated.'
+        )
+        delete_cache_with_key_prefix('banners_list')
+
+    @admin.action(description='Disapprove selected issues')
+    def disapprove(self, request, queryset):
+        updated_issue_count = queryset.update(is_approved=False)
+        self.message_user(
+            request,
+            f'{updated_issue_count} issues and were successfully updated.'
+        )
+        delete_cache_with_key_prefix('banners_list')
+
+    @admin.action(description='Disable display of selected issues')
+    def disable_display(self, request, queryset):
+        updated_issues_count = queryset.update(is_enabled=False)
+        self.message_user(
+            request,
+            f'{updated_issues_count} issues were successfully updated.'
+        )
+        delete_cache_with_key_prefix('banners_list')
+
+    @admin.action(description='Enable display of selected issues')
+    def enable_display(self, request, queryset):
+        updated_issues_count = queryset.update(is_enabled=True)
+        self.message_user(
+            request,
+            f'{updated_issues_count} issues were successfully updated.'
+        )
+        delete_cache_with_key_prefix('banners_list')
 
     def save_model(self, request, obj, form, change):
         obj.member = request.user.member

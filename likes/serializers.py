@@ -11,7 +11,7 @@ class LikedItemSerializer(serializers.ModelSerializer):
 
     class Meta:
         model = LikedItem
-        fields = ['content_type', 'object_id', 'user_id']
+        fields = ['id', 'content_type', 'object_id', 'user_id']
 
 
 class DislikedItemSerializer(serializers.ModelSerializer):
@@ -23,4 +23,4 @@ class DislikedItemSerializer(serializers.ModelSerializer):
 
     class Meta:
         model = DislikedItem
-        fields = ['content_type', 'object_id', 'user_id']
+        fields = ['id', 'content_type', 'object_id', 'user_id']

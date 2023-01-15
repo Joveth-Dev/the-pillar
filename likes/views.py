@@ -13,7 +13,7 @@ class LikedItemViewSet(ModelViewSet):
         select_related('user'). \
         filter(Q(content_type=8) | Q(content_type=9))
     serializer_class = LikedItemSerializer
-    # permission_classes = [IsAuthenticated]
+    permission_classes = [IsAuthenticated]
     pagination_class = DefaultPagination
     filter_backends = [DjangoFilterBackend, SearchFilter, OrderingFilter]
     filterset_fields = ['content_type', 'object_id']
@@ -27,7 +27,7 @@ class DislikedItemViewSet(ModelViewSet):
         select_related('user'). \
         filter(Q(content_type=8) | Q(content_type=9))
     serializer_class = DislikedItemSerializer
-    # permission_classes = [IsAuthenticated]
+    permission_classes = [IsAuthenticated]
     pagination_class = DefaultPagination
     filter_backends = [DjangoFilterBackend, SearchFilter, OrderingFilter]
     filterset_fields = ['content_type', 'object_id']
