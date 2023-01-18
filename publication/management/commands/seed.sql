@@ -17,9 +17,9 @@ INSERT INTO `publication_position` (`id`,`title`) VALUES (7,'Staff Writters');
 INSERT INTO `publication_position` (`id`,`title`) VALUES (8,'Cartoonist');
 INSERT INTO `publication_position` (`id`,`title`) VALUES (9,'Photojournalist');
 INSERT INTO `publication_position` (`id`,`title`) VALUES (10,'Layout Artist');
-INSERT INTO `publication_position` (`id`,`title`) VALUES (11,'Financial Manager');
-INSERT INTO `publication_position` (`id`,`title`) VALUES (12,'Assistant Financial Manager');
-INSERT INTO `publication_position` (`id`,`title`) VALUES (13,'Financial Adviser');
+INSERT INTO `publication_position` (`id`,`title`) VALUES (11,'Financial Adviser');
+INSERT INTO `publication_position` (`id`,`title`) VALUES (12,'Assistant Finance Manager');
+INSERT INTO `publication_position` (`id`,`title`) VALUES (13,'Finance Manager');
 INSERT INTO `publication_position` (`id`,`title`) VALUES (14,'Technical Adviser');
 
 -- POPULATING ISSUE TABLE
