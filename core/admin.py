@@ -16,6 +16,7 @@ class UserAdmin(BaseUserAdmin):
     actions = ['delete_user']
     list_display = ['user_avatar', 'username', 'email', 'first_name',
                     'middle_initial', 'last_name', 'is_staff', 'is_active']
+    list_filter = ("is_staff", "is_active", "groups")
     fieldsets = (
         (None, {"fields": ("username", "password")}),
         (_("Personal info"), {
