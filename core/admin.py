@@ -1,9 +1,12 @@
 from django.contrib import admin
-from django.contrib.auth.admin import UserAdmin as BaseUserAdmin, GroupAdmin as BaseGroupAdmin
-from django.contrib.auth.models import Group
+from django.contrib.auth.admin import UserAdmin as BaseUserAdmin
+from django.contrib.admin.models import LogEntry
 from django.utils.html import format_html, urlencode
 from django.utils.translation import gettext_lazy as _
 from .models import User
+
+# NEED TO CUSTOMIZE PRESENTATION IN ADMIN
+admin.site.register(LogEntry)
 
 
 @admin.register(User)

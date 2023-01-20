@@ -256,6 +256,7 @@ JAZZMIN_SETTINGS = {
         "userprofile.profile": "fas fa-id-card",
         "likes.likeditem": "fas fa-thumbs-up",
         "likes.dislikeditem": "fas fa-thumbs-down",
+        "admin.logentry": "fas fa-poll-h",
     },
 }
 
