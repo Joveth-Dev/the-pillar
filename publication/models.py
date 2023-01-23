@@ -7,6 +7,7 @@ from .validators import validate_image_size
 class Member(models.Model):
     pen_name = models.CharField(max_length=85)
     date_updated = models.DateTimeField(auto_now=True)
+    is_active = models.BooleanField(default=True)
     user = models.OneToOneField(
         settings.AUTH_USER_MODEL,
         on_delete=models.CASCADE)
@@ -16,6 +17,11 @@ class Member(models.Model):
 
     def get_pen_name(self):
         return self.pen_name
+
+    def delete(self, *args, **kwargs):
+        # set is_active to False instead of deleting
+        self.is_active = False
+        super(Member, self).save(*args, **kwargs)
 
 
 class Position(models.Model):

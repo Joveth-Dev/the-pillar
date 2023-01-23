@@ -27,8 +27,8 @@ class MemberAdmin(admin.ModelAdmin):
     exclude = ['date_updated']
     inlines = [MemberPositionInline]
     list_display = ['user_avatar', 'full_name',
-                    'pen_name', 'current_position', 'date_updated']
-    list_filter = ['date_updated']
+                    'pen_name', 'current_position', 'date_updated', 'is_active']
+    list_filter = ['date_updated', 'is_active']
     list_per_page = 10
     list_select_related = ['user__profile']
     ordering = ['-user__date_joined']
@@ -86,9 +86,11 @@ class MemberAdmin(admin.ModelAdmin):
         delete_cache_with_key_prefix('members_list')
         return super().save_model(request, obj, form, change)
 
+    # SET MEMBER TO INACTIVE INSTEAD OF DELETING
     def delete_queryset(self, request, queryset):
         delete_cache_with_key_prefix('members_list')
-        return super().delete_queryset(request, queryset)
+        queryset.update(is_active=False)
+    # ========================================
 
     class Media:
         css = {
