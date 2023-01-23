@@ -19,7 +19,7 @@ class Member(models.Model):
 
 
 class Position(models.Model):
-    title = models.CharField(max_length=27)
+    title = models.CharField(max_length=50)
 
     def __str__(self) -> str:
         return self.title
