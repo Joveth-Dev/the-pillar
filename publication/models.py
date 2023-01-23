@@ -62,7 +62,7 @@ class Issue(models.Model):
         validators=[MinValueValidator(1), MaxValueValidator(999)])
     issue_number = models.PositiveIntegerField(
         validators=[MinValueValidator(1), MaxValueValidator(999)])
-    description = models.TextField(null=True, blank=True)
+    description = models.TextField(max_length=255, null=True, blank=True)
     category = models.CharField(max_length=2, choices=CATEGORY_CHOICES)
     date_created = models.DateTimeField(auto_now_add=True)
     date_updated = models.DateTimeField(auto_now=True)
