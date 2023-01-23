@@ -32,8 +32,7 @@ class Profile(models.Model):
     zip_code = models.PositiveSmallIntegerField(
         null=True,
         blank=True,
-        validators=[MinValueValidator(1), MaxValueValidator(9999)],
-        max_length=4)
+        validators=[MinValueValidator(1), MaxValueValidator(99950)])
     country = models.CharField(
         max_length=255,
         null=True,
