@@ -1,5 +1,5 @@
 from django.conf import settings
-from django.core.validators import MinValueValidator, FileExtensionValidator
+from django.core.validators import MinValueValidator, MaxValueValidator, FileExtensionValidator
 from django.db import models
 from .validators import validate_image_size
 
@@ -59,9 +59,9 @@ class Issue(models.Model):
     ]
     member = models.ForeignKey(Member, on_delete=models.CASCADE)
     volume_number = models.PositiveIntegerField(
-        validators=[MinValueValidator(1)])
+        validators=[MinValueValidator(1), MaxValueValidator(999)])
     issue_number = models.PositiveIntegerField(
-        validators=[MinValueValidator(1)])
+        validators=[MinValueValidator(1), MaxValueValidator(999)])
     description = models.TextField(null=True, blank=True)
     category = models.CharField(max_length=2, choices=CATEGORY_CHOICES)
     date_created = models.DateTimeField(auto_now_add=True)
