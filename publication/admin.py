@@ -23,7 +23,7 @@ class MemberPositionInline(admin.StackedInline):
 @ admin.register(models.Member)
 class MemberAdmin(admin.ModelAdmin):
     autocomplete_fields = ['user']
-    fields = ['avatar_diplay', 'user', 'pen_name']
+    fields = ['avatar_diplay', 'user', 'pen_name', 'is_active']
     exclude = ['date_updated']
     inlines = [MemberPositionInline]
     list_display = ['user_avatar', 'full_name',
