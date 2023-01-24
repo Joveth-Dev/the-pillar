@@ -16,12 +16,18 @@ from .serializers import AnnouncementSerializer, \
 
 class MemberViewSet(ReadOnlyModelViewSet):
     # get the current position of the members first
-    subquery = MemberPosition.objects.select_related('position').filter(
-        member_id=OuterRef('pk')).order_by('-date_assigned').values('position__title')[:1]
+    subquery = MemberPosition.objects.select_related('position') \
+        .filter(member_id=OuterRef('pk')) \
+        .order_by('-date_assigned') \
+        .values('position__title')[:1]
 
     # annotate the queryset with their current position
-    queryset = Member.objects.prefetch_related('memberposition_set').select_related(
-        'user__profile').annotate(current_position=Subquery(subquery)).filter(user__is_active=True).defer('date_updated')
+    queryset = Member.objects.prefetch_related('memberposition_set') \
+        .select_related('user__profile') \
+        .annotate(current_position=Subquery(subquery)) \
+        .filter(user__is_active=True) \
+        .filter(is_active=True) \
+        .defer('date_updated')
     serializer_class = MemberSerializer
     filter_backends = [SearchFilter]
     search_fields = ['user__first_name', 'user__last_name',
