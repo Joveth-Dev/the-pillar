@@ -241,6 +241,8 @@ class IssueFileInline(admin.StackedInline):
     model = models.IssueFile
     readonly_fields = ['thumbnail']
     verbose_name_plural = 'Issue'
+    min_num = 1
+    max_num = 1
 
     def thumbnail(self, instance):
         if instance.image_for_thumbnail.name != '':
