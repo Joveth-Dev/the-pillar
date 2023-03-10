@@ -23,9 +23,12 @@ class LikedItemAdmin(admin.ModelAdmin):
 
     @admin.display(ordering='content_object')
     def liked_item_name(self, likeditem):
-        if likeditem.content_type.model == 'article':
+        try:
+            if likeditem.content_type.model == 'article':
+                return likeditem.content_object
+            return f'Volume {likeditem.content_object.volume_number} | Issue {likeditem.content_object}'
+        except AttributeError:
             return likeditem.content_object
-        return f'Volume {likeditem.content_object.volume_number} | Issue {likeditem.content_object}'
 
     @admin.display(ordering='user__username')
     def liked_by(self, likeditem):

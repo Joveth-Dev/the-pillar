@@ -25,6 +25,7 @@ urlpatterns = [
     path('userprofile/', include('userprofile.urls')),
     path('publication/', include('publication.urls')),
     path('likes/', include('likes.urls')),
+    path('comments/', include('comments.urls')),
     # path('university/', include('university.urls')),
     # path('playground/', include('playground.urls')),
     path('auth/', include('djoser.urls')),

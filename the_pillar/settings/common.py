@@ -50,6 +50,7 @@ INSTALLED_APPS = [
     # 'playground',
     'core',
     'likes',
+    'comments',
 ]
 
 MIDDLEWARE = [
@@ -256,6 +257,8 @@ JAZZMIN_SETTINGS = {
         "userprofile.profile": "fas fa-id-card",
         "likes.likeditem": "fas fa-thumbs-up",
         "likes.dislikeditem": "fas fa-thumbs-down",
+        "comments.comment": "fas fa-comment",
+        "comments.reply": "fas fa-comments",
         "admin.logentry": "fas fa-poll-h",
     },
 }
